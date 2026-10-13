@@ -30,3 +30,12 @@ Before writing production code:
 
 The NPZ export is a Python interchange artifact, not a format CosmoLattice is
 claimed to ingest directly. A C++ reader or agreed conversion format is needed.
+
+## Source inspection and transfer prototype
+
+The pinned v2.0.0 source has now been inspected. The host-side binary reader and
+local potential evaluator compile and pass Python/C++ comparisons. The upstream
+scalar potential API does not receive stage time, and existing RK cache calls
+retain full-step time. See [detailed findings](adapter-prototype.md) before
+implementing the actual TempLat-backed adapter. No full solver build or field
+evolution benchmark has been completed.

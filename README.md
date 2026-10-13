@@ -40,3 +40,10 @@ suite establishes these limited checks, not the published physics benchmark.
 See [physics conventions](docs/physics.md), [adapter plan](docs/cosmolattice.md),
 and [roadmap](docs/roadmap.md). Licensing is intentionally undecided; no uploaded
 source code or third-party solver code is redistributed in this repository.
+
+## C++ adapter prototype
+
+A versioned arrival-map exporter and standalone C++20 reader/force evaluator are
+now available. The tests compile the probe and compare its one-bubble results
+with Python at multiple stage times. This does not yet evolve fields through
+CosmoLattice. See [prototype and source findings](docs/adapter-prototype.md).
