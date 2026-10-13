@@ -1,0 +1,2 @@
+{"trial_id": "A-20261013-core", "question_version": "v1", "command": "PYTHONPATH=src python -m unittest discover -s tests -v", "outcome": "8 tests passed", "decision": "keep", "scope": "numeric limit check only"}
+{"trial_id": "A-20261013-core", "question_version": "v1", "command": "PYTHONPATH=src python examples/validate_statistics.py", "artifact": "workspace/statistics.json", "decision": "keep", "status": "provisional; independent challenge pending"}

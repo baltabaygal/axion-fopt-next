@@ -1,0 +1,22 @@
+{
+  "status": "provisional numeric limit check",
+  "model": "constant q; static background",
+  "box_size": 3,
+  "wall_speed": 0.5,
+  "tau_end": 1,
+  "q": 4,
+  "catalogue_seeds": [
+    0,
+    99
+  ],
+  "probe_seed": 902,
+  "probes_per_realization": 1000,
+  "realizations": 100,
+  "numpy_version": "2.3.5",
+  "analytic_P_FV": 0.592384847188389,
+  "measured_P_FV": 0.59342,
+  "ensemble_standard_error": 0.004279388703631358,
+  "difference_in_standard_errors": 0.24189268217970705,
+  "expected_candidates": 108,
+  "mean_candidates": 108.56
+}
