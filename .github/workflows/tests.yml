@@ -14,3 +14,29 @@ jobs:
       - run: python -m pip install -e .
       - run: python -m unittest discover -s tests -v
       - run: python examples/export_background.py
+
+  cosmolattice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y libfftw3-dev
+      - run: python -m pip install -e '.[validation]'
+      - run: |
+          mkdir -p build/vendor
+          git clone --depth 1 --branch v2.0.0 https://github.com/cosmolattice/cosmolattice.git build/vendor/cosmolattice
+          cmake -S adapters/cosmolattice -B build/cosmolattice -DCOSMOLATTICE_SOURCE="$PWD/build/vendor/cosmolattice" -DNATIVE=OFF
+          cmake --build build/cosmolattice --target axion_fopt_evolve -j 2
+      - run: |
+          export AFOPT_COSMOLATTICE_EXECUTABLE="$PWD/build/cosmolattice/axion_fopt_evolve"
+          python -m unittest discover -s tests -v
+          python examples/validate_cosmolattice.py --executable "$AFOPT_COSMOLATTICE_EXECUTABLE"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cosmolattice-validation
+          path: |
+            outputs/cosmolattice-validation/
+            build/cosmolattice/build-info.json

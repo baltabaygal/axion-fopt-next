@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "configuration": {
+    "N": 128,
+    "lSide": 6.283185307179586,
+    "dt": 0.009817477042468103,
+    "tMax": 12.566370614359172,
+    "evolver": "PV2",
+    "expansion": "false",
+    "theta_initial": 1.0,
+    "theta_prime_initial": 0.0,
+    "mass_false": 0.0,
+    "mass_true": 1.0,
+    "potential": "quadratic",
+    "wall_width": 0.15,
+    "profile_wall_speed": 0.5,
+    "omega_star": 1.0,
+    "f_axion": 1.0,
+    "tau_origin": 0.0,
+    "arrival_map": "/Users/baltabay/Desktop/axion-fopt-next/outputs/lee-single-bubble/N128_v0.5_ref1.afopt",
+    "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/lee-single-bubble/N128_v0.5_ref1",
+    "snapshot_format": "binary",
+    "energy_diagnostics": "true",
+    "output_every": 2,
+    "profile": "true"
+  },
+  "repeats": 3,
+  "runs": [
+    {
+      "label": "baseline",
+      "repeat": 1,
+      "wall_seconds": 43.75331100000767,
+      "peak_rss_bytes": 175226880,
+      "timings": {
+        "initialization_seconds": 0.090267583,
+        "evolution_seconds": 24.38804397099999,
+        "diagnostics_seconds": 19.239028042999998,
+        "snapshots_seconds": 0.026911125,
+        "mass_update_seconds": 16.700701975999976,
+        "total_seconds": 43.744587333
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 0.0,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186,
+      "final_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+      "final_snapshot_byte_identical": true
+    },
+    {
+      "label": "optimized",
+      "repeat": 1,
+      "wall_seconds": 13.797732625040226,
+      "peak_rss_bytes": 176193536,
+      "timings": {
+        "initialization_seconds": 0.095206666,
+        "evolution_seconds": 10.897468893,
+        "diagnostics_seconds": 2.7677195939999995,
+        "snapshots_seconds": 0.031626208,
+        "mass_update_seconds": 0.9040473070000008,
+        "total_seconds": 13.792266125
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 2.6201263381153694e-14,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186,
+      "final_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+      "final_snapshot_byte_identical": true
+    },
+    {
+      "label": "optimized",
+      "repeat": 2,
+      "wall_seconds": 14.164816249976866,
+      "peak_rss_bytes": 176160768,
+      "timings": {
+        "initialization_seconds": 0.0960505,
+        "evolution_seconds": 11.138925786000012,
+        "diagnostics_seconds": 2.8964998379999978,
+        "snapshots_seconds": 0.027297415999999998,
+        "mass_update_seconds": 0.9341039599999987,
+        "total_seconds": 14.159145958
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 2.6201263381153694e-14,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186,
+      "final_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+      "final_snapshot_byte_identical": true
+    },
+    {
+      "label": "baseline",
+      "repeat": 2,
+      "wall_seconds": 45.73031962499954,
+      "peak_rss_bytes": 175243264,
+      "timings": {
+        "initialization_seconds": 0.073457333,
+        "evolution_seconds": 25.612530357999983,
+        "diagnostics_seconds": 20.008966837999996,
+        "snapshots_seconds": 0.028659417,
+        "mass_update_seconds": 17.42539186299999,
+        "total_seconds": 45.72398225
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 0.0,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186,
+      "final_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+      "final_snapshot_byte_identical": true
+    },
+    {
+      "label": "baseline",
+      "repeat": 3,
+      "wall_seconds": 45.42316075001145,
+      "peak_rss_bytes": 175259648,
+      "timings": {
+        "initialization_seconds": 0.074004167,
+        "evolution_seconds": 25.433706841,
+        "diagnostics_seconds": 19.884431410000005,
+        "snapshots_seconds": 0.024722292,
+        "mass_update_seconds": 17.274109288000005,
+        "total_seconds": 45.417342708
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 0.0,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186,
+      "final_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+      "final_snapshot_byte_identical": true
+    },
+    {
+      "label": "optimized",
+      "repeat": 3,
+      "wall_seconds": 14.50662033300614,
+      "peak_rss_bytes": 176160768,
+      "timings": {
+        "initialization_seconds": 0.089738833,
+        "evolution_seconds": 11.425356209999993,
+        "diagnostics_seconds": 2.953907046000002,
+        "snapshots_seconds": 0.031507167,
+        "mass_update_seconds": 0.9605635839999985,
+        "total_seconds": 14.500826083
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 2.6201263381153694e-14,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186,
+      "final_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+      "final_snapshot_byte_identical": true
+    }
+  ],
+  "median_wall_seconds": {
+    "baseline": 45.42316075001145,
+    "optimized": 14.164816249976866
+  },
+  "speedup": 3.20675961822559,
+  "executable_sha256": {
+    "baseline": "3c1d808ee198b4c04ee96801ea0f97ffd8980a16edf9421fe0859d8a86c934ea",
+    "optimized": "d5bae7471fb924058b0d0ebb8528dce044e9571c22de4083e7d59a4fd34ca773"
+  },
+  "source_sha256": {
+    "checks/benchmark_runtime.py": "ad6bd5aac48f16112c2d679ab62bef0d9773b5a279f50eb5b2512b37ea79e5db",
+    "adapters/cosmolattice/axion_fopt.h": "fd40a72f00d3207d809ea78344224dd8ae479fce8f3c2dcbece60c5b19a4f529",
+    "adapters/cosmolattice/potential_functions.h": "c8b9081d0a4c1025172ad32b1a50232ddb93c3eca565b641577386f1a60dac5c",
+    "adapters/cosmolattice/evolve.cpp": "ebf44666c64500566b2670f556bcbfa15f2eed4f788ae342697db9e30d4f4f2d",
+    "adapters/cosmolattice/prepare_overlay.py": "6dcac06bd32c217cca274ac4c52a176f1ae65be9c1449f679adfa391a901a673",
+    "adapters/cosmolattice/CMakeLists.txt": "dfb7dc0f5f1ff2441b84a06fe2a9f67946c186be39878556eaf3a20003600901"
+  },
+  "golden_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+  "methodology": "3 alternating pairs by default; full executable wall time including diagnostics and two snapshots; FFT and comparisons excluded; double precision; identical 1280 steps and output_every=2",
+  "timing_note": "mass_update_seconds overlaps initialization/evolution/diagnostics; do not add it to those phase totals",
+  "source_capture_note": "Source hashes refreshed after benchmark-script SHA recording and CMake overlay-dependency maintenance; neither changes timed solver calculations."
+}

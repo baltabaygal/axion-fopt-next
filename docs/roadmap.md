@@ -7,8 +7,11 @@
    distributions distinguish free-growth radii from collision-limited objects.
 3. Acceleration: benchmark spatial indexing against identical candidate events;
    preserve catalogue and arrival results before claiming speed gains.
-4. CosmoLattice feasibility: compile actual upstream code and one-bubble adapter;
-   pass homogeneous limits and spacetime-resolution convergence.
+4. CosmoLattice feasibility (CPU/PV2 first implementation complete): compiled
+   actual upstream kernels; homogeneous limits and temporal refinement pass;
+   one-bubble evolution agrees with an independent fixed-grid reference.
+   Still required: spatial continuum convergence, finite-wall studies and MPI/GPU
+   support before production-scale use. See docs/cosmolattice.md.
 5. Published benchmark: freeze original commit, cosmology, catalogue, lattice,
    integrator, initial angle, potential and abundance estimator. Compare both
    solvers at multiple resolutions with a predeclared error tolerance.

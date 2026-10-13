@@ -1,0 +1,104 @@
+{
+  "python": "3.13.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "executable_sha256": "d672d110aea4bbde4b98e9c9fdedbbb7c98fc9c7b69ee1cc178c681bd0f8ff33",
+  "reference": "SciPy DOP853; canonical equations split at each lattice mass jump",
+  "checks": {
+    "zero_mass_flat": {
+      "max_theta_error": 8.881784197001252e-15
+    },
+    "zero_mass_rd": {
+      "max_theta_error": 7.623409764567768e-07
+    },
+    "midpoint_switch": {
+      "pi": -0.01088727891431697,
+      "expected_pi": -0.01088727891431698
+    },
+    "homogeneous_flat_switch_0.0": {
+      "dt": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "max_theta_errors": [
+        2.3739953602608388e-05,
+        5.934780583083388e-06,
+        1.483682158631705e-06
+      ],
+      "coarse_to_fine_ratio": 16.00070032823072
+    },
+    "homogeneous_flat_switch_0.4": {
+      "dt": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "max_theta_errors": [
+        1.73277148807216e-05,
+        4.331760989795264e-06,
+        1.0829297661940629e-06
+      ],
+      "coarse_to_fine_ratio": 16.000774400743957
+    },
+    "homogeneous_rd_switch_0.0": {
+      "dt": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "max_theta_errors": [
+        1.8685439414467542e-05,
+        4.670557606167858e-06,
+        1.167589279205128e-06
+      ],
+      "coarse_to_fine_ratio": 16.003435238107212
+    },
+    "homogeneous_rd_switch_0.4": {
+      "dt": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "max_theta_errors": [
+        1.896241299143009e-05,
+        4.739566831557518e-06,
+        1.1848269547698465e-06
+      ],
+      "coarse_to_fine_ratio": 16.004373394014785
+    },
+    "one_bubble_rd": {
+      "n": 8,
+      "box_size": 4.0,
+      "errors": [
+        {
+          "dt": 0.02,
+          "theta_max_error": 0.002318851546831202,
+          "pi_max_error": 0.01810148457788452,
+          "theta_std": 0.0610882905923267
+        },
+        {
+          "dt": 0.01,
+          "theta_max_error": 0.0010190417157748266,
+          "pi_max_error": 0.011577203496391852,
+          "theta_std": 0.06121770232763971
+        },
+        {
+          "dt": 0.005,
+          "theta_max_error": 0.0006046197258008368,
+          "pi_max_error": 0.0047826996883174044,
+          "theta_std": 0.06122718299520063
+        }
+      ],
+      "note": "Compared at fixed spatial resolution; sharp-wall crossings generally reduce temporal order"
+    }
+  },
+  "limits": "CPU, single process, PV2, fixed grid; no published benchmark or spatial continuum convergence",
+  "build": {
+    "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+    "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+    "kokkos": "5.1.1",
+    "compiler": "AppleClang 21.0.0.21000334",
+    "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+  }
+}

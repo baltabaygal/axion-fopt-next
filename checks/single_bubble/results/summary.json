@@ -1,0 +1,345 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "name": "N32_v0.5_ref1",
+      "n": 32,
+      "v": 0.5,
+      "refinement": 1,
+      "dt": 0.009817477042468103,
+      "steps": 1280,
+      "end": 12.566370614359172,
+      "wall_width": 0.15,
+      "wall_cells": 0.7639437268410976,
+      "elapsed_seconds": 0.9590996670303866,
+      "number_continuum": 0.14568120818383823,
+      "number_stencil": 0.1456949599458715,
+      "zero_mode_number": 0.105301983593935,
+      "energy_real": 0.17025640859811147,
+      "energy_fft": 0.17025640859811145,
+      "parseval_relative_error": 1.6302220776397128e-16,
+      "mean_k": 0.34463255060750025,
+      "final_energy": 0.1702564085930442,
+      "energy_work_relative_residual": 3.872294962528024e-06,
+      "minimum_final_mass_squared": 0.9999986167574137,
+      "paper_piecewise_fit": 0.16453891918737618,
+      "relative_difference_from_fit": -0.11460942551873014
+    },
+    {
+      "name": "N64_v0.5_ref1",
+      "n": 64,
+      "v": 0.5,
+      "refinement": 1,
+      "dt": 0.009817477042468103,
+      "steps": 1280,
+      "end": 12.566370614359172,
+      "wall_width": 0.15,
+      "wall_cells": 1.5278874536821951,
+      "elapsed_seconds": 6.3969743750058115,
+      "number_continuum": 0.14575726836371716,
+      "number_stencil": 0.14576067056125813,
+      "zero_mode_number": 0.10557582231181446,
+      "energy_real": 0.17014060745781961,
+      "energy_fft": 0.17014060745781953,
+      "parseval_relative_error": 4.893994919321644e-16,
+      "mean_k": 0.3418146474158105,
+      "final_energy": 0.17014060745155965,
+      "energy_work_relative_residual": 3.7418987867529633e-06,
+      "minimum_final_mass_squared": 0.9999957024197517,
+      "paper_piecewise_fit": 0.16453891918737618,
+      "relative_difference_from_fit": -0.11414716297164049
+    },
+    {
+      "name": "N64_v0.5_ref2",
+      "n": 64,
+      "v": 0.5,
+      "refinement": 2,
+      "dt": 0.004908738521234052,
+      "steps": 2560,
+      "end": 12.566370614359172,
+      "wall_width": 0.15,
+      "wall_cells": 1.5278874536821951,
+      "elapsed_seconds": 10.434281583002303,
+      "number_continuum": 0.14575759220759105,
+      "number_stencil": 0.14576099462534425,
+      "zero_mode_number": 0.10557618144087488,
+      "energy_real": 0.1701411451955944,
+      "energy_fft": 0.17014114519559437,
+      "parseval_relative_error": 1.6313264838861337e-16,
+      "mean_k": 0.341815510728914,
+      "final_energy": 0.17014114518933987,
+      "energy_work_relative_residual": 1.0289995777549199e-06,
+      "minimum_final_mass_squared": 0.9999957024197517,
+      "paper_piecewise_fit": 0.16453891918737618,
+      "relative_difference_from_fit": -0.11414519478152788
+    },
+    {
+      "name": "N128_v0.5_ref1",
+      "n": 128,
+      "v": 0.5,
+      "refinement": 1,
+      "dt": 0.009817477042468103,
+      "steps": 1280,
+      "end": 12.566370614359172,
+      "wall_width": 0.15,
+      "wall_cells": 3.0557749073643903,
+      "elapsed_seconds": 44.39554620796116,
+      "number_continuum": 0.1457762180924186,
+      "number_stencil": 0.14577706636629192,
+      "zero_mode_number": 0.10564407371869527,
+      "energy_real": 0.17011320273865596,
+      "energy_fft": 0.17011320273865593,
+      "parseval_relative_error": 1.6315944423355347e-16,
+      "mean_k": 0.3411275129751955,
+      "final_energy": 0.1701132027320672,
+      "energy_work_relative_residual": 3.7140848110631097e-06,
+      "minimum_final_mass_squared": 0.999992424940886,
+      "paper_piecewise_fit": 0.16453891918737618,
+      "relative_difference_from_fit": -0.11403199430033135
+    },
+    {
+      "name": "N128_v0.5_ref2",
+      "n": 128,
+      "v": 0.5,
+      "refinement": 2,
+      "dt": 0.004908738521234052,
+      "steps": 2560,
+      "end": 12.566370614359172,
+      "wall_width": 0.15,
+      "wall_cells": 3.0557749073643903,
+      "elapsed_seconds": 66.72264254098991,
+      "number_continuum": 0.1457765438866255,
+      "number_stencil": 0.14577739221412536,
+      "zero_mode_number": 0.10564443271208933,
+      "energy_real": 0.1701137404382929,
+      "energy_fft": 0.17011374043829294,
+      "parseval_relative_error": 3.263178570304493e-16,
+      "mean_k": 0.3411283631934678,
+      "final_energy": 0.17011374043170657,
+      "energy_work_relative_residual": 1.0219008144665975e-06,
+      "minimum_final_mass_squared": 0.999992424940886,
+      "paper_piecewise_fit": 0.16453891918737618,
+      "relative_difference_from_fit": -0.11403001425689543
+    },
+    {
+      "name": "N128_v0.9_ref1",
+      "n": 128,
+      "v": 0.9,
+      "refinement": 1,
+      "dt": 0.009805220516822076,
+      "steps": 712,
+      "end": 6.981317007977318,
+      "wall_width": 0.15,
+      "wall_cells": 3.0557749073643903,
+      "elapsed_seconds": 24.167082333995495,
+      "number_continuum": 0.29636876100917775,
+      "number_stencil": 0.2963666388043823,
+      "zero_mode_number": 0.19392735577833436,
+      "energy_real": 0.3833858040592457,
+      "energy_fft": 0.3833858040592457,
+      "parseval_relative_error": 0.0,
+      "mean_k": 0.5230488342172777,
+      "final_energy": 0.3833858022857765,
+      "energy_work_relative_residual": 1.191046339732484e-05,
+      "minimum_final_mass_squared": 0.999992424940886,
+      "paper_piecewise_fit": 0.26332169640479614,
+      "relative_difference_from_fit": 0.12550072802804446
+    },
+    {
+      "name": "N128_v0.1_ref1",
+      "n": 128,
+      "v": 0.1,
+      "refinement": 1,
+      "dt": 0.009817477042468103,
+      "steps": 6400,
+      "end": 62.83185307179586,
+      "wall_width": 0.15,
+      "wall_cells": 3.0557749073643903,
+      "elapsed_seconds": 227.36609058297472,
+      "number_continuum": 0.05664169624761009,
+      "number_stencil": 0.05664167235442124,
+      "zero_mode_number": 0.055660198493000836,
+      "energy_real": 0.057059082022441275,
+      "energy_fft": 0.057059082022441275,
+      "parseval_relative_error": 0.0,
+      "mean_k": 0.01757938203804209,
+      "final_energy": 0.0570590820172872,
+      "energy_work_relative_residual": 1.5508598511941252e-05,
+      "minimum_final_mass_squared": 0.999992424940886,
+      "paper_piecewise_fit": 0.08236894129609253,
+      "relative_difference_from_fit": -0.3123415773428534
+    }
+  ],
+  "gates": [
+    {
+      "name": "N32_v0.5_ref1/parseval",
+      "value": 1.6302220776397128e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_v0.5_ref1/external_work_balance",
+      "value": 3.872294962528024e-06,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N32_v0.5_ref1/final_mass",
+      "value": 1.3832425862503328e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N64_v0.5_ref1/parseval",
+      "value": 4.893994919321644e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_v0.5_ref1/external_work_balance",
+      "value": 3.7418987867529633e-06,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N64_v0.5_ref1/final_mass",
+      "value": 4.297580248335819e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N64_v0.5_ref2/parseval",
+      "value": 1.6313264838861337e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_v0.5_ref2/external_work_balance",
+      "value": 1.0289995777549199e-06,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N64_v0.5_ref2/final_mass",
+      "value": 4.297580248335819e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.5_ref1/parseval",
+      "value": 1.6315944423355347e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.5_ref1/external_work_balance",
+      "value": 3.7140848110631097e-06,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.5_ref1/final_mass",
+      "value": 7.575059113973381e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.5_ref2/parseval",
+      "value": 3.263178570304493e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.5_ref2/external_work_balance",
+      "value": 1.0219008144665975e-06,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.5_ref2/final_mass",
+      "value": 7.575059113973381e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.9_ref1/parseval",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.9_ref1/external_work_balance",
+      "value": 1.191046339732484e-05,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.9_ref1/final_mass",
+      "value": 7.575059113973381e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.1_ref1/parseval",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.1_ref1/external_work_balance",
+      "value": 1.5508598511941252e-05,
+      "limit": 0.005,
+      "passed": true
+    },
+    {
+      "name": "N128_v0.1_ref1/final_mass",
+      "value": 7.575059113973381e-06,
+      "limit": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "N64/time_number_change",
+      "value": 2.221797636647871e-06,
+      "limit": 0.002,
+      "passed": true
+    },
+    {
+      "name": "N128/time_number_change",
+      "value": 2.2348877137812195e-06,
+      "limit": 0.002,
+      "passed": true
+    },
+    {
+      "name": "v0.5/space_number_change",
+      "value": 0.00012999190779827696,
+      "limit": 0.02,
+      "passed": true
+    }
+  ],
+  "paper": "https://arxiv.org/pdf/2402.09501 (v2), Sec. IV F, Eqs.53-57, Table I",
+  "conventions": "m0=phi0=omega_star=f_axion=1; a=1; t=u=tau; box L=2pi; center=L/2; initial phi=1, phi_dot=0; delta_w=.15",
+  "fit_caveat": "Eqs.56-57 approximate fit measured at L=16pi; used as a comparison, not an exact acceptance target for L=2pi",
+  "limits": "Only smallest Table-I box; PV2 and nearest-neighbor stencil; cell-centered sampling; no digitized figure or author raw data; spatial/time refinements at v=.5 only",
+  "executable_sha256": "6215cb9ead01d069fa2336cd3fac5654f60a48a77c0b8a4fe860b13403c7405f",
+  "source_sha256": {
+    "checks/single_bubble/run.py": "16efd5e766553543a4ed457845e028a919c9419b4e9df439eab08cd1eb235289",
+    "checks/single_bubble/reference.py": "13c68d09be3c440c6a1060b8caf2c0472651f195595e21d29a27afca4d77403e",
+    "src/axion_fopt_next/core.py": "b272f8171b7df298de6dd59b4d31bf6f0763937e3558b871608a3410929f44a5",
+    "adapters/cosmolattice/axion_fopt.h": "33a1d8b3d3656ce5fee48d315980a5e8b83ed34f3f7f97f507d39521b69761e7",
+    "adapters/cosmolattice/evolve.cpp": "956cc28dead82528e1a465cde1fccd06dfaca12ddd3ec96448519590645ca33e",
+    "adapters/cosmolattice/prepare_overlay.py": "1f94b4ff30346089130e8e330429003b0ce30162faef7c19292d5e54e803570d",
+    "adapters/cosmolattice/CMakeLists.txt": "9f7ac96e699d59dd558b7b9f6bb0bf9237345fedf58ebd07da158d73858b0cd0"
+  },
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "python": "3.13.15",
+  "git_head": "f85d540a83cdcdc2cb24c416e730879c25ba931b",
+  "git_status": " M .github/workflows/tests.yml\n M README.md\n M adapters/cosmolattice/arrival_map.hpp\n M docs/adapter-prototype.md\n M docs/cosmolattice.md\n M docs/roadmap.md\n M pyproject.toml\n?? adapters/cosmolattice/CMakeLists.txt\n?? adapters/cosmolattice/axion_fopt.h\n?? adapters/cosmolattice/evolve.cpp\n?? adapters/cosmolattice/one_bubble.in\n?? adapters/cosmolattice/prepare_overlay.py\n?? checks/\n?? docs/cosmolattice-validation.json\n?? examples/plot_cosmolattice.py\n?? examples/validate_cosmolattice.py\n?? tests/test_bubble_adapter.py\n?? tests/test_cosmolattice.py\n",
+  "build": {
+    "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+    "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+    "kokkos": "5.1.1",
+    "compiler": "AppleClang 21.0.0.21000334",
+    "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+  }
+}

@@ -1,0 +1,568 @@
+{
+  "status": "passed",
+  "source": "https://arxiv.org/pdf/2607.01333, Appendix B, B1-B2",
+  "conventions": {
+    "m": 1,
+    "H_star": 1,
+    "L": 6.283185307179586,
+    "tau_initial": 1,
+    "t_initial": 0.5,
+    "u_final": 8.0,
+    "t_final": 40.5,
+    "initial_conditions": "Bessel field and derivative at finite start; theta_i is early-time regular amplitude"
+  },
+  "normalization": "max absolute error / fixed theta_i; pi=a^2 dtheta/du",
+  "python": "3.13.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "executable_sha256": "d672d110aea4bbde4b98e9c9fdedbbb7c98fc9c7b69ee1cc178c681bd0f8ff33",
+  "source_sha256": {
+    "checks/homogeneous.py": "108703c148aa0fdbeef52b21cc30f777d82fef490164771c07731180d8ee7cee",
+    "src/axion_fopt_next/core.py": "b272f8171b7df298de6dd59b4d31bf6f0763937e3558b871608a3410929f44a5",
+    "src/axion_fopt_next/interchange.py": "2965b517ad6978d4c209e5a67c43ead2b0274c9e6b6d21572f825aaa3c620e0a",
+    "adapters/cosmolattice/evolve.cpp": "c62ad20a7e7eca44ecc10e5e7732170400a803ffe9aa34c7c77f8f460be68578",
+    "adapters/cosmolattice/axion_fopt.h": "0b9ca375da283701d3857cc5e6d5fd3de6873f2c147e9c08740a5e4e8ff06011",
+    "adapters/cosmolattice/arrival_map.hpp": "5e4d8b53ac81cce896f4e9fc76576af2fbf9a84af0a7359d09747be140c79c25",
+    "adapters/cosmolattice/prepare_overlay.py": "1f94b4ff30346089130e8e330429003b0ce30162faef7c19292d5e54e803570d",
+    "adapters/cosmolattice/CMakeLists.txt": "9f7ac96e699d59dd558b7b9f6bb0bf9237345fedf58ebd07da158d73858b0cd0"
+  },
+  "git_head": "f85d540a83cdcdc2cb24c416e730879c25ba931b",
+  "git_status": " M .github/workflows/tests.yml\n M README.md\n M adapters/cosmolattice/arrival_map.hpp\n M docs/adapter-prototype.md\n M docs/cosmolattice.md\n M docs/roadmap.md\n M pyproject.toml\n?? adapters/cosmolattice/CMakeLists.txt\n?? adapters/cosmolattice/axion_fopt.h\n?? adapters/cosmolattice/evolve.cpp\n?? adapters/cosmolattice/one_bubble.in\n?? adapters/cosmolattice/prepare_overlay.py\n?? checks/\n?? docs/cosmolattice-validation.json\n?? examples/plot_cosmolattice.py\n?? examples/validate_cosmolattice.py\n?? tests/test_cosmolattice.py\n",
+  "runs": [
+    {
+      "name": "N4_dt0.002_theta0.01",
+      "n": 4,
+      "dt": 0.002,
+      "amplitude": 0.01,
+      "theta_error_cosine": 1.4531979737291879e-05,
+      "pi_error_cosine": 0.009572779174150253,
+      "theta_error_bessel": 1.3776079021658722e-05,
+      "pi_error_bessel": 0.009058004888157917,
+      "nonlinear_theta_correction": 4.418245415273997e-06,
+      "linear_theta_error": 4.380176776841438e-15,
+      "linear_pi_error": 1.0755285551056204e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 3.6591823321385775e-15
+    },
+    {
+      "name": "N8_dt0.002_theta0.01",
+      "n": 8,
+      "dt": 0.002,
+      "amplitude": 0.01,
+      "theta_error_cosine": 1.4531979737188202e-05,
+      "pi_error_cosine": 0.009572779174069068,
+      "theta_error_bessel": 1.3776079021555045e-05,
+      "pi_error_bessel": 0.009058004888029547,
+      "nonlinear_theta_correction": 4.418245415273997e-06,
+      "linear_theta_error": 4.380176776841438e-15,
+      "linear_pi_error": 1.0755285551056204e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 2.6834003769016235e-14
+    },
+    {
+      "name": "N16_dt0.002_theta0.01",
+      "n": 16,
+      "dt": 0.002,
+      "amplitude": 0.01,
+      "theta_error_cosine": 1.4531979737363707e-05,
+      "pi_error_cosine": 0.009572779174063517,
+      "theta_error_bessel": 1.377607902173055e-05,
+      "pi_error_bessel": 0.009058004887790155,
+      "nonlinear_theta_correction": 4.418245415273997e-06,
+      "linear_theta_error": 4.380176776841438e-15,
+      "linear_pi_error": 1.0755285551056204e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 2.504507018441515e-13
+    },
+    {
+      "name": "N32_dt0.002_theta0.01",
+      "n": 32,
+      "dt": 0.002,
+      "amplitude": 0.01,
+      "theta_error_cosine": 1.453197973568116e-05,
+      "pi_error_cosine": 0.009572779173337709,
+      "theta_error_bessel": 1.3776079020048004e-05,
+      "pi_error_bessel": 0.00905800489278269,
+      "nonlinear_theta_correction": 4.418245415273997e-06,
+      "linear_theta_error": 4.380176776841438e-15,
+      "linear_pi_error": 1.0755285551056204e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 1.8909841140862804e-12
+    },
+    {
+      "name": "N8_dt0.001_theta0.01",
+      "n": 8,
+      "dt": 0.001,
+      "amplitude": 0.01,
+      "theta_error_cosine": 3.6329686226839957e-06,
+      "pi_error_cosine": 0.002393185049283375,
+      "theta_error_bessel": 4.4014632757938266e-06,
+      "pi_error_bessel": 0.0018820497819885262,
+      "nonlinear_theta_correction": 4.418245415273997e-06,
+      "linear_theta_error": 4.380176776841438e-15,
+      "linear_pi_error": 1.0755285551056204e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 2.9544509200229996e-14
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01",
+      "n": 8,
+      "dt": 0.0005,
+      "amplitude": 0.01,
+      "theta_error_cosine": 9.082433764332631e-07,
+      "pi_error_cosine": 0.0005982949530185244,
+      "theta_error_bessel": 4.414048892153674e-06,
+      "pi_error_bessel": 0.00022159429877918746,
+      "nonlinear_theta_correction": 4.418245415273997e-06,
+      "linear_theta_error": 4.380176776841438e-15,
+      "linear_pi_error": 1.0755285551056204e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 3.3068166260807885e-14
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001",
+      "n": 8,
+      "dt": 0.0005,
+      "amplitude": 0.001,
+      "theta_error_cosine": 9.082417332069637e-07,
+      "pi_error_cosine": 0.0005982935790448465,
+      "theta_error_bessel": 9.006798354077273e-07,
+      "pi_error_bessel": 0.0005931370937271169,
+      "nonlinear_theta_correction": 4.41823249806763e-08,
+      "linear_theta_error": 4.336808689942018e-15,
+      "linear_pi_error": 1.102416768983261e-12,
+      "local_theta_spread": 0.0,
+      "local_pi_spread": 0.0,
+      "max_moment_variance_normalized": 3.695181232396885e-14
+    }
+  ],
+  "gates": [
+    {
+      "name": "N4_dt0.002_theta0.01/linear_theta_error",
+      "measured": 4.380176776841438e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N4_dt0.002_theta0.01/linear_pi_error",
+      "measured": 1.0755285551056204e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N4_dt0.002_theta0.01/cosine_field",
+      "measured": 1.4531979737291879e-05,
+      "operator": "<",
+      "limit": 0.0003,
+      "passed": true
+    },
+    {
+      "name": "N4_dt0.002_theta0.01/bessel_field",
+      "measured": 1.3776079021658722e-05,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N4_dt0.002_theta0.01/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N4_dt0.002_theta0.01/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N4_dt0.002_theta0.01/moment_variance",
+      "measured": 3.6591823321385775e-15,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/linear_theta_error",
+      "measured": 4.380176776841438e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/linear_pi_error",
+      "measured": 1.0755285551056204e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/cosine_field",
+      "measured": 1.4531979737188202e-05,
+      "operator": "<",
+      "limit": 0.0003,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/bessel_field",
+      "measured": 1.3776079021555045e-05,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.002_theta0.01/moment_variance",
+      "measured": 2.6834003769016235e-14,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/linear_theta_error",
+      "measured": 4.380176776841438e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/linear_pi_error",
+      "measured": 1.0755285551056204e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/cosine_field",
+      "measured": 1.4531979737363707e-05,
+      "operator": "<",
+      "limit": 0.0003,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/bessel_field",
+      "measured": 1.377607902173055e-05,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N16_dt0.002_theta0.01/moment_variance",
+      "measured": 2.504507018441515e-13,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/linear_theta_error",
+      "measured": 4.380176776841438e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/linear_pi_error",
+      "measured": 1.0755285551056204e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/cosine_field",
+      "measured": 1.453197973568116e-05,
+      "operator": "<",
+      "limit": 0.0003,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/bessel_field",
+      "measured": 1.3776079020048004e-05,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.002_theta0.01/moment_variance",
+      "measured": 1.8909841140862804e-12,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/linear_theta_error",
+      "measured": 4.380176776841438e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/linear_pi_error",
+      "measured": 1.0755285551056204e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/cosine_field",
+      "measured": 3.6329686226839957e-06,
+      "operator": "<",
+      "limit": 0.0003,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/bessel_field",
+      "measured": 4.4014632757938266e-06,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.001_theta0.01/moment_variance",
+      "measured": 2.9544509200229996e-14,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/linear_theta_error",
+      "measured": 4.380176776841438e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/linear_pi_error",
+      "measured": 1.0755285551056204e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/cosine_field",
+      "measured": 9.082433764332631e-07,
+      "operator": "<",
+      "limit": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/bessel_field",
+      "measured": 4.414048892153674e-06,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.01/moment_variance",
+      "measured": 3.3068166260807885e-14,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/linear_theta_error",
+      "measured": 4.336808689942018e-15,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/linear_pi_error",
+      "measured": 1.102416768983261e-12,
+      "operator": "<",
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/cosine_field",
+      "measured": 9.082417332069637e-07,
+      "operator": "<",
+      "limit": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/bessel_field",
+      "measured": 9.006798354077273e-07,
+      "operator": "<",
+      "limit": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/local_theta_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/local_pi_spread",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0005_theta0.001/moment_variance",
+      "measured": 3.695181232396885e-14,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N4/grid_theta_mean",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N4/grid_pi_mean",
+      "measured": 0.0,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8/grid_theta_mean",
+      "measured": 1.2836953722228372e-14,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N8/grid_pi_mean",
+      "measured": 5.051514762044462e-13,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N16/grid_theta_mean",
+      "measured": 1.0321604682062002e-13,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N16/grid_pi_mean",
+      "measured": 3.7414515929867775e-12,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N32/grid_theta_mean",
+      "measured": 7.696968062909093e-13,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N32/grid_pi_mean",
+      "measured": 2.7844393457598926e-11,
+      "operator": "<",
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "temporal_coarse_to_fine_ratio",
+      "measured": 16.00009437366483,
+      "operator": ">",
+      "limit": 10.0,
+      "passed": true
+    },
+    {
+      "name": "nonlinear_amplitude_ratio",
+      "measured": 100.00029236139956,
+      "operator": ">",
+      "limit": 80.0,
+      "passed": true
+    }
+  ],
+  "limits": "Homogeneous mode only; no bubble, non-expanding run, spatial convergence or paper reproduction claim",
+  "build": {
+    "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+    "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+    "kokkos": "5.1.1",
+    "compiler": "AppleClang 21.0.0.21000334",
+    "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+  }
+}

@@ -12,7 +12,11 @@ first-arrival grid export, and an axion potential/force API independent of any
 solver. Only NumPy is needed. This is a correctness-first prototype: rejection
 and projection use brute-force geometry. Spatial indexing is a next milestone.
 
-Not yet implemented: CosmoLattice field evolution, physical collision response,
+Implemented adapter: CosmoLattice v2.0.0 CPU/PV2 scalar evolution with explicit
+force-stage timing, fixed background, and deterministic arrival maps. Independent
+ODE and one-bubble lattice-reference checks pass. See [build and run guide](docs/cosmolattice.md).
+
+Not yet implemented: MPI/GPU adapter execution, physical collision response,
 variable bubble speeds, dynamical order parameters, published abundance
 reproduction, or minicluster spectra. Overlap means conversion by the earliest
 wall; it does not simulate wall/plasma collision dynamics.
@@ -37,13 +41,14 @@ Poisson mean/variance, linear-rate time distributions, force derivatives, and
 an ensemble comparison to the analytic false-vacuum fraction. A passing test
 suite establishes these limited checks, not the published physics benchmark.
 
-See [physics conventions](docs/physics.md), [adapter plan](docs/cosmolattice.md),
+See [physics conventions](docs/physics.md), [CosmoLattice build and run guide](docs/cosmolattice.md),
 and [roadmap](docs/roadmap.md). Licensing is intentionally undecided; no uploaded
 source code or third-party solver code is redistributed in this repository.
 
 ## C++ adapter prototype
 
-A versioned arrival-map exporter and standalone C++20 reader/force evaluator are
-now available. The tests compile the probe and compare its one-bubble results
-with Python at multiple stage times. This does not yet evolve fields through
-CosmoLattice. See [prototype and source findings](docs/adapter-prototype.md).
+A versioned arrival-map exporter and C++20 reader/force evaluator are available.
+The [original transfer prototype](docs/adapter-prototype.md) is now coupled to
+real [CosmoLattice field evolution](docs/cosmolattice.md). The basic test suite
+compiles the standalone probe; the optional integration suite runs the solver
+against independent references. Neither establishes published-paper reproduction.

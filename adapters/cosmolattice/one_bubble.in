@@ -1,0 +1,21 @@
+# Matches examples/export_one_bubble.py. Paths are relative to the run directory.
+N = 16
+lSide = 4
+dt = 0.005
+tMax = 4
+evolver = PV2
+expansion = true
+fixedBackground = true
+omegaEoS = 0.333333333333333333
+H0 = 1
+# a=1+u, tau=1+u; arrival times use the same conformal unit.
+tau_origin = 1
+omega_star = 1
+f_axion = 1
+theta_initial = 0.7
+theta_prime_initial = 0
+mass_false = 0
+mass_true = 1
+arrival_map = outputs/one_bubble.afopt
+result_dir = outputs/one_bubble_evolution
+output_every = 10

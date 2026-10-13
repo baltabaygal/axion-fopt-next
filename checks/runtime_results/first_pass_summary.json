@@ -1,0 +1,158 @@
+{
+  "status": "passed",
+  "configuration": {
+    "N": 128,
+    "lSide": 6.283185307179586,
+    "dt": 0.009817477042468103,
+    "tMax": 12.566370614359172,
+    "evolver": "PV2",
+    "expansion": "false",
+    "theta_initial": 1.0,
+    "theta_prime_initial": 0.0,
+    "mass_false": 0.0,
+    "mass_true": 1.0,
+    "potential": "quadratic",
+    "wall_width": 0.15,
+    "profile_wall_speed": 0.5,
+    "omega_star": 1.0,
+    "f_axion": 1.0,
+    "tau_origin": 0.0,
+    "arrival_map": "/Users/baltabay/Desktop/axion-fopt-next/outputs/lee-single-bubble/N128_v0.5_ref1.afopt",
+    "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/lee-single-bubble/N128_v0.5_ref1",
+    "snapshot_format": "binary",
+    "energy_diagnostics": "true",
+    "output_every": 2,
+    "profile": "true"
+  },
+  "repeats": 3,
+  "runs": [
+    {
+      "label": "baseline",
+      "repeat": 1,
+      "wall_seconds": 55.20161141699646,
+      "peak_rss_bytes": 175276032,
+      "timings": {
+        "initialization_seconds": 0.111782458,
+        "evolution_seconds": 30.826679446000032,
+        "diagnostics_seconds": 23.988016708000018,
+        "snapshots_seconds": 0.057090749999999996,
+        "mass_update_seconds": 20.679206719000018,
+        "total_seconds": 54.984233375
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 0.0,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186
+    },
+    {
+      "label": "optimized",
+      "repeat": 1,
+      "wall_seconds": 30.586064084025566,
+      "peak_rss_bytes": 175046656,
+      "timings": {
+        "initialization_seconds": 0.099816125,
+        "evolution_seconds": 22.607144665999982,
+        "diagnostics_seconds": 7.793946951,
+        "snapshots_seconds": 0.070135458,
+        "mass_update_seconds": 13.632404270999976,
+        "total_seconds": 30.5721895
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 2.6201263381153694e-14,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186
+    },
+    {
+      "label": "optimized",
+      "repeat": 2,
+      "wall_seconds": 33.65713341603987,
+      "peak_rss_bytes": 175095808,
+      "timings": {
+        "initialization_seconds": 0.110602875,
+        "evolution_seconds": 24.97202913200002,
+        "diagnostics_seconds": 8.495109954000002,
+        "snapshots_seconds": 0.063653334,
+        "mass_update_seconds": 15.112549633,
+        "total_seconds": 33.641861417
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 2.6201263381153694e-14,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186
+    },
+    {
+      "label": "baseline",
+      "repeat": 2,
+      "wall_seconds": 52.80037245800486,
+      "peak_rss_bytes": 175210496,
+      "timings": {
+        "initialization_seconds": 0.10245375,
+        "evolution_seconds": 29.37798532600001,
+        "diagnostics_seconds": 23.255042322999998,
+        "snapshots_seconds": 0.049974375,
+        "mass_update_seconds": 19.95188229800005,
+        "total_seconds": 52.786186292
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 0.0,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186
+    },
+    {
+      "label": "baseline",
+      "repeat": 3,
+      "wall_seconds": 48.95398416597163,
+      "peak_rss_bytes": 175243264,
+      "timings": {
+        "initialization_seconds": 0.111247125,
+        "evolution_seconds": 27.488447156999992,
+        "diagnostics_seconds": 21.296960115999983,
+        "snapshots_seconds": 0.043496833,
+        "mass_update_seconds": 18.465245721000006,
+        "total_seconds": 48.940563125
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 0.0,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186
+    },
+    {
+      "label": "optimized",
+      "repeat": 3,
+      "wall_seconds": 28.21217324997997,
+      "peak_rss_bytes": 175030272,
+      "timings": {
+        "initialization_seconds": 0.083737333,
+        "evolution_seconds": 20.79265767300001,
+        "diagnostics_seconds": 7.2845293729999945,
+        "snapshots_seconds": 0.041965999999999996,
+        "mass_update_seconds": 12.816006620000005,
+        "total_seconds": 28.203421333
+      },
+      "final_state_max_error": 0.0,
+      "history_max_error": 2.6201263381153694e-14,
+      "number_relative_error": 0.0,
+      "number_continuum": 0.1457762180924186
+    }
+  ],
+  "median_wall_seconds": {
+    "baseline": 52.80037245800486,
+    "optimized": 30.586064084025566
+  },
+  "speedup": 1.7262885578527687,
+  "executable_sha256": {
+    "baseline": "3c1d808ee198b4c04ee96801ea0f97ffd8980a16edf9421fe0859d8a86c934ea",
+    "optimized": "5aca7127859fa673c28449e4fb500ae4d0dc26c703ca162653bcd9a3a26835b7"
+  },
+  "source_sha256": {
+    "checks/benchmark_runtime.py": "5f069c8523fa526883133a757083a44f1690b48d66f37aef981b7f54f5d8f775",
+    "adapters/cosmolattice/axion_fopt.h": "b1869266d2c8aed187069b000b63d0ad3b835bfc9888da2644bdc07fab808d85",
+    "adapters/cosmolattice/potential_functions.h": "9fbe88061568257edeb5df7672b81088008e967bf3b6f1f54c5ce850a5b1d1a3",
+    "adapters/cosmolattice/evolve.cpp": "ebf44666c64500566b2670f556bcbfa15f2eed4f788ae342697db9e30d4f4f2d",
+    "adapters/cosmolattice/prepare_overlay.py": "6dcac06bd32c217cca274ac4c52a176f1ae65be9c1449f679adfa391a901a673",
+    "adapters/cosmolattice/CMakeLists.txt": "9f7ac96e699d59dd558b7b9f6bb0bf9237345fedf58ebd07da158d73858b0cd0"
+  },
+  "golden_snapshot_sha256": "0aa9ac3ed92ea362835806e9b97220cfe62299ce2d1bce0fbab64fcf13e5f43c",
+  "methodology": "3 alternating pairs by default; full executable wall time including diagnostics and two snapshots; FFT and comparisons excluded; double precision; identical 1280 steps and output_every=2",
+  "timing_note": "mass_update_seconds overlaps initialization/evolution/diagnostics; do not add it to those phase totals"
+}

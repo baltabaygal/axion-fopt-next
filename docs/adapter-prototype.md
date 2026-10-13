@@ -1,5 +1,9 @@
 # Arrival-map C++ feasibility prototype
 
+Historical first milestone. The host-side transfer now feeds a working CPU/PV2
+model; see [CosmoLattice evolution](cosmolattice.md) for its validated scope.
+The findings below document the original transfer-only stage.
+
 This is a compiled host-side transfer and potential evaluator, not a working
 CosmoLattice model or a field-evolution benchmark. No upstream code is vendored.
 

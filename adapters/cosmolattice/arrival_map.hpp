@@ -1,6 +1,6 @@
 #ifndef AXION_FOPT_NEXT_ARRIVAL_MAP_HPP
 #define AXION_FOPT_NEXT_ARRIVAL_MAP_HPP
-// Standalone host-side transfer/force prototype. No TempLat integration yet.
+// Solver-independent host-side arrival-map reader and program-unit mass evaluator.
 #include <array>
 #include <bit>
 #include <cmath>
