@@ -76,8 +76,8 @@ class Catalogue:
         return self.arrival_times(np.stack(np.meshgrid(x, x, x, indexing="ij"), axis=-1))
 
 
-def sample_catalogue(tau, q, box_size, wall_speed, seed, max_candidates=1_000_000):
-    """Generate Poisson candidates, then reject events in previously converted space.
+def sample_candidates(tau, q, box_size, wall_speed, seed, max_candidates=1_000_000):
+    """Generate ordered Poisson candidates without false-vacuum rejection.
 
     q is an attempted nucleation intensity, NOT Gamma multiplied by P_FV.
     Each interval has Poisson count V*integral(q); conditional birth times follow
@@ -110,8 +110,14 @@ def sample_catalogue(tau, q, box_size, wall_speed, seed, max_candidates=1_000_00
         batches.append(tau[i] + offset)
     births = np.sort(np.concatenate(batches)) if batches else np.empty(0)
     centres = rng.uniform(0, box_size, (len(births), 3))
+    return Catalogue(box_size, wall_speed, births, centres, len(births))
+
+
+def exclude_converted_births(candidates):
+    """Brute-force causal exclusion; preserve the supplied candidate event order."""
+    box_size, wall_speed = candidates.box_size, candidates.wall_speed
     accepted_t, accepted_x = [], []
-    for birth, centre in zip(births, centres):
+    for birth, centre in zip(candidates.times, candidates.positions):
         if accepted_t:
             delta = np.abs(np.asarray(accepted_x) - centre)
             delta = np.minimum(delta, box_size - delta)
@@ -120,7 +126,12 @@ def sample_catalogue(tau, q, box_size, wall_speed, seed, max_candidates=1_000_00
                 continue
         accepted_t.append(birth)
         accepted_x.append(centre)
-    return Catalogue(box_size, wall_speed, np.asarray(accepted_t), np.asarray(accepted_x).reshape(-1, 3), len(births))
+    return Catalogue(box_size, wall_speed, np.asarray(accepted_t), np.asarray(accepted_x).reshape(-1, 3), len(candidates.times))
+
+
+def sample_catalogue(tau, q, box_size, wall_speed, seed, max_candidates=1_000_000):
+    """Sample candidates with q, then reject births in previously converted space."""
+    return exclude_converted_births(sample_candidates(tau,q,box_size,wall_speed,seed,max_candidates))
 
 
 @dataclass(frozen=True)

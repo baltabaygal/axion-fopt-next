@@ -3,8 +3,31 @@
 This workspace investigates stochastic bubble nucleation, false-vacuum
 exclusion, periodic growth and arrival maps before coupling catalogues to
 field evolution. The homogeneous and centered-bubble checks remain separate
-reference cases. This folder starts with a validation plan; no new stochastic
-ensemble or coupled field run has been performed here yet.
+reference cases. The first geometry-only ensembles are implemented in
+[run_survival.py](run_survival.py), with analytic F(t) as the primary observable.
+See [EXPERIMENT.md](EXPERIMENT.md) for the predeclared parameters and acceptance
+criteria, and [results/README.md](results/README.md) for recorded findings.
+No coupled stochastic field evolution has been performed here.
+
+The warm-JIT tracer timing baseline is in
+[benchmark_tracers.py](benchmark_tracers.py), with predeclared parameters in
+[SCALING_EXPERIMENT.md](SCALING_EXPERIMENT.md) and measured phase/memory results
+in [results/tracer_scaling/README.md](results/tracer_scaling/README.md).
+It varies tracer population and box volume without changing the paper kernel.
+
+```sh
+MPLCONFIGDIR=/tmp/afopt-mpl python3 checks/stochastic/benchmark_tracers.py \
+  --output outputs/stochastic/tracer-scaling-new
+MPLCONFIGDIR=/tmp/afopt-mpl python3 checks/stochastic/benchmark_tracers.py \
+  --density-match-only --output outputs/stochastic/tracer-density-new
+```
+
+The Hubble-rate scan is in [run_hubble.py](run_hubble.py), with its predeclared
+contract in [HUBBLE_EXPERIMENT.md](HUBBLE_EXPERIMENT.md) and recorded results
+in [results/hubble/README.md](results/hubble/README.md). It compares fixed
+beta/H* scale covariance and fixed-beta changes to the transition shape.
+Run with `MPLCONFIGDIR=/tmp/afopt-mpl python3 checks/stochastic/run_hubble.py
+--output outputs/stochastic/hubble-new`, using a fresh output directory.
 
 ## Existing implementation
 
@@ -58,9 +81,9 @@ convergence therefore need their own checks. See [physics.md](../../docs/physics
 2. **Exclusion and periodic geometry.** Check causal accepted births, wraparound,
    first arrival and monotonic converted volume. For common speed, compare the
    accepted catalogue's conversion with all candidate bubbles (phantom
-   equivalence). Capturing rejected candidate events will require a diagnostic
-   interface; the current public sampler returns only accepted bubbles and the
-   candidate count.
+   equivalence). `sample_candidates` now exposes all attempted events, and
+   `exclude_converted_births` applies the original brute-force rejection to those
+   same events. `sample_catalogue` retains its existing seeded behavior.
 3. **Static ensemble benchmark.** Revisit constant q with independent realizations
    and controlled geometry/probe error. In the regime R_max<L/2, compare against
 
@@ -90,8 +113,28 @@ convergence therefore need their own checks. See [physics.md](../../docs/physics
 
 The first new experiment should be a small geometry-only benchmark with a
 fully specified rate, box, speed, time window and seed ensemble. Record its
-acceptance criteria before examining its results. We have not chosen a new
-physical parameter set or launched this experiment yet.
+acceptance criteria before examining its results. The first experiment uses a
+static control and a radiation-era beta/H*=1 diagnostic; it is not the full
+paper Fig. 1 scan.
+
+## Run the initial comparison
+
+Requires the project, SciPy, Matplotlib and Numba. The paper source is read from
+the existing local checkout by default and verified against its pinned Git blob;
+use `--paper-source` to provide that exact file elsewhere. Only four bubble and
+tracer declarations are loaded, with JIT disk caching disabled. The original
+field module is never imported and its files are not modified. Outer timesteps
+are imposed by the geometry-only driver, rather than its field CFL controller.
+
+```sh
+PYTHONPATH=src MPLCONFIGDIR=/tmp/afopt-mpl python3 checks/stochastic/run_survival.py \
+  --output outputs/stochastic/survival-new
+```
+
+Use a fresh output directory. Each case runs 24 realizations, two Poisson rate
+grids and three tracer configurations. Both the internal tracer fraction and
+independent geometric F are retained. The source snapshot, catalogues, seed
+information, rates, reference curves, ensemble errors and checks are saved.
 
 ## Evidence and outputs
 
