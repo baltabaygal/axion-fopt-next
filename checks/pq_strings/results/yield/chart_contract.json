@@ -1,0 +1,18 @@
+{
+  "surface": "standalone scientific PNG/PDF",
+  "question": "Can the current estimator and grids support a paper comparison?",
+  "panels": [
+    "early diagnostic yield line (13 snapshots each, no extrapolation)",
+    "finite-box spectrum lines and unavailable IR range",
+    "evolved-wave analytic normalization error lines",
+    "necessary grid bound bars by mass-growth law"
+  ],
+  "warning": "Early diagnostics are not relic yields. Bar bounds depend on stated resolution criteria.",
+  "palette": "blue/neutral controls; orange alternate model indices",
+  "source_paths": {
+    "audit": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/yield-audit-final",
+    "feasibility": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/feasibility-01",
+    "wave": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/yield-wave-validation-01",
+    "preparation": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/preparation-volume-01"
+  }
+}

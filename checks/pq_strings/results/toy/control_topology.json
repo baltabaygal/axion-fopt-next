@@ -1,0 +1,149 @@
+[
+  {
+    "tau": 40.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 5.509641873278236,
+    "theta_max": 3.0968147151548306
+  },
+  {
+    "tau": 42.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 5.785123966942147,
+    "theta_max": 3.097648235002851
+  },
+  {
+    "tau": 44.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 6.06060606060606,
+    "theta_max": 3.09638690171493
+  },
+  {
+    "tau": 46.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 5.797101449275363,
+    "theta_max": 3.087303555363809
+  },
+  {
+    "tau": 48.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 5.555555555555555,
+    "theta_max": 3.0756500555728334
+  },
+  {
+    "tau": 50.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 5.333333333333333,
+    "theta_max": 3.089606784128338
+  },
+  {
+    "tau": 52.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 5.1282051282051295,
+    "theta_max": 3.1179625914685403
+  },
+  {
+    "tau": 54.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.938271604938272,
+    "theta_max": 3.1205286721226297
+  },
+  {
+    "tau": 56.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.761904761904763,
+    "theta_max": 3.08437197903821
+  },
+  {
+    "tau": 58.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.597701149425287,
+    "theta_max": 3.0720110927879856
+  },
+  {
+    "tau": 60.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.444444444444444,
+    "theta_max": 3.0877462489342866
+  },
+  {
+    "tau": 62.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.301075268817203,
+    "theta_max": 3.09684284680423
+  },
+  {
+    "tau": 64.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.166666666666666,
+    "theta_max": 3.0981454775778916
+  },
+  {
+    "tau": 66.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 4.04040404040404,
+    "theta_max": 3.099780364439698
+  },
+  {
+    "tau": 68.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.9215686274509802,
+    "theta_max": 3.1012085782648495
+  },
+  {
+    "tau": 70.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.8095238095238093,
+    "theta_max": 3.0931133249901217
+  },
+  {
+    "tau": 72.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.7037037037037033,
+    "theta_max": 3.0844779683324535
+  },
+  {
+    "tau": 74.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.6036036036036028,
+    "theta_max": 3.0900394859041542
+  },
+  {
+    "tau": 76.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.508771929824561,
+    "theta_max": 3.101515946322436
+  },
+  {
+    "tau": 78.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.418803418803418,
+    "theta_max": 3.107630309269734
+  },
+  {
+    "tau": 80.0,
+    "plaquettes": 256,
+    "walls": 4096,
+    "core_cells": 3.333333333333332,
+    "theta_max": 3.093098434638845
+  }
+]

@@ -1,0 +1,414 @@
+{
+  "status": "passed",
+  "parameters": {
+    "h": 0.05,
+    "beta": 0.2,
+    "v": 0.15,
+    "theta_i": 2.0,
+    "physical_box": 25.132741228718345,
+    "n": 128,
+    "wall_width": 0.0,
+    "seed": 0,
+    "tracers": 100000
+  },
+  "coordinate_gauge": {
+    "c": 0.5,
+    "program_box": 12.566370614359172,
+    "physical_tau_initial": 10.0,
+    "physical_t_initial": 2.5,
+    "program_tau_initial": 5.0,
+    "native_H0": 0.2
+  },
+  "runs": [
+    {
+      "name": "N128_dt0.005",
+      "n": 128,
+      "dt": 0.005,
+      "physical_dtau": 0.01,
+      "seconds": 51.40808033302892,
+      "steps": 5325,
+      "final_energy": 0.038128167145932146,
+      "peak_energy": 0.08317396331391828,
+      "peak_time": 59.78025,
+      "timings": {
+        "initialization_seconds": 0.079755167,
+        "evolution_seconds": 45.64926827999986,
+        "diagnostics_seconds": 5.582566412,
+        "snapshots_seconds": 0.041529375,
+        "mass_update_seconds": 3.184615173999991,
+        "total_seconds": 51.353627042
+      }
+    },
+    {
+      "name": "N64_dt0.005",
+      "n": 64,
+      "dt": 0.005,
+      "physical_dtau": 0.01,
+      "seconds": 11.870581249997485,
+      "steps": 5325,
+      "final_energy": 0.040490244100021534,
+      "peak_energy": 0.08945421651345664,
+      "peak_time": 59.78025,
+      "timings": {
+        "initialization_seconds": 0.010442084,
+        "evolution_seconds": 11.088090437000009,
+        "diagnostics_seconds": 0.7059604180000008,
+        "snapshots_seconds": 0.009357542,
+        "mass_update_seconds": 0.4055231860000018,
+        "total_seconds": 11.814127584
+      }
+    },
+    {
+      "name": "N64_dt0.0025",
+      "n": 64,
+      "dt": 0.0025,
+      "physical_dtau": 0.005,
+      "seconds": 22.874201250029728,
+      "steps": 10650,
+      "final_energy": 0.04048742343020559,
+      "peak_energy": 0.08944681450058319,
+      "peak_time": 59.78025,
+      "timings": {
+        "initialization_seconds": 0.011177708,
+        "evolution_seconds": 22.111375251000016,
+        "diagnostics_seconds": 0.7039758720000008,
+        "snapshots_seconds": 0.009227959,
+        "mass_update_seconds": 0.7695867880000007,
+        "total_seconds": 22.836151542
+      }
+    }
+  ],
+  "gates": [
+    {
+      "name": "N128_dt0.005/scale",
+      "value": 8.881784197001252e-16,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/initial.bin/kinetic_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/initial.bin/gradient_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/initial.bin/potential_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/initial.bin/total_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/checkpoint.bin/kinetic_mean",
+      "value": 1.0547118733938987e-15,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/checkpoint.bin/gradient_mean",
+      "value": 4.926614671774132e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/checkpoint.bin/potential_mean",
+      "value": 8.881784197001252e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/checkpoint.bin/total_mean",
+      "value": 3.3306690738754696e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/final.bin/kinetic_mean",
+      "value": 4.40619762898109e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/final.bin/gradient_mean",
+      "value": 1.0668549377257364e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/final.bin/potential_mean",
+      "value": 4.649058915617843e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N128_dt0.005/final.bin/total_mean",
+      "value": 1.249000902703301e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/scale",
+      "value": 8.881784197001252e-16,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/kinetic_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/gradient_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/potential_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/total_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/kinetic_mean",
+      "value": 3.469446951953614e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/gradient_mean",
+      "value": 8.673617379884035e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/potential_mean",
+      "value": 1.1102230246251565e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/total_mean",
+      "value": 3.7470027081099033e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/kinetic_mean",
+      "value": 5.204170427930421e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/gradient_mean",
+      "value": 1.2923689896027213e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/potential_mean",
+      "value": 9.367506770274758e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/total_mean",
+      "value": 9.020562075079397e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/scale",
+      "value": 1.3322676295501878e-15,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/kinetic_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/gradient_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/potential_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/total_mean",
+      "value": 0.0,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/kinetic_mean",
+      "value": 2.0816681711721685e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/gradient_mean",
+      "value": 1.4224732503009818e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/potential_mean",
+      "value": 2.0816681711721685e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/total_mean",
+      "value": 3.885780586188048e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/kinetic_mean",
+      "value": 1.5265566588595902e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/gradient_mean",
+      "value": 5.984795992119984e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/potential_mean",
+      "value": 1.4224732503009818e-16,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/total_mean",
+      "value": 6.938893903907228e-17,
+      "limit": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "N64/timestep_final_energy",
+      "value": 6.966780241790538e-05,
+      "limit": 0.01,
+      "passed": true
+    }
+  ],
+  "catalogue": {
+    "seconds": 5.186610457953066,
+    "bubbles": 18844,
+    "first_birth": 15.579999923706055,
+    "last_birth": 50.130001068115234,
+    "seed": 0,
+    "tracers": 100000,
+    "dt": 0.01,
+    "source": {
+      "commit": "1b67fecf3d40b707a9dd6f4c2eabefc8f9bb3f1b",
+      "git_blob": "ace7473a90f2a88f4e4c5121e6345b86b16a24e3",
+      "sha256": "6f40c88312c58cdd0cc4277e9cc8fa4b4340efdcba633b6b23a6fd64ee0294b4",
+      "source_path": "/Users/baltabay/Desktop/miniclusters/axion-fopt/sim_core/axion_sim.py",
+      "numba": "0.65.1",
+      "jit_disk_cache": false
+    }
+  },
+  "projection": {
+    "seconds": 0.7448641669470817,
+    "N8_max_error": 0.0,
+    "N128_spot_error": 0.0
+  },
+  "spatial_final_energy_relative_change": 0.058336940331958465,
+  "timestep_max_absolute_energy_change": 7.4799931367580674e-06,
+  "no_FOPT_final_energy": 0.002193569011478329,
+  "executable_sha256": "7b0ee669f6dddc778c0d3ea1bad615c07863f74850d6a7791ff80bebb30dff6f",
+  "source_sha256": {
+    "checks/stochastic/run_paper_figure2.py": "cd5099df6e76c129778b90194ebb2c020b81a9341707fc0cceb175c0cf71854b",
+    "checks/stochastic/PAPER_FIGURE2.md": "101ae859313b49badb60609d7f9fe9afe418a9f13700de9c17b2fb993db5a789",
+    "checks/stochastic/arrival_projection.py": "47663d0a96019bfa363bcac66182fed5bf59502c9f07485b655b699454641265",
+    "checks/stochastic/spatial_engulfment.py": "adec691e2718b467988c9ebbdac6252a30a7a08d392e09eb61757f7ea6047a39",
+    "checks/stochastic/tracer_reference.py": "ec4889afbd573eeae29347421f053e2788f770bda0ca4d5b06690c8dd870f016",
+    "checks/stochastic/plot_energy.py": "f6d4d582893ec55ef1cc69b636b7f11da6168ef42acaba6065159f74921e440e",
+    "adapters/cosmolattice/evolve.cpp": "05eb549bfe6115ab871f41e6cd39e4cbe5960bf708691089769e81148fb1e572",
+    "adapters/cosmolattice/axion_fopt.h": "fd40a72f00d3207d809ea78344224dd8ae479fce8f3c2dcbece60c5b19a4f529"
+  },
+  "limits": "Fig.2 physical parameters matched. New seed realization and solver; same published-model tracers with fixed dtau=.01; not bitwise replay of original paper. Finite tracer population and spatial convergence remain diagnostics."
+}

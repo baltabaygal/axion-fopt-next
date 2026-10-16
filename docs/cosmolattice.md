@@ -57,6 +57,13 @@ momentum, arrival time and mass squared), and `parameters.txt`. CSV is a small
 prototype output format, not a production snapshot format. For production
 runs, replace it with scalable snapshots and observables.
 
+For animation frames, `snapshot_every=<positive step count>` writes numbered
+`frame_0000000.bin` (or CSV) snapshots at that step cadence, including step zero.
+The default `snapshot_every=0` disables them. This is independent of the
+history cadence; snapshots synchronize the state at the recorded time. Initial
+and final snapshots remain available, and `snapshot_at` still provides a single
+checkpoint. Prefer binary frames and a modest grid to bound storage.
+
 ## Units and initial data
 
 Set alpha=1, fStar=f_axion. The evolved scalar is theta=phi/f_axion and
@@ -166,7 +173,13 @@ wall and Fourier particle-number measurements, see
 parameters `potential=quadratic`, `wall_width>0` and `profile_wall_speed`
 implement that equation. Defaults remain `potential=cosine` and `wall_width=0`
 for existing runs. `energy_diagnostics=true` adds kinetic/gradient/total/inside
-energy and external-power columns, and currently requires no expansion.
+energy and external-power columns. These also support fixed expansion:
+kinetic energy uses pi^2/(2 a^6), gradient energy uses the periodic forward
+stencil divided by 2 a^2, and potential energy is the local mass times the
+potential shape. Energies are normalized to f_axion^2*omega_star^2. The external
+power is an explicit derivative with respect to program conformal time; it
+does not include Hubble dilution or delta-function impulses from a sharp
+mass switch. Ordinary energy conservation is not a check for these runs.
 
 `snapshot_format=binary` selects AFST0001 state snapshots: 8-byte magic,
 little-endian uint32 N, float64 program box length, program time and scale

@@ -1,0 +1,1427 @@
+{
+  "validation": {
+    "gates": {
+      "force_difference": 2e-07,
+      "vacuum_mass_error": 2e-06,
+      "final_ode_error": 0.0002,
+      "refinement_ratio": 3.5,
+      "transfer_error": 0.0,
+      "energy_snapshot_error": 2e-12,
+      "energy_balance_relative": 0.0002
+    },
+    "checks": {
+      "force_difference": true,
+      "origin_limit": true,
+      "vacuum_masses": true,
+      "known_winding": true,
+      "homogeneous_static_0.005_transfer": true,
+      "homogeneous_static_0.005_time": true,
+      "homogeneous_static_0.005_energy": true,
+      "homogeneous_static_0.005_balance": true,
+      "homogeneous_static_0.0025_transfer": true,
+      "homogeneous_static_0.0025_time": true,
+      "homogeneous_static_0.0025_energy": true,
+      "homogeneous_static_0.0025_balance": true,
+      "homogeneous_static_ode": true,
+      "homogeneous_static_refinement": true,
+      "inhomogeneous_static_0.005_transfer": true,
+      "inhomogeneous_static_0.005_time": true,
+      "inhomogeneous_static_0.005_energy": true,
+      "inhomogeneous_static_0.005_balance": true,
+      "inhomogeneous_static_0.0025_transfer": true,
+      "inhomogeneous_static_0.0025_time": true,
+      "inhomogeneous_static_0.0025_energy": true,
+      "inhomogeneous_static_0.0025_balance": true,
+      "inhomogeneous_static_ode": true,
+      "inhomogeneous_static_refinement": true,
+      "inhomogeneous_radiation_0.005_transfer": true,
+      "inhomogeneous_radiation_0.005_time": true,
+      "inhomogeneous_radiation_0.005_energy": true,
+      "inhomogeneous_radiation_0.005_balance": true,
+      "inhomogeneous_radiation_0.0025_transfer": true,
+      "inhomogeneous_radiation_0.0025_time": true,
+      "inhomogeneous_radiation_0.0025_energy": true,
+      "inhomogeneous_radiation_0.0025_balance": true,
+      "inhomogeneous_radiation_ode": true,
+      "inhomogeneous_radiation_refinement": true,
+      "reject_nonfinite": true,
+      "reject_fractional_grid": true,
+      "reject_wrong_background": true
+    },
+    "details": {
+      "force_difference": 1.4439178741554315e-09,
+      "vacuum_mass_error": 1.2000400673173317e-12,
+      "known_winding": {
+        "plaquettes": 64,
+        "wall_links": 256,
+        "signed_winding": [
+          0,
+          0,
+          0
+        ],
+        "string_length_estimate": 21.333333333333332,
+        "wall_area_estimate": 42.666666666666664,
+        "zeta": 1.0416666666666665,
+        "A_dw": 0.41666666666666663
+      },
+      "homogeneous_static_0.005": {
+        "final_ode_error": 1.7360257689030822e-07,
+        "energy_error": 3.0357660829594124e-18,
+        "balance_relative": 1.1537054930152288e-06
+      },
+      "homogeneous_static_0.0025": {
+        "final_ode_error": 4.3400493934808715e-08,
+        "energy_error": 2.3852447794681098e-17,
+        "balance_relative": 2.8842402424412614e-07
+      },
+      "homogeneous_static_ratio": 4.000013851249579,
+      "inhomogeneous_static_0.005": {
+        "final_ode_error": 1.714178312946582e-05,
+        "energy_error": 2.220446049250313e-16,
+        "balance_relative": 1.0107957960534857e-05
+      },
+      "inhomogeneous_static_0.0025": {
+        "final_ode_error": 4.285247177012071e-06,
+        "energy_error": 1.1102230246251565e-16,
+        "balance_relative": 2.52698297948387e-06
+      },
+      "inhomogeneous_static_ratio": 4.000185385202935,
+      "inhomogeneous_radiation_0.005": {
+        "final_ode_error": 5.618813487373586e-05,
+        "energy_error": 5.204170427930421e-18,
+        "balance_relative": 2.498428536289278e-05
+      },
+      "inhomogeneous_radiation_0.0025": {
+        "final_ode_error": 1.4046266898493087e-05,
+        "energy_error": 6.938893903907228e-18,
+        "balance_relative": 6.245942150982032e-06
+      },
+      "inhomogeneous_radiation_ratio": 4.000218369748039
+    },
+    "passed": true,
+    "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677"
+  },
+  "experiments": {
+    "pilot-final": {
+      "suite": "pilot",
+      "contract": {
+        "model": "arXiv:2609.20801v1 Eq.3; two real canonical fields; f_a=1",
+        "background": "radiation a=tau/20, pi=a^2*F_prime",
+        "lambda_": 0.08,
+        "tau_origin": 20.0,
+        "tau_star": 27.0,
+        "n_tau": 8.0,
+        "preparation": "random Gaussian ell=2.5, seed=0, E[|Phi|^2]=1; static chi=0 diffusion time 2",
+        "simplification": "no core-growth stage; short finite-box evolution; no scaling or abundance inference",
+        "gates": {
+          "minimum_core_cells": 4.0,
+          "minimum_wall_cells": 4.0,
+          "maximum_ma_ms": 0.16,
+          "exact_initial_transfer": true,
+          "snapshot_energy_error": 2e-12,
+          "balance_relative": 0.003,
+          "temporal_field_rms": 0.001,
+          "spatial_field_rms": 0.05,
+          "cooling_energy_increase": 1e-12
+        }
+      },
+      "provenance": {
+        "python": "3.13.15",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677",
+        "sources": {
+          "checks/pq_strings/AGENTS.md": "0051c6599fe4627599a4d46f0b5cb8d0f90d17b5ba49fa052ee37d0112a6ccb5",
+          "checks/pq_strings/CMakeLists.txt": "d5ced0c3289db42b2c49e22b424862a09df75adedd9eabdccb40d739352dba34",
+          "checks/pq_strings/README.md": "e19775722ef9f4c076f78edc5701f22b79387f0fee8676611b2727b174cea801",
+          "checks/pq_strings/evolve.cpp": "9f858c8f08de1d2f545c517c03b67aa9d6934604b9448e8bd0067bba5ad35fe1",
+          "checks/pq_strings/model.py": "b2671d9995d00acc148fdbbbb897da4dc4300298baafe389a65302a953031b6c",
+          "checks/pq_strings/plot.py": "bb0ddc6af245b34f412c815577a4cb535606678da84215564920f835ad6ef87a",
+          "checks/pq_strings/pq_model.h": "46cd2daea95f532a0868e998b4f5b8af46c2151c11d12f96cefcf0a091a52566",
+          "checks/pq_strings/run_demo.py": "adeb1d954f3adc62c5109b3f96e8978a995d648a2d3f845f5a89ce989b280f9b",
+          "checks/pq_strings/validate.py": "d4aabdfa4817a4ad2f5f42f1564535cfb6315e56d1268dc4507a5aea19702146"
+        },
+        "build": {
+          "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+          "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+          "kokkos": "5.1.1",
+          "compiler": "AppleClang 21.0.0.21000334",
+          "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+        }
+      },
+      "comparisons": {
+        "temporal_field_rms": 2.6589051116916893e-06,
+        "temporal_passed": true,
+        "cooling_passed": true
+      },
+      "passed": true
+    },
+    "refinement-final": {
+      "suite": "refinement",
+      "contract": {
+        "model": "arXiv:2609.20801v1 Eq.3; two real canonical fields; f_a=1",
+        "background": "radiation a=tau/20, pi=a^2*F_prime",
+        "lambda_": 0.08,
+        "tau_origin": 20.0,
+        "tau_star": 27.0,
+        "n_tau": 8.0,
+        "preparation": "random Gaussian ell=2.5, seed=0, E[|Phi|^2]=1; static chi=0 diffusion time 2",
+        "simplification": "no core-growth stage; short finite-box evolution; no scaling or abundance inference",
+        "gates": {
+          "minimum_core_cells": 4.0,
+          "minimum_wall_cells": 4.0,
+          "maximum_ma_ms": 0.16,
+          "exact_initial_transfer": true,
+          "snapshot_energy_error": 2e-12,
+          "balance_relative": 0.003,
+          "temporal_field_rms": 0.001,
+          "spatial_field_rms": 0.05,
+          "cooling_energy_increase": 1e-12
+        }
+      },
+      "provenance": {
+        "python": "3.13.15",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677",
+        "sources": {
+          "checks/pq_strings/AGENTS.md": "0051c6599fe4627599a4d46f0b5cb8d0f90d17b5ba49fa052ee37d0112a6ccb5",
+          "checks/pq_strings/CMakeLists.txt": "d5ced0c3289db42b2c49e22b424862a09df75adedd9eabdccb40d739352dba34",
+          "checks/pq_strings/README.md": "e19775722ef9f4c076f78edc5701f22b79387f0fee8676611b2727b174cea801",
+          "checks/pq_strings/evolve.cpp": "9f858c8f08de1d2f545c517c03b67aa9d6934604b9448e8bd0067bba5ad35fe1",
+          "checks/pq_strings/model.py": "b2671d9995d00acc148fdbbbb897da4dc4300298baafe389a65302a953031b6c",
+          "checks/pq_strings/plot.py": "bb0ddc6af245b34f412c815577a4cb535606678da84215564920f835ad6ef87a",
+          "checks/pq_strings/pq_model.h": "46cd2daea95f532a0868e998b4f5b8af46c2151c11d12f96cefcf0a091a52566",
+          "checks/pq_strings/run_demo.py": "adeb1d954f3adc62c5109b3f96e8978a995d648a2d3f845f5a89ce989b280f9b",
+          "checks/pq_strings/validate.py": "d4aabdfa4817a4ad2f5f42f1564535cfb6315e56d1268dc4507a5aea19702146"
+        },
+        "build": {
+          "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+          "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+          "kokkos": "5.1.1",
+          "compiler": "AppleClang 21.0.0.21000334",
+          "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+        }
+      },
+      "comparisons": {
+        "temporal_field_rms": 2.54021596920526e-06,
+        "temporal_passed": true
+      },
+      "passed": true
+    },
+    "matched-final": {
+      "suite": "matched",
+      "contract": {
+        "model": "arXiv:2609.20801v1 Eq.3; two real canonical fields; f_a=1",
+        "background": "radiation a=tau/20, pi=a^2*F_prime",
+        "lambda_": 0.08,
+        "tau_origin": 20.0,
+        "tau_star": 27.0,
+        "n_tau": 8.0,
+        "preparation": "random Gaussian ell=2.5, seed=0, E[|Phi|^2]=1; static chi=0 diffusion time 2",
+        "simplification": "no core-growth stage; short finite-box evolution; no scaling or abundance inference",
+        "gates": {
+          "minimum_core_cells": 4.0,
+          "minimum_wall_cells": 4.0,
+          "maximum_ma_ms": 0.16,
+          "exact_initial_transfer": true,
+          "snapshot_energy_error": 2e-12,
+          "balance_relative": 0.003,
+          "temporal_field_rms": 0.001,
+          "spatial_field_rms": 0.05,
+          "cooling_energy_increase": 1e-12
+        }
+      },
+      "provenance": {
+        "python": "3.13.15",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677",
+        "sources": {
+          "checks/pq_strings/AGENTS.md": "0051c6599fe4627599a4d46f0b5cb8d0f90d17b5ba49fa052ee37d0112a6ccb5",
+          "checks/pq_strings/CMakeLists.txt": "d5ced0c3289db42b2c49e22b424862a09df75adedd9eabdccb40d739352dba34",
+          "checks/pq_strings/README.md": "e19775722ef9f4c076f78edc5701f22b79387f0fee8676611b2727b174cea801",
+          "checks/pq_strings/evolve.cpp": "9f858c8f08de1d2f545c517c03b67aa9d6934604b9448e8bd0067bba5ad35fe1",
+          "checks/pq_strings/model.py": "b2671d9995d00acc148fdbbbb897da4dc4300298baafe389a65302a953031b6c",
+          "checks/pq_strings/plot.py": "bb0ddc6af245b34f412c815577a4cb535606678da84215564920f835ad6ef87a",
+          "checks/pq_strings/pq_model.h": "46cd2daea95f532a0868e998b4f5b8af46c2151c11d12f96cefcf0a091a52566",
+          "checks/pq_strings/run_demo.py": "adeb1d954f3adc62c5109b3f96e8978a995d648a2d3f845f5a89ce989b280f9b",
+          "checks/pq_strings/validate.py": "d4aabdfa4817a4ad2f5f42f1564535cfb6315e56d1268dc4507a5aea19702146"
+        },
+        "build": {
+          "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+          "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+          "kokkos": "5.1.1",
+          "compiler": "AppleClang 21.0.0.21000334",
+          "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+        }
+      },
+      "comparisons": {
+        "initial_matching": "N32 cell averages of frozen cooled N64 initial state, L=12",
+        "spatial_field_rms": 0.0006770335712270661,
+        "spatial_passed": true
+      },
+      "passed": true
+    },
+    "collapse-final": {
+      "suite": "collapse",
+      "contract": {
+        "model": "arXiv:2609.20801v1 Eq.3; two real canonical fields; f_a=1",
+        "background": "radiation a=tau/20, pi=a^2*F_prime",
+        "lambda_": 0.08,
+        "tau_origin": 20.0,
+        "tau_star": 27.0,
+        "n_tau": 8.0,
+        "preparation": "random Gaussian ell=2.5, seed=0, E[|Phi|^2]=1; static chi=0 diffusion time 2",
+        "simplification": "no core-growth stage; short finite-box evolution; no scaling or abundance inference",
+        "gates": {
+          "minimum_core_cells": 4.0,
+          "minimum_wall_cells": 4.0,
+          "maximum_ma_ms": 0.16,
+          "exact_initial_transfer": true,
+          "snapshot_energy_error": 2e-12,
+          "balance_relative": 0.003,
+          "temporal_field_rms": 0.001,
+          "spatial_field_rms": 0.05,
+          "cooling_energy_increase": 1e-12
+        }
+      },
+      "provenance": {
+        "python": "3.13.15",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677",
+        "sources": {
+          "checks/pq_strings/AGENTS.md": "0051c6599fe4627599a4d46f0b5cb8d0f90d17b5ba49fa052ee37d0112a6ccb5",
+          "checks/pq_strings/CMakeLists.txt": "d5ced0c3289db42b2c49e22b424862a09df75adedd9eabdccb40d739352dba34",
+          "checks/pq_strings/README.md": "e19775722ef9f4c076f78edc5701f22b79387f0fee8676611b2727b174cea801",
+          "checks/pq_strings/evolve.cpp": "9f858c8f08de1d2f545c517c03b67aa9d6934604b9448e8bd0067bba5ad35fe1",
+          "checks/pq_strings/model.py": "05e729b89fb2ba1219d2fac25ceb191eb5e4993f53ed3c212f79651ab510d3b7",
+          "checks/pq_strings/plot.py": "bb0ddc6af245b34f412c815577a4cb535606678da84215564920f835ad6ef87a",
+          "checks/pq_strings/pq_model.h": "46cd2daea95f532a0868e998b4f5b8af46c2151c11d12f96cefcf0a091a52566",
+          "checks/pq_strings/run_demo.py": "92089b7f8cf5c568f612f8a6043d34e11c055fb0590617b59d159c25f774afb7",
+          "checks/pq_strings/validate.py": "bca8607d6ced899440c003260c2afadb4a9d66f3b1f152e8663f679eb4516b8f"
+        },
+        "build": {
+          "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+          "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+          "kokkos": "5.1.1",
+          "compiler": "AppleClang 21.0.0.21000334",
+          "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+        }
+      },
+      "comparisons": {
+        "initial_definition": "Four neutral analytic straight strings; X=cos(2pi*x/L)+0.5, Y=sin(2pi*y/L), tanh modulus core=2.5, L=12",
+        "spatial_field_rms": 0.0004678031064770194,
+        "spatial_passed": true
+      },
+      "passed": true
+    },
+    "network-final": {
+      "suite": "network",
+      "contract": {
+        "model": "arXiv:2609.20801v1 Eq.3; two real canonical fields; f_a=1",
+        "background": "radiation a=tau/20, pi=a^2*F_prime",
+        "lambda_": 0.08,
+        "tau_origin": 20.0,
+        "tau_star": 27.0,
+        "n_tau": 8.0,
+        "preparation": "random Gaussian ell=2.5, seed=0, E[|Phi|^2]=1; static chi=0 diffusion time 2",
+        "simplification": "no core-growth stage; short finite-box evolution; no scaling or abundance inference",
+        "gates": {
+          "minimum_core_cells": 4.0,
+          "minimum_wall_cells": 4.0,
+          "maximum_ma_ms": 0.16,
+          "exact_initial_transfer": true,
+          "snapshot_energy_error": 2e-12,
+          "balance_relative": 0.003,
+          "temporal_field_rms": 0.001,
+          "spatial_field_rms": 0.05,
+          "cooling_energy_increase": 1e-12
+        }
+      },
+      "provenance": {
+        "python": "3.13.15",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677",
+        "sources": {
+          "checks/pq_strings/AGENTS.md": "0051c6599fe4627599a4d46f0b5cb8d0f90d17b5ba49fa052ee37d0112a6ccb5",
+          "checks/pq_strings/CMakeLists.txt": "d5ced0c3289db42b2c49e22b424862a09df75adedd9eabdccb40d739352dba34",
+          "checks/pq_strings/README.md": "e19775722ef9f4c076f78edc5701f22b79387f0fee8676611b2727b174cea801",
+          "checks/pq_strings/evolve.cpp": "9f858c8f08de1d2f545c517c03b67aa9d6934604b9448e8bd0067bba5ad35fe1",
+          "checks/pq_strings/model.py": "b2671d9995d00acc148fdbbbb897da4dc4300298baafe389a65302a953031b6c",
+          "checks/pq_strings/plot.py": "bb0ddc6af245b34f412c815577a4cb535606678da84215564920f835ad6ef87a",
+          "checks/pq_strings/pq_model.h": "46cd2daea95f532a0868e998b4f5b8af46c2151c11d12f96cefcf0a091a52566",
+          "checks/pq_strings/run_demo.py": "adeb1d954f3adc62c5109b3f96e8978a995d648a2d3f845f5a89ce989b280f9b",
+          "checks/pq_strings/validate.py": "d4aabdfa4817a4ad2f5f42f1564535cfb6315e56d1268dc4507a5aea19702146"
+        },
+        "build": {
+          "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+          "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+          "kokkos": "5.1.1",
+          "compiler": "AppleClang 21.0.0.21000334",
+          "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+        }
+      },
+      "comparisons": {
+        "cooling_passed": true,
+        "temporal_field_rms": 5.166323041304945e-06,
+        "temporal_passed": true
+      },
+      "passed": true
+    }
+  },
+  "runs": {
+    "pilot-final": {
+      "deterministic_growing": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/deterministic_growing/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/deterministic_growing/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": 86.9530014032045,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 1.0643049551564935e-05,
+        "snapshot_energy_error": 1.0921819004749977e-14,
+        "initial_defects": {
+          "plaquettes": 128,
+          "wall_links": 1024,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.5555555555555556
+        },
+        "final_defects": {
+          "plaquettes": 128,
+          "wall_links": 1024,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 3.1296296296296298,
+          "A_dw": 0.7222222222222222
+        },
+        "final_energy": 0.03232638002419752,
+        "elapsed_seconds": 0.14786558301420882
+      },
+      "deterministic_massless": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/deterministic_massless/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/deterministic_massless/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": null,
+        "maximum_ma_ms": 0.0,
+        "energy_balance_relative": 1.0987405177172995e-05,
+        "snapshot_energy_error": 1.0921819004749977e-14,
+        "initial_defects": {
+          "plaquettes": 128,
+          "wall_links": 1024,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.5555555555555556
+        },
+        "final_defects": {
+          "plaquettes": 128,
+          "wall_links": 1024,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 3.1296296296296298,
+          "A_dw": 0.7222222222222222
+        },
+        "final_energy": 0.03226591366332382,
+        "elapsed_seconds": 0.1520217499928549
+      },
+      "deterministic_fine_dt": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.01,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 10,
+          "snapshot_every": 50,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/deterministic_fine_dt/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/deterministic_fine_dt/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": 86.9530014032045,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 2.1293260797878236e-06,
+        "snapshot_energy_error": 1.0921819004749977e-14,
+        "initial_defects": {
+          "plaquettes": 128,
+          "wall_links": 1024,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.5555555555555556
+        },
+        "final_defects": {
+          "plaquettes": 128,
+          "wall_links": 1024,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 3.1296296296296298,
+          "A_dw": 0.7222222222222222
+        },
+        "final_energy": 0.03232629180414347,
+        "elapsed_seconds": 0.22022037504939362
+      },
+      "network_growing": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/network_growing/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/network_growing/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": 86.9530014032045,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 3.2439938828021386e-05,
+        "snapshot_energy_error": 2.498001805406602e-16,
+        "initial_defects": {
+          "plaquettes": 198,
+          "wall_links": 766,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 49.5,
+          "wall_area_estimate": 71.8125,
+          "zeta": 2.8645833333333335,
+          "A_dw": 0.4155815972222222
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.024978364880069128,
+        "elapsed_seconds": 0.1787210420006886
+      },
+      "network_massless": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/network_massless/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/pilot-final/network_massless/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": null,
+        "maximum_ma_ms": 0.0,
+        "energy_balance_relative": 3.249157991472142e-05,
+        "snapshot_energy_error": 2.1510571102112408e-16,
+        "initial_defects": {
+          "plaquettes": 198,
+          "wall_links": 766,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 49.5,
+          "wall_area_estimate": 71.8125,
+          "zeta": 2.8645833333333335,
+          "A_dw": 0.4155815972222222
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.024959569319881542,
+        "elapsed_seconds": 0.1688447499764152
+      }
+    },
+    "refinement-final": {
+      "deterministic_growing": {
+        "parameters": {
+          "N": 64,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/refinement-final/deterministic_growing/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/refinement-final/deterministic_growing/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 10.256410256410259,
+        "minimum_wall_cells": 173.906002806409,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 1.0825498669267065e-05,
+        "snapshot_energy_error": 4.510974926930089e-14,
+        "initial_defects": {
+          "plaquettes": 256,
+          "wall_links": 4096,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.5555555555555556
+        },
+        "final_defects": {
+          "plaquettes": 256,
+          "wall_links": 4096,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 3.1296296296296298,
+          "A_dw": 0.7222222222222222
+        },
+        "final_energy": 0.03238051701927888,
+        "elapsed_seconds": 1.8583925839629956
+      },
+      "deterministic_massless": {
+        "parameters": {
+          "N": 64,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/refinement-final/deterministic_massless/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/refinement-final/deterministic_massless/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 10.256410256410259,
+        "minimum_wall_cells": null,
+        "maximum_ma_ms": 0.0,
+        "energy_balance_relative": 1.1166741452918983e-05,
+        "snapshot_energy_error": 2.7880475705899244e-14,
+        "initial_defects": {
+          "plaquettes": 256,
+          "wall_links": 4096,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.5555555555555556
+        },
+        "final_defects": {
+          "plaquettes": 256,
+          "wall_links": 4096,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 3.1296296296296298,
+          "A_dw": 0.7222222222222222
+        },
+        "final_energy": 0.03231973463293278,
+        "elapsed_seconds": 1.9006568329641595
+      },
+      "deterministic_fine_dt": {
+        "parameters": {
+          "N": 64,
+          "lSide": 12.0,
+          "dt": 0.01,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 10,
+          "snapshot_every": 50,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/refinement-final/deterministic_fine_dt/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/refinement-final/deterministic_fine_dt/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 10.256410256410259,
+        "minimum_wall_cells": 173.906002806409,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 2.2778553326584207e-06,
+        "snapshot_energy_error": 2.7880475705899244e-14,
+        "initial_defects": {
+          "plaquettes": 256,
+          "wall_links": 4096,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.5555555555555556
+        },
+        "final_defects": {
+          "plaquettes": 256,
+          "wall_links": 4096,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 96.0,
+          "zeta": 3.1296296296296298,
+          "A_dw": 0.7222222222222222
+        },
+        "final_energy": 0.032380429861144616,
+        "elapsed_seconds": 3.081057208008133
+      }
+    },
+    "matched-final": {
+      "network_N32": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/matched-final/network_N32/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/matched-final/network_N32/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": 86.9530014032045,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 1.958741494523316e-05,
+        "snapshot_energy_error": 1.3877787807814457e-16,
+        "initial_defects": {
+          "plaquettes": 192,
+          "wall_links": 1628,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 48.0,
+          "wall_area_estimate": 152.625,
+          "zeta": 2.7777777777777777,
+          "A_dw": 0.8832465277777778
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.02223211169549737,
+        "elapsed_seconds": 0.13886170904152095
+      },
+      "network_N64": {
+        "parameters": {
+          "N": 64,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/matched-final/network_N64/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/matched-final/network_N64/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 10.256410256410259,
+        "minimum_wall_cells": 173.906002806409,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 1.969236847657321e-05,
+        "snapshot_energy_error": 6.036837696399289e-16,
+        "initial_defects": {
+          "plaquettes": 384,
+          "wall_links": 6522,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 48.0,
+          "wall_area_estimate": 152.859375,
+          "zeta": 2.7777777777777777,
+          "A_dw": 0.8846028645833334
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.022291852517832444,
+        "elapsed_seconds": 1.738392874947749
+      }
+    },
+    "collapse-final": {
+      "pair_N32": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/collapse-final/pair_N32/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/collapse-final/pair_N32/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": 86.9530014032045,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 1.2677817885116132e-05,
+        "snapshot_energy_error": 2.6645352591003757e-15,
+        "initial_defects": {
+          "plaquettes": 128,
+          "wall_links": 640,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 60.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.3472222222222222
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.027313638660634014,
+        "elapsed_seconds": 0.14709554199362174
+      },
+      "pair_N64": {
+        "parameters": {
+          "N": 64,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/collapse-final/pair_N64/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/collapse-final/pair_N64/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 10.256410256410259,
+        "minimum_wall_cells": 173.906002806409,
+        "maximum_ma_ms": 0.05897674658089649,
+        "energy_balance_relative": 1.2909556390940365e-05,
+        "snapshot_energy_error": 3.1807889655510735e-14,
+        "initial_defects": {
+          "plaquettes": 256,
+          "wall_links": 2816,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 66.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.3819444444444444
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.02736808393729918,
+        "elapsed_seconds": 1.8791309999651276
+      },
+      "pair_massless": {
+        "parameters": {
+          "N": 32,
+          "lSide": 12.0,
+          "dt": 0.02,
+          "tMax": 6.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 25,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/collapse-final/pair_massless/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/collapse-final/pair_massless/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 5.1282051282051295,
+        "minimum_wall_cells": null,
+        "maximum_ma_ms": 0.0,
+        "energy_balance_relative": 1.273381489402518e-05,
+        "snapshot_energy_error": 4.277828091758806e-15,
+        "initial_defects": {
+          "plaquettes": 128,
+          "wall_links": 640,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 32.0,
+          "wall_area_estimate": 60.0,
+          "zeta": 1.8518518518518519,
+          "A_dw": 0.3472222222222222
+        },
+        "final_defects": {
+          "plaquettes": 0,
+          "wall_links": 0,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 0.0,
+          "wall_area_estimate": 0.0,
+          "zeta": 0.0,
+          "A_dw": 0.0
+        },
+        "final_energy": 0.027295481649965522,
+        "elapsed_seconds": 0.16575654200278223
+      }
+    },
+    "network-final": {
+      "network_growing": {
+        "parameters": {
+          "N": 64,
+          "lSide": 24.0,
+          "dt": 0.02,
+          "tMax": 12.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 50,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/network-final/network_growing/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/network-final/network_growing/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 4.166666666666666,
+        "minimum_wall_cells": 30.789414167404182,
+        "maximum_ma_ms": 0.13532789691977284,
+        "energy_balance_relative": 1.6421493927785073e-05,
+        "snapshot_energy_error": 9.922618282587337e-16,
+        "initial_defects": {
+          "plaquettes": 1450,
+          "wall_links": 13244,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 362.5,
+          "wall_area_estimate": 1241.6249999999998,
+          "zeta": 2.6222511574074074,
+          "A_dw": 0.8981662326388887
+        },
+        "final_defects": {
+          "plaquettes": 56,
+          "wall_links": 1306,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 13.999999999999998,
+          "wall_area_estimate": 122.4375,
+          "zeta": 0.25925925925925924,
+          "A_dw": 0.14171006944444445
+        },
+        "final_energy": 0.01758962725296964,
+        "elapsed_seconds": 2.993090707983356
+      },
+      "network_massless": {
+        "parameters": {
+          "N": 64,
+          "lSide": 24.0,
+          "dt": 0.02,
+          "tMax": 12.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 5,
+          "snapshot_every": 50,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/network-final/network_massless/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/network-final/network_massless/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 4.166666666666666,
+        "minimum_wall_cells": null,
+        "maximum_ma_ms": 0.0,
+        "energy_balance_relative": 2.103349546081743e-05,
+        "snapshot_energy_error": 9.922618282587337e-16,
+        "initial_defects": {
+          "plaquettes": 1450,
+          "wall_links": 13244,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 362.5,
+          "wall_area_estimate": 1241.6249999999998,
+          "zeta": 2.6222511574074074,
+          "A_dw": 0.8981662326388887
+        },
+        "final_defects": {
+          "plaquettes": 66,
+          "wall_links": 1433,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 16.5,
+          "wall_area_estimate": 134.34375,
+          "zeta": 0.3055555555555556,
+          "A_dw": 0.1554904513888889
+        },
+        "final_energy": 0.016295052529119274,
+        "elapsed_seconds": 3.228941750014201
+      },
+      "network_fine_dt": {
+        "parameters": {
+          "N": 64,
+          "lSide": 24.0,
+          "dt": 0.01,
+          "tMax": 12.0,
+          "tau_origin": 20.0,
+          "tau_star": 27.0,
+          "n_tau": 8.0,
+          "chi_star": 0.0007526705692635682,
+          "expansion": true,
+          "fixedBackground": true,
+          "H0": 0.05,
+          "omegaEoS": 0.3333333333333333,
+          "evolver": "PV2",
+          "output_every": 10,
+          "snapshot_every": 100,
+          "lambda": 0.08,
+          "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/network-final/network_fine_dt/input.bin",
+          "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pq_strings/network-final/network_fine_dt/native"
+        },
+        "gates": {
+          "initial_transfer": true,
+          "finite_history": true,
+          "core_resolution": true,
+          "wall_resolution": true,
+          "mass_hierarchy": true,
+          "energy_transfer": true,
+          "energy_balance": true
+        },
+        "passed": true,
+        "minimum_core_cells": 4.166666666666666,
+        "minimum_wall_cells": 30.789414167404182,
+        "maximum_ma_ms": 0.13532789691977284,
+        "energy_balance_relative": 6.598158189247224e-06,
+        "snapshot_energy_error": 9.922618282587337e-16,
+        "initial_defects": {
+          "plaquettes": 1450,
+          "wall_links": 13244,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 362.5,
+          "wall_area_estimate": 1241.6249999999998,
+          "zeta": 2.6222511574074074,
+          "A_dw": 0.8981662326388887
+        },
+        "final_defects": {
+          "plaquettes": 56,
+          "wall_links": 1306,
+          "signed_winding": [
+            0,
+            0,
+            0
+          ],
+          "string_length_estimate": 13.999999999999998,
+          "wall_area_estimate": 122.4375,
+          "zeta": 0.25925925925925924,
+          "A_dw": 0.14171006944444445
+        },
+        "final_energy": 0.017589579147185168,
+        "elapsed_seconds": 5.372271208034363
+      }
+    }
+  }
+}

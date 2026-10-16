@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "parameters": {
+    "h": 0.05,
+    "beta": 0.05,
+    "box": 60.0,
+    "width": 3.0,
+    "origin": 20.0,
+    "n": 64,
+    "birth_end": 50.0,
+    "field_end": 60.0,
+    "dt": 0.01,
+    "mass_true": 1.0,
+    "mass_false": 0.0,
+    "speed": 0.5
+  },
+  "runs": [
+    {
+      "name": "evolution",
+      "n": 64,
+      "dt": 0.01,
+      "duration": 40.0,
+      "seconds": 15.71572587499395,
+      "theta_mean": 0.001662318041981262,
+      "theta_std": 0.06895160848893667,
+      "timings": {
+        "initialization_seconds": 0.035924833,
+        "evolution_seconds": 13.749465360999995,
+        "diagnostics_seconds": 0.6651061550000001,
+        "snapshots_seconds": 1.1937717950000002,
+        "mass_update_seconds": 4.904430883999999,
+        "total_seconds": 15.645987875
+      }
+    },
+    {
+      "name": "refined",
+      "n": 64,
+      "dt": 0.005,
+      "duration": 30.0,
+      "seconds": 20.330924790992867,
+      "theta_mean": -0.0010894472982750372,
+      "theta_std": 0.0894799899713864,
+      "timings": {
+        "initialization_seconds": 0.016904708,
+        "evolution_seconds": 19.656008278999927,
+        "diagnostics_seconds": 0.5626426609999998,
+        "snapshots_seconds": 0.008241291,
+        "mass_update_seconds": 7.9583764980000105,
+        "total_seconds": 20.244636625
+      }
+    },
+    {
+      "name": "N32_diagnostic",
+      "n": 32,
+      "dt": 0.01,
+      "duration": 40.0,
+      "seconds": 1.6399969159974717,
+      "theta_mean": 0.0010985759569527645,
+      "theta_std": 0.06747152267886102,
+      "timings": {
+        "initialization_seconds": 0.004838708,
+        "evolution_seconds": 1.4589173340000015,
+        "diagnostics_seconds": 0.09755933599999991,
+        "snapshots_seconds": 0.0009397920000000001,
+        "mass_update_seconds": 0.7309548280000003,
+        "total_seconds": 1.562630125
+      }
+    },
+    {
+      "name": "N8_reference",
+      "n": 8,
+      "dt": 0.01,
+      "duration": 40.0,
+      "seconds": 0.08788095804629847,
+      "theta_mean": -0.00392507021145591,
+      "theta_std": 0.06979949683062049,
+      "timings": {
+        "initialization_seconds": 0.006214167,
+        "evolution_seconds": 0.04185286500000027,
+        "diagnostics_seconds": 0.002967202,
+        "snapshots_seconds": 0.000516917,
+        "mass_update_seconds": 0.010523246999999916,
+        "total_seconds": 0.05183725
+      }
+    }
+  ],
+  "gates": [
+    {
+      "name": "evolution/scale",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "evolution/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "refined/scale",
+      "value": 0.0,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "refined/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64/timestep_theta_rms",
+      "value": 1.886581459763922e-05,
+      "limit": 0.002,
+      "passed": true
+    },
+    {
+      "name": "N32_diagnostic/scale",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N32_diagnostic/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_reference/scale",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "N8_reference/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8/reference_theta",
+      "value": 0.00017412297054650305,
+      "limit": 0.003,
+      "passed": true
+    },
+    {
+      "name": "N8/reference_pi",
+      "value": 0.005529786206483478,
+      "limit": 0.03,
+      "passed": true
+    }
+  ],
+  "spatial_theta_rms_diagnostic": 0.07096207836168437,
+  "catalogue": "Validated H=1 seed-0 catalogue rescaled exactly in coordinates/time; field independently evolved.",
+  "limits": "Representative resolution only; spatial convergence not established. Frozen birth catalogue ends at tau=50.",
+  "executable_sha256": "de7b038930c8dd00e52f527170475531f7364425f7c55ec408ad73e70aafe5f4"
+}

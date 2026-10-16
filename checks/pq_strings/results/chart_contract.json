@@ -1,0 +1,8 @@
+{
+  "surface": "standalone scientific PNG/PDF and GIF",
+  "diagnostic": "periodic complex-PQ evolution in one seeded realization",
+  "trends": "13 physical-time snapshots; growing susceptibility versus identical massless initial data",
+  "slices": "fixed z=N//2 at three times, fixed cyclic phase and modulus color scales",
+  "encodings": "blue solid growing chi; neutral dashed massless; cyclic phase; sequential blue modulus",
+  "limitations": "branch-cut surface is not a physical wall when chi=0; finite box; no ensemble errors"
+}

@@ -1,0 +1,48 @@
+{
+  "numerical_gates_passed": false,
+  "gates": {
+    "pocket": {
+      "energy_drift": true,
+      "frequency_guard": true,
+      "wall_resolution": true,
+      "solver_completed": false,
+      "initial_transfer": true
+    },
+    "timestep": {
+      "energy_drift": true,
+      "frequency_guard": true,
+      "wall_resolution": false,
+      "solver_completed": true,
+      "initial_transfer": true,
+      "timestep_agreement": true
+    },
+    "spatial": {
+      "energy_drift": false,
+      "frequency_guard": true,
+      "wall_resolution": false,
+      "solver_completed": true,
+      "initial_transfer": true,
+      "spatial_agreement": true,
+      "spatial_mean": false
+    },
+    "leaky": {
+      "energy_drift": false,
+      "frequency_guard": true,
+      "wall_resolution": false,
+      "solver_completed": false,
+      "initial_transfer": true
+    }
+  },
+  "outcomes": {
+    "pocket": {
+      "survives": true,
+      "persists": false,
+      "confined": true
+    },
+    "leaky": {
+      "escaped": true,
+      "smaller_than_pocket": true
+    }
+  },
+  "relic_pocket": false
+}

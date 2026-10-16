@@ -1,0 +1,13 @@
+{
+  "bubble_frames": 55,
+  "field_frames": 111,
+  "mean_zero_crossings": 6,
+  "catalogue_bubbles": 614,
+  "source_directory": "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic/representative-gifs",
+  "physics": "H=beta=mt=1,mf=0,L=3,v=0.5,width=0.15,theta_initial=1 at tau=1,N32,du=.005",
+  "limits": "Representative visualization. Catalogue ends at tau=2.5; existing bubbles continue growing to tau=6.5. Prescribed geometry, no backreaction. Cube rendering uses independent probe points.",
+  "same_early_field_exact": true,
+  "source_sha256": "70ccbf0d429a436136cd687bcff124f22b4a8d17723798e62b0aa418b95b9255",
+  "executable_sha256": "de7b038930c8dd00e52f527170475531f7364425f7c55ec408ad73e70aafe5f4",
+  "input_sha256": "ef867d3308e385970f29dd9947c506e68ddd489284d12e540a2575fd547863fe"
+}

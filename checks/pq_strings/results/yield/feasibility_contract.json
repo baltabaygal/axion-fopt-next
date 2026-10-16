@@ -1,0 +1,13 @@
+{
+  "target_tau_ratio": 3.0,
+  "n_tau": 8.0,
+  "core_cells": 4.0,
+  "wall_cells": 4.0,
+  "mass_ratio": 0.16,
+  "peak": 3.0,
+  "modes_to_peak": 2.0,
+  "horizon_factor": 2.0,
+  "scope": "necessary lower bounds; not sufficient conditions for scaling or accurate yield",
+  "preparation_note": "lambda may vary during preparation but remains constant in physical production",
+  "memory_note": "four double component arrays only; excludes ghosts, work arrays and FFTs"
+}

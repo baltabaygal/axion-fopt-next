@@ -32,6 +32,39 @@ class FourierTests(unittest.TestCase):
 
 @unittest.skipUnless(EXECUTABLE,"Set AFOPT_COSMOLATTICE_EXECUTABLE")
 class BubbleAdapterTests(unittest.TestCase):
+    def test_periodic_snapshots_preserve_dynamics(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            arrival=np.linspace(.1,1.,64).reshape(4,4,4)
+            write_arrival_map(root/'map.afopt',arrival,3.)
+            finals=[]
+            for cadence in (0,2):
+                out=root/f'cadence{cadence}'
+                args=dict(N=4,lSide=3,dt=.01,tMax=.06,evolver='PV2',expansion='true',fixedBackground='true',H0=1.,
+                          omegaEoS=1/3,tau_origin=1.,theta_initial=1.,potential='cosine',wall_width=.15,
+                          arrival_map=root/'map.afopt',result_dir=out,snapshot_format='binary',output_every=1,
+                          snapshot_every=cadence,energy_diagnostics='true')
+                proc=subprocess.run([EXECUTABLE,*[f'{k}={v}' for k,v in args.items()]],capture_output=True,text=True,timeout=30)
+                self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
+                finals.append(read_state(out/'final.bin')[1])
+                meta,state=read_state(out/'final.bin');a=meta['scale'];theta=state[...,0]
+                history=np.genfromtxt(out/'history.csv',delimiter=',',names=True)
+                k=.5*np.mean(state[...,1]**2)/a**6
+                g=.5*sum(np.mean((np.roll(theta,-1,axis)-theta)**2) for axis in range(3))/((3/4)**2*a**2)
+                self.assertAlmostEqual(history['kinetic_mean'][-1],k,places=13)
+                self.assertAlmostEqual(history['gradient_mean'][-1],g,places=13)
+                frames=sorted(out.glob('frame_*.bin'))
+                self.assertEqual(len(frames),4 if cadence else 0)
+                for i,path in enumerate(frames):
+                    meta,state=read_state(path)
+                    self.assertAlmostEqual(meta['time'],i*.02)
+                    self.assertAlmostEqual(meta['scale'],1+i*.02)
+                    np.testing.assert_array_equal(state[...,2],arrival)
+                if frames:
+                    np.testing.assert_array_equal(read_state(frames[0])[1],read_state(out/'initial.bin')[1])
+                    np.testing.assert_array_equal(read_state(frames[-1])[1],finals[-1])
+            np.testing.assert_array_equal(*finals)
+
     def test_irregular_arrival_cache_fallback(self):
         # No repeated arrivals: automatic cache fallback must preserve all cells.
         with tempfile.TemporaryDirectory() as tmp:
@@ -104,10 +137,10 @@ class BubbleAdapterTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
             write_arrival_map(root/"map.afopt",np.zeros((4,4,4)),4.)
-            base=dict(N=4,lSide=4,dt=.01,tMax=.1,expansion="false",arrival_map=root/"map.afopt",result_dir=root/"out")
+            base=dict(N=4,lSide=4,dt=.01,tMax=.1,evolver='PV2',expansion="false",arrival_map=root/"map.afopt",result_dir=root/"out")
             for change in ({"wall_width":-1},{"wall_width":"nan"},{"profile_wall_speed":0},
                            {"profile_wall_speed":1.1},{"potential":"invalid"},{"snapshot_format":"invalid"},
-                           {"expansion":"true","fixedBackground":"true","energy_diagnostics":"true"}):
+                           {"expansion":"true","fixedBackground":"true","H0":0.,"energy_diagnostics":"true"}):
                 proc=subprocess.run([EXECUTABLE,*[f"{k}={v}" for k,v in (base|change).items()]],capture_output=True,text=True,timeout=30)
                 self.assertNotEqual(proc.returncode,0,change)
                 self.assertFalse((root/"out").exists(),change)

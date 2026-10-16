@@ -1,0 +1,50 @@
+{
+  "suite": "control",
+  "parameters": {
+    "N": 128,
+    "lSide": 64.0,
+    "dt": 0.05,
+    "tMax": 60.0,
+    "expansion": false,
+    "evolver": "PV2",
+    "lambda": 2.0,
+    "delta_v": 0.01,
+    "mass_tv": 2.0,
+    "output_every": 10,
+    "snapshot_every": 0,
+    "slice_every": 40,
+    "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pockets/prototype-control-02/control/input.bin",
+    "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pockets/prototype-control-02/control/native"
+  },
+  "energy_drift": 0.0009759935777474178,
+  "max_dt_frequency": 0.4471362766507785,
+  "initial_total": 1202.9408835538766,
+  "initial_axion": 0.0,
+  "min_radius": 1.1866877982896216,
+  "final_radius": 1.1866877982896216,
+  "min_wall_cells": 3.109066159565657,
+  "max_tv_fraction": null,
+  "final_tv_fraction": null,
+  "max_asphericity": 0.0,
+  "max_centroid_shift": 0.0,
+  "max_phi2_fv": 0.941203883754308,
+  "gates": {
+    "energy_drift": false,
+    "frequency_guard": true,
+    "wall_resolution": false,
+    "solver_completed": false,
+    "initial_transfer": true,
+    "radial_reference": true
+  },
+  "solver_error": "dt*field-dependent frequency bound > .5",
+  "completed_until": 25.0,
+  "gas_amplitude": 0.0,
+  "elapsed_seconds": 11.990344540972728,
+  "radial_difference": 0.15771576270317844,
+  "collapse_time": 23.5,
+  "thin_wall_collapse_time": 23.34302244007899,
+  "energy_drift_resolved": 0.0005043441352983297,
+  "outcome": {
+    "collapsed": true
+  }
+}

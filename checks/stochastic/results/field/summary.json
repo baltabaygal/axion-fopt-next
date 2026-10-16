@@ -1,0 +1,1172 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "name": "N8_dt0.005",
+      "n": 8,
+      "dt": 0.005,
+      "steps": 300,
+      "arrival_projection_seconds": 0.005876416980754584,
+      "wall_seconds": 0.025123625004198402,
+      "native_timings": {
+        "initialization_seconds": 0.006489208,
+        "evolution_seconds": 0.003360418,
+        "diagnostics_seconds": 0.000502414,
+        "snapshots_seconds": 0.000485166,
+        "mass_update_seconds": 0.0010774439999999981,
+        "total_seconds": 0.010991
+      },
+      "snapshots": [
+        {
+          "u": 0.0,
+          "tau": 1.0,
+          "t": 0.5,
+          "theta_mean": 1.0,
+          "theta_std": 0.0,
+          "potential": 0.003974413125714971,
+          "kinetic": 0.0,
+          "gradient": 0.0,
+          "geometric_F": 1.0,
+          "mean_mass_squared": 0.008645710379776118
+        },
+        {
+          "u": 0.75,
+          "tau": 1.75,
+          "t": 1.53125,
+          "theta_mean": 0.9813985664080369,
+          "theta_std": 0.018714935188339128,
+          "potential": 0.11861630733378219,
+          "kinetic": 0.0029129249980315184,
+          "gradient": 0.001107307720513423,
+          "geometric_F": 0.798828125,
+          "mean_mass_squared": 0.275201647098219
+        },
+        {
+          "u": 1.5,
+          "tau": 2.5,
+          "t": 3.125,
+          "theta_mean": 0.527706548392193,
+          "theta_std": 0.06065866358815403,
+          "potential": 0.12781634930366625,
+          "kinetic": 0.14088899773672278,
+          "gradient": 0.0025644536506957073,
+          "geometric_F": 0.001953125,
+          "mean_mass_squared": 0.9399940710620303
+        }
+      ],
+      "reference_theta_error": 5.850110751937088e-06,
+      "reference_pi_error": 0.00027538991392717094
+    },
+    {
+      "name": "N8_dt0.0025",
+      "n": 8,
+      "dt": 0.0025,
+      "steps": 600,
+      "arrival_projection_seconds": 0.005876416980754584,
+      "wall_seconds": 0.022421958041377366,
+      "native_timings": {
+        "initialization_seconds": 0.000867,
+        "evolution_seconds": 0.004642248000000007,
+        "diagnostics_seconds": 0.00036041800000000004,
+        "snapshots_seconds": 0.000489207,
+        "mass_update_seconds": 0.0013721689999999988,
+        "total_seconds": 0.006527791
+      },
+      "snapshots": [
+        {
+          "u": 0.0,
+          "tau": 1.0,
+          "t": 0.5,
+          "theta_mean": 1.0,
+          "theta_std": 0.0,
+          "potential": 0.003974413125714971,
+          "kinetic": 0.0,
+          "gradient": 0.0,
+          "geometric_F": 1.0,
+          "mean_mass_squared": 0.008645710379776118
+        },
+        {
+          "u": 0.75,
+          "tau": 1.75,
+          "t": 1.53125,
+          "theta_mean": 0.9813988018965092,
+          "theta_std": 0.01871466816338692,
+          "potential": 0.1186164285917509,
+          "kinetic": 0.002913005161462248,
+          "gradient": 0.0011072724600807264,
+          "geometric_F": 0.798828125,
+          "mean_mass_squared": 0.275201647098219
+        },
+        {
+          "u": 1.5,
+          "tau": 2.5,
+          "t": 3.125,
+          "theta_mean": 0.5277071025672635,
+          "theta_std": 0.0606591689552347,
+          "potential": 0.12781659228555176,
+          "kinetic": 0.1408876124859374,
+          "gradient": 0.002564571930689317,
+          "geometric_F": 0.001953125,
+          "mean_mass_squared": 0.9399940710620303
+        }
+      ],
+      "reference_theta_error": 1.4624259049300647e-06,
+      "reference_pi_error": 6.884261281925319e-05
+    },
+    {
+      "name": "N32_dt0.005",
+      "n": 32,
+      "dt": 0.005,
+      "steps": 300,
+      "arrival_projection_seconds": 0.2815246250247583,
+      "wall_seconds": 0.12771779095055535,
+      "native_timings": {
+        "initialization_seconds": 0.0027525,
+        "evolution_seconds": 0.09125837799999995,
+        "diagnostics_seconds": 0.013638210999999999,
+        "snapshots_seconds": 0.001190375,
+        "mass_update_seconds": 0.05133108400000003,
+        "total_seconds": 0.108996583
+      },
+      "snapshots": [
+        {
+          "u": 0.0,
+          "tau": 1.0,
+          "t": 0.5,
+          "theta_mean": 1.0,
+          "theta_std": 0.0,
+          "potential": 0.0042006714273156165,
+          "kinetic": 0.0,
+          "gradient": 0.0,
+          "geometric_F": 0.99847412109375,
+          "mean_mass_squared": 0.009137899713089905
+        },
+        {
+          "u": 0.75,
+          "tau": 1.75,
+          "t": 1.53125,
+          "theta_mean": 0.9813311307457633,
+          "theta_std": 0.016732139079180083,
+          "potential": 0.11735148195457686,
+          "kinetic": 0.002647186878851536,
+          "gradient": 0.0010082744646069007,
+          "geometric_F": 0.808624267578125,
+          "mean_mass_squared": 0.27126921278712673
+        },
+        {
+          "u": 1.5,
+          "tau": 2.5,
+          "t": 3.125,
+          "theta_mean": 0.5284405841747786,
+          "theta_std": 0.05712857129083186,
+          "potential": 0.12831997072937454,
+          "kinetic": 0.14036380768437892,
+          "gradient": 0.0018809436486044388,
+          "geometric_F": 0.001190185546875,
+          "mean_mass_squared": 0.9394904258771354
+        }
+      ],
+      "reference_theta_error": null,
+      "reference_pi_error": null
+    },
+    {
+      "name": "N64_dt0.005",
+      "n": 64,
+      "dt": 0.005,
+      "steps": 300,
+      "arrival_projection_seconds": 1.957338374981191,
+      "wall_seconds": 1.0955545409815386,
+      "native_timings": {
+        "initialization_seconds": 0.012895458,
+        "evolution_seconds": 0.940364121,
+        "diagnostics_seconds": 0.09339183300000001,
+        "snapshots_seconds": 0.008863125999999999,
+        "mass_update_seconds": 0.361298474,
+        "total_seconds": 1.055758708
+      },
+      "snapshots": [
+        {
+          "u": 0.0,
+          "tau": 1.0,
+          "t": 0.5,
+          "theta_mean": 1.0,
+          "theta_std": 0.0,
+          "potential": 0.004201801690239242,
+          "kinetic": 0.0,
+          "gradient": 0.0,
+          "geometric_F": 0.9986991882324219,
+          "mean_mass_squared": 0.009140358422233008
+        },
+        {
+          "u": 0.75,
+          "tau": 1.75,
+          "t": 1.53125,
+          "theta_mean": 0.9813296885627891,
+          "theta_std": 0.01666159254880299,
+          "potential": 0.11736757583629129,
+          "kinetic": 0.0026411250513990302,
+          "gradient": 0.001000517745020684,
+          "geometric_F": 0.8090972900390625,
+          "mean_mass_squared": 0.27125543088774734
+        },
+        {
+          "u": 1.5,
+          "tau": 2.5,
+          "t": 3.125,
+          "theta_mean": 0.528414838609172,
+          "theta_std": 0.05698543801058013,
+          "potential": 0.12831728740684215,
+          "kinetic": 0.14036947094196697,
+          "gradient": 0.0018641703048647227,
+          "geometric_F": 0.00138092041015625,
+          "mean_mass_squared": 0.9395197970020535
+        }
+      ],
+      "reference_theta_error": null,
+      "reference_pi_error": null
+    },
+    {
+      "name": "N64_dt0.0025",
+      "n": 64,
+      "dt": 0.0025,
+      "steps": 600,
+      "arrival_projection_seconds": 1.957338374981191,
+      "wall_seconds": 2.0268434160389006,
+      "native_timings": {
+        "initialization_seconds": 0.01467425,
+        "evolution_seconds": 1.8821093980000012,
+        "diagnostics_seconds": 0.092725501,
+        "snapshots_seconds": 0.008026376,
+        "mass_update_seconds": 0.6617674219999996,
+        "total_seconds": 1.997819125
+      },
+      "snapshots": [
+        {
+          "u": 0.0,
+          "tau": 1.0,
+          "t": 0.5,
+          "theta_mean": 1.0,
+          "theta_std": 0.0,
+          "potential": 0.004201801690239242,
+          "kinetic": 0.0,
+          "gradient": 0.0,
+          "geometric_F": 0.9986991882324219,
+          "mean_mass_squared": 0.009140358422233008
+        },
+        {
+          "u": 0.75,
+          "tau": 1.75,
+          "t": 1.53125,
+          "theta_mean": 0.981329918858368,
+          "theta_std": 0.016661381441456145,
+          "potential": 0.117367670415194,
+          "kinetic": 0.0026412167244017153,
+          "gradient": 0.001000495275571619,
+          "geometric_F": 0.8090972900390625,
+          "mean_mass_squared": 0.27125543088774734
+        },
+        {
+          "u": 1.5,
+          "tau": 2.5,
+          "t": 3.125,
+          "theta_mean": 0.5284154186729593,
+          "theta_std": 0.05698577919294468,
+          "potential": 0.12831755246220672,
+          "kinetic": 0.14036813810249182,
+          "gradient": 0.0018642400541545715,
+          "geometric_F": 0.00138092041015625,
+          "mean_mass_squared": 0.9395197970020535
+        }
+      ],
+      "reference_theta_error": null,
+      "reference_pi_error": null
+    }
+  ],
+  "gates": [
+    {
+      "name": "N8_dt0.005/scale_history",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/tau_history",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/mass",
+      "value": 5.551115123125783e-17,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/theta_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/theta2_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/initial.bin/potential_mean",
+      "value": 2.6020852139652106e-18,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/theta_mean",
+      "value": 9.992007221626409e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/theta2_mean",
+      "value": 3.3306690738754696e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/pi_mean",
+      "value": 1.6653345369377348e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/checkpoint.bin/potential_mean",
+      "value": 2.7755575615628914e-17,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/theta_mean",
+      "value": 2.220446049250313e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/theta2_mean",
+      "value": 1.1102230246251565e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/final.bin/potential_mean",
+      "value": 8.326672684688674e-17,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/reference_theta",
+      "value": 5.850110751937088e-06,
+      "limit": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.005/reference_pi",
+      "value": 0.00027538991392717094,
+      "limit": 0.001,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/scale_history",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/tau_history",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/mass",
+      "value": 5.551115123125783e-17,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/theta_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/theta2_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/initial.bin/potential_mean",
+      "value": 2.6020852139652106e-18,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/theta_mean",
+      "value": 3.3306690738754696e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/theta2_mean",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/checkpoint.bin/potential_mean",
+      "value": 5.551115123125783e-17,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/theta_mean",
+      "value": 2.220446049250313e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/theta2_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/pi_mean",
+      "value": 5.329070518200751e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/final.bin/potential_mean",
+      "value": 5.551115123125783e-17,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/reference_theta",
+      "value": 1.4624259049300647e-06,
+      "limit": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "N8_dt0.0025/reference_pi",
+      "value": 6.884261281925319e-05,
+      "limit": 0.001,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/scale_history",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/tau_history",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/theta_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/theta2_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/initial.bin/potential_mean",
+      "value": 5.204170427930421e-18,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/theta_mean",
+      "value": 7.66053886991358e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/theta2_mean",
+      "value": 5.10702591327572e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/pi_mean",
+      "value": 1.4988010832439613e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/checkpoint.bin/potential_mean",
+      "value": 1.8041124150158794e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/theta_mean",
+      "value": 3.1086244689504383e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/theta2_mean",
+      "value": 2.3314683517128287e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/pi_mean",
+      "value": 7.460698725481052e-14,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N32_dt0.005/final.bin/potential_mean",
+      "value": 8.326672684688674e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/scale_history",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/tau_history",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/theta_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/theta2_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/initial.bin/potential_mean",
+      "value": 1.8214596497756474e-17,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/theta_mean",
+      "value": 2.7755575615628914e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/theta2_mean",
+      "value": 2.4424906541753444e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/pi_mean",
+      "value": 3.3861802251067274e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/checkpoint.bin/potential_mean",
+      "value": 1.0408340855860843e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/theta_mean",
+      "value": 3.3306690738754696e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/theta2_mean",
+      "value": 4.107825191113079e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/pi_mean",
+      "value": 1.2434497875801753e-14,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.005/final.bin/potential_mean",
+      "value": 2.7755575615628914e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/scale_history",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/tau_history",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/theta_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/theta2_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/pi_mean",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/initial.bin/potential_mean",
+      "value": 1.8214596497756474e-17,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/theta_mean",
+      "value": 1.0658141036401503e-14,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/theta2_mean",
+      "value": 1.176836406102666e-14,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/pi_mean",
+      "value": 6.772360450213455e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/checkpoint.bin/potential_mean",
+      "value": 9.575673587391975e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/mass",
+      "value": 1.1102230246251565e-16,
+      "limit": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/scale",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/time",
+      "value": 0.0,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/theta_mean",
+      "value": 5.88418203051333e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/theta2_mean",
+      "value": 2.6645352591003757e-15,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/pi_mean",
+      "value": 1.1191048088221578e-13,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N64_dt0.0025/final.bin/potential_mean",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "N8/reference_refinement",
+      "value": 0.749947804550107,
+      "limit": 1.0,
+      "passed": true
+    },
+    {
+      "name": "N64/timestep_theta_rms",
+      "value": 1.2404968183784523e-06,
+      "limit": 0.001,
+      "passed": true
+    },
+    {
+      "name": "N32_N64/spatial_theta_rms",
+      "value": 0.000512189489607676,
+      "limit": 0.02,
+      "passed": true
+    }
+  ],
+  "catalogue": {
+    "bubbles": 614,
+    "seed": 0,
+    "tracers": 100000,
+    "seconds": 0.06273641699226573,
+    "baseline_exact_match": true,
+    "tau": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2000000000000002,
+      1.3,
+      1.4000000000000001,
+      1.5,
+      1.6,
+      1.7000000000000002,
+      1.8,
+      1.9000000000000001,
+      2.0,
+      2.1,
+      2.2,
+      2.3000000000000003,
+      2.4000000000000004,
+      2.5
+    ],
+    "internal_F": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.99998,
+      0.99991,
+      0.99958,
+      0.99877,
+      0.99655,
+      0.99272,
+      0.98592,
+      0.9724000000000002,
+      0.9486900000000003,
+      0.9095100000000004,
+      0.8484300000000005,
+      0.7565800000000009,
+      0.6329300000000011,
+      0.47627000000000147,
+      0.30521000000000076,
+      0.15561,
+      0.056499999999999766,
+      0.013289999999999849,
+      0.00131
+    ],
+    "geometric_F": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.99969482421875,
+      0.998779296875,
+      0.99658203125,
+      0.99420166015625,
+      0.98779296875,
+      0.974609375,
+      0.95062255859375,
+      0.90838623046875,
+      0.84649658203125,
+      0.75872802734375,
+      0.6324462890625,
+      0.47027587890625,
+      0.29833984375,
+      0.1507568359375,
+      0.05560302734375,
+      0.0130615234375,
+      0.0013427734375
+    ],
+    "analytic_F": [
+      1.0,
+      0.999999999988639,
+      0.9999999970769836,
+      0.9999999244575387,
+      0.9999992365220298,
+      0.9999953799022355,
+      0.9999797618451755,
+      0.9999289887189907,
+      0.9997879824329904,
+      0.9994399418015928,
+      0.9986558372716748,
+      0.997013122511082,
+      0.9937698689688841,
+      0.9876778817213898,
+      0.9767205457581674,
+      0.9577783667216291,
+      0.92627981132396,
+      0.8760282445660335,
+      0.7996592900258253,
+      0.6905639560032473,
+      0.5472782267179598,
+      0.3801699648889542,
+      0.21603546961659864,
+      0.09054551519724674,
+      0.02396728635333863,
+      0.0031759202774840085
+    ]
+  },
+  "reference_seconds": 0.1185579159646295,
+  "paper_source": {
+    "commit": "1b67fecf3d40b707a9dd6f4c2eabefc8f9bb3f1b",
+    "git_blob": "ace7473a90f2a88f4e4c5121e6345b86b16a24e3",
+    "sha256": "6f40c88312c58cdd0cc4277e9cc8fa4b4340efdcba633b6b23a6fd64ee0294b4",
+    "source_path": "/Users/baltabay/Desktop/miniclusters/axion-fopt/sim_core/axion_sim.py",
+    "numba": "0.65.1",
+    "jit_disk_cache": false
+  },
+  "executable_sha256": "d5bae7471fb924058b0d0ebb8528dce044e9571c22de4083e7d59a4fd34ca773",
+  "build": {
+    "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+    "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+    "kokkos": "5.1.1",
+    "compiler": "AppleClang 21.0.0.21000334",
+    "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+  },
+  "numpy": "2.4.6",
+  "source_sha256": {
+    "checks/stochastic/run_field.py": "5dbf4e1742d73b70cd7fa41aaa66aeffd834c2b16a312a29f93b032a391bdadb",
+    "checks/stochastic/FIELD_EXPERIMENT.md": "6e76a40e5c968c2ffc05d16b2d638e16edd8b37c8a97ab395c9383d681c453e7",
+    "checks/stochastic/spatial_engulfment.py": "adec691e2718b467988c9ebbdac6252a30a7a08d392e09eb61757f7ea6047a39",
+    "checks/stochastic/tracer_reference.py": "ec4889afbd573eeae29347421f053e2788f770bda0ca4d5b06690c8dd870f016",
+    "checks/stochastic/analytic.py": "b10c52b00a64c47e448158401db895556e72cba9360b2cd70d6c9e906a85e610",
+    "src/axion_fopt_next/core.py": "e2bda5655ff4262a478d0df3a912ad6cce910a381815838ea544cb5d92bcd2b5",
+    "src/axion_fopt_next/interchange.py": "2965b517ad6978d4c209e5a67c43ead2b0274c9e6b6d21572f825aaa3c620e0a",
+    "checks/single_bubble/reference.py": "13c68d09be3c440c6a1060b8caf2c0472651f195595e21d29a27afca4d77403e",
+    "adapters/cosmolattice/axion_fopt.h": "fd40a72f00d3207d809ea78344224dd8ae479fce8f3c2dcbece60c5b19a4f529",
+    "adapters/cosmolattice/potential_functions.h": "c8b9081d0a4c1025172ad32b1a50232ddb93c3eca565b641577386f1a60dac5c",
+    "adapters/cosmolattice/evolve.cpp": "ebf44666c64500566b2670f556bcbfa15f2eed4f788ae342697db9e30d4f4f2d",
+    "adapters/cosmolattice/prepare_overlay.py": "6dcac06bd32c217cca274ac4c52a176f1ae65be9c1449f679adfa391a901a673",
+    "adapters/cosmolattice/CMakeLists.txt": "dfb7dc0f5f1ff2441b84a06fe2a9f67946c186be39878556eaf3a20003600901"
+  },
+  "limits": "Single seeded prescribed-bubble cosine field run. Finite initial tau=1. No backreaction or abundance claim. Smooth first-arrival profile differs from sharp geometric F."
+}

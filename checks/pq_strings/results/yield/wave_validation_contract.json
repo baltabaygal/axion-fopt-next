@@ -1,0 +1,12 @@
+{
+  "gates": {
+    "max_relative_yield_error": 0.005,
+    "max_angle_error_over_initial": 0.001,
+    "timestep_yield_change": 0.001,
+    "late_plateau_peak_to_peak": 0.05,
+    "minimum_late_mass_phase_advance": 12.566370614359172
+  },
+  "initial": "N8,L8,theta=1e-5*cos(2pi*x/L); |Phi|=1; WKB initial angular velocity",
+  "physics": "lambda=.08,tau_origin=20,tau_star=27,n_tau=8; evolve to tau=81",
+  "limitation": "single resolved linear mode, no defects; not a network reproduction"
+}

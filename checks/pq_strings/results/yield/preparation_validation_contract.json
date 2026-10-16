@@ -1,0 +1,7 @@
+{
+  "final_state_error": 0.0002,
+  "refinement_ratio": 3.5,
+  "coefficient_error": 2e-13,
+  "snapshot_energy_error": 2e-12,
+  "relative_energy_balance": 0.003
+}

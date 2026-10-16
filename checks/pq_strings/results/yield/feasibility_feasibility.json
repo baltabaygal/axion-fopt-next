@@ -1,0 +1,311 @@
+{
+  "contract": {
+    "target_tau_ratio": 3.0,
+    "n_tau": 8.0,
+    "core_cells": 4.0,
+    "wall_cells": 4.0,
+    "mass_ratio": 0.16,
+    "peak": 3.0,
+    "modes_to_peak": 2.0,
+    "horizon_factor": 2.0,
+    "scope": "necessary lower bounds; not sufficient conditions for scaling or accurate yield",
+    "preparation_note": "lambda may vary during preparation but remains constant in physical production",
+    "memory_note": "four double component arrays only; excludes ghosts, work arrays and FFTs"
+  },
+  "target": {
+    "tau_ratio": 3.0,
+    "n_tau": 8.0,
+    "minimum_L_over_tau_star": 6.0,
+    "ir_box_minimum": 4.1887902047863905,
+    "horizon_box_minimum": 6.0,
+    "minimum_N": 36450,
+    "core_bound_N": 36450.0,
+    "wall_bound_N": 5832.0,
+    "four_component_state_bytes": 1549681956000000,
+    "assumptions": {
+      "core_cells": 4.0,
+      "wall_cells": 4.0,
+      "max_ma_ms": 0.16,
+      "peak_k_tau_star": 3.0,
+      "fundamental_intervals_to_peak": 2.0,
+      "L_over_tau_end_minimum": 2.0
+    }
+  },
+  "one_cell_core_relaxed": {
+    "tau_ratio": 3.0,
+    "n_tau": 8.0,
+    "minimum_L_over_tau_star": 6.0,
+    "ir_box_minimum": 4.1887902047863905,
+    "horizon_box_minimum": 6.0,
+    "minimum_N": 7290,
+    "core_bound_N": 7290.0,
+    "wall_bound_N": 5832.0,
+    "four_component_state_bytes": 12397455648000,
+    "assumptions": {
+      "core_cells": 1.0,
+      "wall_cells": 4.0,
+      "max_ma_ms": 0.2,
+      "peak_k_tau_star": 3.0,
+      "fundamental_intervals_to_peak": 2.0,
+      "L_over_tau_end_minimum": 2.0
+    }
+  },
+  "grids": [
+    {
+      "N": 32,
+      "best_possible_tau_ratio": 0.7889042070627879,
+      "target_feasible": false,
+      "state_bytes": 1048576
+    },
+    {
+      "N": 64,
+      "best_possible_tau_ratio": 0.9062129649032648,
+      "target_feasible": false,
+      "state_bytes": 8388608
+    },
+    {
+      "N": 128,
+      "best_possible_tau_ratio": 1.040965342061366,
+      "target_feasible": false,
+      "state_bytes": 67108864
+    },
+    {
+      "N": 256,
+      "best_possible_tau_ratio": 1.1957551760348168,
+      "target_feasible": false,
+      "state_bytes": 536870912
+    },
+    {
+      "N": 512,
+      "best_possible_tau_ratio": 1.3735620036903842,
+      "target_feasible": false,
+      "state_bytes": 4294967296
+    },
+    {
+      "N": 1024,
+      "best_possible_tau_ratio": 1.5778084141255757,
+      "target_feasible": false,
+      "state_bytes": 34359738368
+    },
+    {
+      "N": 2048,
+      "best_possible_tau_ratio": 1.8124259298065295,
+      "target_feasible": false,
+      "state_bytes": 274877906944
+    },
+    {
+      "N": 4096,
+      "best_possible_tau_ratio": 2.081930684122732,
+      "target_feasible": false,
+      "state_bytes": 2199023255552
+    },
+    {
+      "N": 8192,
+      "best_possible_tau_ratio": 2.3392141905702926,
+      "target_feasible": false,
+      "state_bytes": 17592186044416
+    },
+    {
+      "N": 12288,
+      "best_possible_tau_ratio": 2.50275612592801,
+      "target_feasible": false,
+      "state_bytes": 59373627899904
+    },
+    {
+      "N": 32768,
+      "best_possible_tau_ratio": 2.9472251989123093,
+      "target_feasible": false,
+      "state_bytes": 1125899906842624
+    },
+    {
+      "N": 65536,
+      "best_possible_tau_ratio": 3.3081484336001097,
+      "target_feasible": true,
+      "state_bytes": 9007199254740992
+    }
+  ],
+  "mass_growth_indices": [
+    {
+      "tau_ratio": 3.0,
+      "n_tau": 0.0,
+      "minimum_L_over_tau_star": 6.0,
+      "ir_box_minimum": 4.1887902047863905,
+      "horizon_box_minimum": 6.0,
+      "minimum_N": 450,
+      "core_bound_N": 450.0,
+      "wall_bound_N": 72.0,
+      "four_component_state_bytes": 2916000000,
+      "assumptions": {
+        "core_cells": 4.0,
+        "wall_cells": 4.0,
+        "max_ma_ms": 0.16,
+        "peak_k_tau_star": 3.0,
+        "fundamental_intervals_to_peak": 2.0,
+        "L_over_tau_end_minimum": 2.0
+      }
+    },
+    {
+      "tau_ratio": 3.0,
+      "n_tau": 2.0,
+      "minimum_L_over_tau_star": 6.0,
+      "ir_box_minimum": 4.1887902047863905,
+      "horizon_box_minimum": 6.0,
+      "minimum_N": 1350,
+      "core_bound_N": 1350.0,
+      "wall_bound_N": 216.0,
+      "four_component_state_bytes": 78732000000,
+      "assumptions": {
+        "core_cells": 4.0,
+        "wall_cells": 4.0,
+        "max_ma_ms": 0.16,
+        "peak_k_tau_star": 3.0,
+        "fundamental_intervals_to_peak": 2.0,
+        "L_over_tau_end_minimum": 2.0
+      }
+    },
+    {
+      "tau_ratio": 3.0,
+      "n_tau": 4.0,
+      "minimum_L_over_tau_star": 6.0,
+      "ir_box_minimum": 4.1887902047863905,
+      "horizon_box_minimum": 6.0,
+      "minimum_N": 4050,
+      "core_bound_N": 4050.0,
+      "wall_bound_N": 648.0,
+      "four_component_state_bytes": 2125764000000,
+      "assumptions": {
+        "core_cells": 4.0,
+        "wall_cells": 4.0,
+        "max_ma_ms": 0.16,
+        "peak_k_tau_star": 3.0,
+        "fundamental_intervals_to_peak": 2.0,
+        "L_over_tau_end_minimum": 2.0
+      }
+    },
+    {
+      "tau_ratio": 3.0,
+      "n_tau": 6.0,
+      "minimum_L_over_tau_star": 6.0,
+      "ir_box_minimum": 4.1887902047863905,
+      "horizon_box_minimum": 6.0,
+      "minimum_N": 12150,
+      "core_bound_N": 12150.0,
+      "wall_bound_N": 1944.0,
+      "four_component_state_bytes": 57395628000000,
+      "assumptions": {
+        "core_cells": 4.0,
+        "wall_cells": 4.0,
+        "max_ma_ms": 0.16,
+        "peak_k_tau_star": 3.0,
+        "fundamental_intervals_to_peak": 2.0,
+        "L_over_tau_end_minimum": 2.0
+      }
+    },
+    {
+      "tau_ratio": 3.0,
+      "n_tau": 7.0,
+      "minimum_L_over_tau_star": 6.0,
+      "ir_box_minimum": 4.1887902047863905,
+      "horizon_box_minimum": 6.0,
+      "minimum_N": 21045,
+      "core_bound_N": 21044.41731196186,
+      "wall_bound_N": 3367.1067699138976,
+      "four_component_state_bytes": 298261205316000,
+      "assumptions": {
+        "core_cells": 4.0,
+        "wall_cells": 4.0,
+        "max_ma_ms": 0.16,
+        "peak_k_tau_star": 3.0,
+        "fundamental_intervals_to_peak": 2.0,
+        "L_over_tau_end_minimum": 2.0
+      }
+    },
+    {
+      "tau_ratio": 3.0,
+      "n_tau": 8.0,
+      "minimum_L_over_tau_star": 6.0,
+      "ir_box_minimum": 4.1887902047863905,
+      "horizon_box_minimum": 6.0,
+      "minimum_N": 36450,
+      "core_bound_N": 36450.0,
+      "wall_bound_N": 5832.0,
+      "four_component_state_bytes": 1549681956000000,
+      "assumptions": {
+        "core_cells": 4.0,
+        "wall_cells": 4.0,
+        "max_ma_ms": 0.16,
+        "peak_k_tau_star": 3.0,
+        "fundamental_intervals_to_peak": 2.0,
+        "L_over_tau_end_minimum": 2.0
+      }
+    }
+  ],
+  "current_setup": [
+    {
+      "N": 64,
+      "tau_ratio": 1.1851851851851851,
+      "tau": 32.0,
+      "a": 1.6,
+      "ma": 0.05413115876790914,
+      "ms": 0.4,
+      "ma_ms": 0.13532789691977284,
+      "core_cells": 4.166666666666666,
+      "wall_cells": 30.789414167404182,
+      "kmin_tau_star": 7.0685834705770345,
+      "L_over_tau_end": 0.75
+    },
+    {
+      "N": 64,
+      "tau_ratio": 1.5,
+      "tau": 40.5,
+      "a": 2.025,
+      "ma": 0.1388888888888889,
+      "ms": 0.4,
+      "ma_ms": 0.3472222222222222,
+      "core_cells": 3.2921810699588474,
+      "wall_cells": 9.481481481481481,
+      "kmin_tau_star": 7.0685834705770345,
+      "L_over_tau_end": 0.5925925925925926
+    },
+    {
+      "N": 64,
+      "tau_ratio": 2.0,
+      "tau": 54.0,
+      "a": 2.7,
+      "ma": 0.438957475994513,
+      "ms": 0.4,
+      "ma_ms": 1.0973936899862824,
+      "core_cells": 2.4691358024691357,
+      "wall_cells": 2.25,
+      "kmin_tau_star": 7.0685834705770345,
+      "L_over_tau_end": 0.4444444444444444
+    },
+    {
+      "N": 64,
+      "tau_ratio": 2.5,
+      "tau": 67.5,
+      "a": 3.375,
+      "ma": 1.071673525377229,
+      "ms": 0.4,
+      "ma_ms": 2.679183813443072,
+      "core_cells": 1.9753086419753083,
+      "wall_cells": 0.7372800000000002,
+      "kmin_tau_star": 7.0685834705770345,
+      "L_over_tau_end": 0.35555555555555557
+    },
+    {
+      "N": 64,
+      "tau_ratio": 3.0,
+      "tau": 81.0,
+      "a": 4.05,
+      "ma": 2.2222222222222223,
+      "ms": 0.4,
+      "ma_ms": 5.555555555555555,
+      "core_cells": 1.6460905349794237,
+      "wall_cells": 0.2962962962962963,
+      "kmin_tau_star": 7.0685834705770345,
+      "L_over_tau_end": 0.2962962962962963
+    }
+  ],
+  "conclusion": "No 32^3,64^3 or128^3 fixed-comoving full-PQ run meets these post-collapse criteria; changing units, lambda or tau_star cannot remove the combined bound."
+}

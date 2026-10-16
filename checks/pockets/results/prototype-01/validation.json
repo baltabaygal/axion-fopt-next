@@ -1,0 +1,57 @@
+{
+  "gates": {
+    "force_difference": 2e-07,
+    "vacuum_mass_error": 2e-06,
+    "kink_tension_relative": 1e-08,
+    "kink_residual": 1e-12,
+    "gas_direct_sum": 1e-10,
+    "final_ode_error": 0.0002,
+    "refinement_ratio": 3.5,
+    "snapshot_energy_relative": 1e-12,
+    "energy_drift_relative": 1e-05
+  },
+  "checks": {
+    "force_difference": true,
+    "vacuum_masses": true,
+    "vacuum_energies": true,
+    "kink_residual": true,
+    "kink_tension": true,
+    "gas_direct_sum": true,
+    "small_0.005_transfer": true,
+    "small_0.005_time": true,
+    "small_0.005_energy": true,
+    "small_0.005_conservation": true,
+    "small_0.005_slices": true,
+    "small_0.0025_transfer": true,
+    "small_0.0025_time": true,
+    "small_0.0025_energy": true,
+    "small_0.0025_conservation": true,
+    "small_0.0025_slices": true,
+    "small_ode": true,
+    "small_refinement": true,
+    "reject_nonfinite": true,
+    "reject_fractional_grid": true,
+    "reject_expansion": true,
+    "reject_negative_mass": true
+  },
+  "details": {
+    "force_difference": 5.57852075644405e-09,
+    "vacuum_mass_error": 2.4264901199444466e-10,
+    "kink_residual": 6.0377863733002135e-16,
+    "kink_tension_relative": 2.220446049250313e-16,
+    "gas_direct_sum": 4.529709940470639e-14,
+    "small_0.005": {
+      "final_ode_error": 6.419970084881044e-06,
+      "energy_error": 3.2432013419035546e-16,
+      "energy_drift": 9.608525115232506e-06
+    },
+    "small_0.0025": {
+      "final_ode_error": 1.6049739474111036e-06,
+      "energy_error": 3.706539900442675e-16,
+      "energy_drift": 2.4020822736576735e-06
+    },
+    "refinement_ratio": 4.000046290618455
+  },
+  "passed": true,
+  "executable_sha256": "0a60f10bc2f0b9cdbd166749da3150032bf44db6cf7ab2160c8b19b843e1f0fe"
+}

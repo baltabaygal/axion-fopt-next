@@ -1,0 +1,70 @@
+{
+  "suite": "pocket",
+  "parameters": {
+    "N": 128,
+    "lSide": 64.0,
+    "dt": 0.05,
+    "tMax": 300.0,
+    "expansion": false,
+    "evolver": "PV2",
+    "lambda": 2.0,
+    "delta_v": 0.01,
+    "mass_tv": 2.0,
+    "output_every": 10,
+    "snapshot_every": 2000,
+    "slice_every": 40,
+    "initial_state": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pockets/prototype-01/pocket/input.bin",
+    "result_dir": "/Users/baltabay/Desktop/axion-fopt-next/outputs/pockets/prototype-01/pocket/native"
+  },
+  "energy_drift": 8.799335459395745e-05,
+  "max_dt_frequency": 0.47770937617145387,
+  "initial_total": 2756.6951173987272,
+  "initial_axion": 1553.7542338448504,
+  "min_radius": 14.647922837443227,
+  "final_radius": 14.647922837443227,
+  "min_wall_cells": 4.254498281991207,
+  "max_tv_fraction": 0.007792222362996381,
+  "final_tv_fraction": 0.007434212524769392,
+  "max_asphericity": 0.4809372665952226,
+  "max_centroid_shift": 1.3387654211784865,
+  "max_phi2_fv": 0.03407733085355691,
+  "gates": {
+    "energy_drift": true,
+    "frequency_guard": true,
+    "wall_resolution": true,
+    "solver_completed": false,
+    "initial_transfer": true
+  },
+  "solver_error": "dt*field-dependent frequency bound > .5",
+  "completed_until": 25.5,
+  "gas_amplitude": 0.00966833602731039,
+  "elapsed_seconds": 13.808462041022722,
+  "late_mean_radius": NaN,
+  "late_radius_std": NaN,
+  "brackets": {
+    "adiabatic": 16.99999999999386,
+    "energy_conserving": 17.3235361277678
+  },
+  "minima_times": [],
+  "minima_radii": [],
+  "breathing_period": null,
+  "thin_wall": {
+    "first_minimum_time": 17.834765890925112,
+    "first_minimum_radius": 14.258798321346376,
+    "period": 35.6285714285752,
+    "max_speed": 0.49238581884171395
+  },
+  "gas": {
+    "0": {
+      "k_eff": 0.4068830432071777,
+      "omega_eff": 0.3499988356256324,
+      "dilaton_tv_energy": 0.0
+    }
+  },
+  "outcome": {
+    "survives": true,
+    "persists": false,
+    "confined": true
+  },
+  "relic_pocket": false
+}

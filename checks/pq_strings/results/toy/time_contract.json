@@ -1,0 +1,41 @@
+{
+  "interpretation": "Modified finite-box toy; no cosmological abundance or paper reproduction",
+  "parameters": {
+    "N": 64,
+    "lSide": 24.0,
+    "dt": 0.01,
+    "tMax": 360.0,
+    "lambda_": 0.08,
+    "tau_origin": 40.0,
+    "tau_star": 45.500987903489424,
+    "n_tau": 8.0,
+    "chi_star": 0.0003732816821437561,
+    "expansion": true,
+    "fixedBackground": true,
+    "H0": 0.025,
+    "omegaEoS": 0.3333333333333333,
+    "evolver": "PV2",
+    "output_every": 20,
+    "snapshot_every": 200,
+    "core_growth_until": 44.0,
+    "mass_schedule": "smooth_cap",
+    "mass_onset": 44.0,
+    "mass_ramp_duration": 6.0,
+    "mass_cap": 0.06
+  },
+  "initial": "symmetric four straight strings",
+  "gates": {
+    "core_cells_while_defects": 4,
+    "wall_cells": 4,
+    "max_ma_ms": 0.16,
+    "late_theta_max": 0.3,
+    "late_radial_rms": 0.1,
+    "late_window_duration": 60,
+    "late_phase_advance": 12.566370614359172,
+    "late_yield_peak_to_peak": 0.05,
+    "dt_yield_change": 0.01,
+    "spatial_yield_change": 0.1
+  },
+  "initial_freeze": "Exact N64 state; N128 Fourier interpolation, matched physical parameters",
+  "normalization": "nu_toy=(a/a_star)^3 n_a/H_star, f_a=1, star solves m_a=H for massive run; control uses same star"
+}

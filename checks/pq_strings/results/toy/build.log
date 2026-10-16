@@ -1,0 +1,7 @@
+[ 68%] Built target kokkoscore
+[ 84%] Built target kokkosalgorithms
+[ 84%] Built target kokkossimd
+[ 92%] Built target kokkoscontainers
+[ 96%] Building CXX object CMakeFiles/pq_evolve.dir/evolve.cpp.o
+[100%] Linking CXX executable pq_evolve
+[100%] Built target pq_evolve

@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "0.01_state": true,
+    "0.01_chi": true,
+    "0.01_balance": true,
+    "0.005_state": true,
+    "0.005_chi": true,
+    "0.005_balance": true,
+    "refinement": true
+  },
+  "details": [
+    {
+      "dt": 0.01,
+      "error": 8.091625999961938e-06,
+      "energy_balance": 4.866015539568015e-05
+    },
+    {
+      "dt": 0.005,
+      "error": 2.022815667065969e-06,
+      "energy_balance": 1.21642735776453e-05
+    }
+  ],
+  "ratio": 4.0001796168103585,
+  "passed": true
+}

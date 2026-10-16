@@ -1,0 +1,102 @@
+{
+  "gates": {
+    "force_difference": 2e-07,
+    "vacuum_mass_error": 2e-06,
+    "final_ode_error": 0.0002,
+    "refinement_ratio": 3.5,
+    "transfer_error": 0.0,
+    "energy_snapshot_error": 2e-12,
+    "energy_balance_relative": 0.0002
+  },
+  "checks": {
+    "force_difference": true,
+    "origin_limit": true,
+    "vacuum_masses": true,
+    "known_winding": true,
+    "homogeneous_static_0.005_transfer": true,
+    "homogeneous_static_0.005_time": true,
+    "homogeneous_static_0.005_energy": true,
+    "homogeneous_static_0.005_balance": true,
+    "homogeneous_static_0.0025_transfer": true,
+    "homogeneous_static_0.0025_time": true,
+    "homogeneous_static_0.0025_energy": true,
+    "homogeneous_static_0.0025_balance": true,
+    "homogeneous_static_ode": true,
+    "homogeneous_static_refinement": true,
+    "inhomogeneous_static_0.005_transfer": true,
+    "inhomogeneous_static_0.005_time": true,
+    "inhomogeneous_static_0.005_energy": true,
+    "inhomogeneous_static_0.005_balance": true,
+    "inhomogeneous_static_0.0025_transfer": true,
+    "inhomogeneous_static_0.0025_time": true,
+    "inhomogeneous_static_0.0025_energy": true,
+    "inhomogeneous_static_0.0025_balance": true,
+    "inhomogeneous_static_ode": true,
+    "inhomogeneous_static_refinement": true,
+    "inhomogeneous_radiation_0.005_transfer": true,
+    "inhomogeneous_radiation_0.005_time": true,
+    "inhomogeneous_radiation_0.005_energy": true,
+    "inhomogeneous_radiation_0.005_balance": true,
+    "inhomogeneous_radiation_0.0025_transfer": true,
+    "inhomogeneous_radiation_0.0025_time": true,
+    "inhomogeneous_radiation_0.0025_energy": true,
+    "inhomogeneous_radiation_0.0025_balance": true,
+    "inhomogeneous_radiation_ode": true,
+    "inhomogeneous_radiation_refinement": true,
+    "reject_nonfinite": true,
+    "reject_fractional_grid": true,
+    "reject_wrong_background": true
+  },
+  "details": {
+    "force_difference": 1.4439178741554315e-09,
+    "vacuum_mass_error": 1.2000400673173317e-12,
+    "known_winding": {
+      "plaquettes": 64,
+      "wall_links": 256,
+      "signed_winding": [
+        0,
+        0,
+        0
+      ],
+      "string_length_estimate": 21.333333333333332,
+      "wall_area_estimate": 42.666666666666664,
+      "zeta": 1.0416666666666665,
+      "A_dw": 0.41666666666666663
+    },
+    "homogeneous_static_0.005": {
+      "final_ode_error": 1.7360257689030822e-07,
+      "energy_error": 3.0357660829594124e-18,
+      "balance_relative": 1.1537054930152288e-06
+    },
+    "homogeneous_static_0.0025": {
+      "final_ode_error": 4.3400493934808715e-08,
+      "energy_error": 2.3852447794681098e-17,
+      "balance_relative": 2.8842402424412614e-07
+    },
+    "homogeneous_static_ratio": 4.000013851249579,
+    "inhomogeneous_static_0.005": {
+      "final_ode_error": 1.714178312946582e-05,
+      "energy_error": 2.220446049250313e-16,
+      "balance_relative": 1.0107957960534857e-05
+    },
+    "inhomogeneous_static_0.0025": {
+      "final_ode_error": 4.285247177012071e-06,
+      "energy_error": 1.1102230246251565e-16,
+      "balance_relative": 2.52698297948387e-06
+    },
+    "inhomogeneous_static_ratio": 4.000185385202935,
+    "inhomogeneous_radiation_0.005": {
+      "final_ode_error": 5.618813487373586e-05,
+      "energy_error": 5.204170427930421e-18,
+      "balance_relative": 2.498428536289278e-05
+    },
+    "inhomogeneous_radiation_0.0025": {
+      "final_ode_error": 1.4046266898493087e-05,
+      "energy_error": 6.938893903907228e-18,
+      "balance_relative": 6.245942150982032e-06
+    },
+    "inhomogeneous_radiation_ratio": 4.000218369748039
+  },
+  "passed": true,
+  "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677"
+}

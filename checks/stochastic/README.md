@@ -7,7 +7,32 @@ reference cases. The first geometry-only ensembles are implemented in
 [run_survival.py](run_survival.py), with analytic F(t) as the primary observable.
 See [EXPERIMENT.md](EXPERIMENT.md) for the predeclared parameters and acceptance
 criteria, and [results/README.md](results/README.md) for recorded findings.
-No coupled stochastic field evolution has been performed here.
+The first stochastic catalogue driving CosmoLattice field evolution is now
+implemented in [run_field.py](run_field.py), with parameters and validation
+criteria in [FIELD_EXPERIMENT.md](FIELD_EXPERIMENT.md) and recorded
+[field results](results/field/README.md). Bubble growth and expansion remain
+prescribed, without axion backreaction.
+
+Representative [bubble and axion GIFs](results/animations/README.md) use the
+same frozen catalogue and an extended native field run. The reproducible
+renderer is [make_gifs.py](make_gifs.py).
+The [H*=0.05 GIFs](results/animations_H0.05/README.md) keep mt=1,
+beta/H*=1 and H*L=3, with a newly evolved field; their detailed spatial
+patterns are representative and have not passed a continuum-convergence check.
+The [energy evolution](results/energy_H0.05/README.md) separates physical
+kinetic, gradient and potential contributions with the paper's dimensionless
+normalization and an independent homogeneous no-FOPT comparison.
+The [Fig.2 physical-parameter rerun](results/paper_figure2/README.md) uses
+H*/m=0.05,beta/H*=4,v=0.15,theta_i=2,L*m=8*pi,N=128 and sharp walls,
+with fixed-catalogue timestep/grid checks. See its numerical-method caveats.
+
+The first optimized engulfment implementation is
+[spatial_engulfment.py](spatial_engulfment.py). Its periodic cell index replaces
+only the frozen paper method's all-pairs tracer geometry. See the
+[paired benchmark](benchmark_engulfment.py),
+[predeclared contract](OPTIMIZATION_EXPERIMENT.md) and
+[exact-equivalence/timing results](results/engulfment_index/README.md).
+The original all-pairs path remains available for validation and fallback.
 
 The warm-JIT tracer timing baseline is in
 [benchmark_tracers.py](benchmark_tracers.py), with predeclared parameters in

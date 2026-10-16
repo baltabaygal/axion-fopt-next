@@ -1,0 +1,26 @@
+{
+  "bubble_frames": 55,
+  "field_frames": 201,
+  "mean_zero_crossings": 14,
+  "catalogue_bubbles": 614,
+  "source_directory": "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic/representative-H0.05",
+  "physics": {
+    "h": 0.05,
+    "beta": 0.05,
+    "box": 60.0,
+    "width": 3.0,
+    "origin": 20.0,
+    "n": 64,
+    "birth_end": 50.0,
+    "field_end": 60.0,
+    "dt": 0.01,
+    "mass_true": 1.0,
+    "mass_false": 0.0,
+    "speed": 0.5
+  },
+  "limits": "Representative visualization. Frozen birth catalogue, continued bubble growth, prescribed geometry, no backreaction. Cube uses independent probes; spatial continuum accuracy is not certified.",
+  "same_early_field_exact": null,
+  "source_sha256": "553402859fb38b3ef9de99f7d444323996186c5be641bdf2ca882e579503db07",
+  "executable_sha256": "de7b038930c8dd00e52f527170475531f7364425f7c55ec408ad73e70aafe5f4",
+  "input_sha256": "35545e9a219c1a8e50c9f68e57c9a869216878cb197869ddd18b1aa3269375b6"
+}

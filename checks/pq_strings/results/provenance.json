@@ -1,0 +1,24 @@
+{
+  "python": "3.13.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "executable_sha256": "18508ed84e975b9d3f3f95a33d81ef9fa09ea66b3a34dd51962f45d1bf74f677",
+  "sources": {
+    "checks/pq_strings/AGENTS.md": "0051c6599fe4627599a4d46f0b5cb8d0f90d17b5ba49fa052ee37d0112a6ccb5",
+    "checks/pq_strings/CMakeLists.txt": "d5ced0c3289db42b2c49e22b424862a09df75adedd9eabdccb40d739352dba34",
+    "checks/pq_strings/README.md": "e19775722ef9f4c076f78edc5701f22b79387f0fee8676611b2727b174cea801",
+    "checks/pq_strings/evolve.cpp": "9f858c8f08de1d2f545c517c03b67aa9d6934604b9448e8bd0067bba5ad35fe1",
+    "checks/pq_strings/model.py": "b2671d9995d00acc148fdbbbb897da4dc4300298baafe389a65302a953031b6c",
+    "checks/pq_strings/plot.py": "bb0ddc6af245b34f412c815577a4cb535606678da84215564920f835ad6ef87a",
+    "checks/pq_strings/pq_model.h": "46cd2daea95f532a0868e998b4f5b8af46c2151c11d12f96cefcf0a091a52566",
+    "checks/pq_strings/run_demo.py": "adeb1d954f3adc62c5109b3f96e8978a995d648a2d3f845f5a89ce989b280f9b",
+    "checks/pq_strings/validate.py": "d4aabdfa4817a4ad2f5f42f1564535cfb6315e56d1268dc4507a5aea19702146"
+  },
+  "build": {
+    "cosmolattice_commit": "0dad16ec2c894a7c6abbea0e98734126b3470b36",
+    "templat_commit": "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b",
+    "kokkos": "5.1.1",
+    "compiler": "AppleClang 21.0.0.21000334",
+    "backend": "Kokkos Serial; FFTW; MPI OFF; strict floating point"
+  }
+}

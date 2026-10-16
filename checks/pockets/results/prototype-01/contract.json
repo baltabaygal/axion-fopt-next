@@ -1,0 +1,72 @@
+{
+  "parameters": {
+    "n": 128,
+    "box": 64.0,
+    "dt": 0.05,
+    "r0": 20.0,
+    "wall_width": 2.0,
+    "lambda_": 2.0,
+    "sigma": 0.16666666666666666,
+    "delta_v": 0.01,
+    "mass_tv": 2.0,
+    "k_min": 0.15,
+    "k_max": 0.6,
+    "seed": 0,
+    "window_radius": 17.0,
+    "window_width": 2.0,
+    "rho0": 0.046366437499999996
+  },
+  "gates": {
+    "energy_drift": 0.0001,
+    "radial_agreement": 0.25,
+    "radial_minimum_radius": 8.0,
+    "minimum_wall_cells": 4.0,
+    "timestep_radius": 0.05,
+    "spatial_radius": 0.5,
+    "spatial_mean_radius": 0.25
+  },
+  "outcomes": {
+    "survival_radius": 8.0,
+    "late_mean_radius": 10.0,
+    "late_window": [
+      200.0,
+      300.0
+    ],
+    "leak_fraction": 0.01,
+    "control_collapse_volume": 0.01,
+    "control_collapse_time": 40.0,
+    "leaky_tv_fraction": 0.5
+  },
+  "suites": {
+    "control": {
+      "gas": false,
+      "duration": 60.0
+    },
+    "pocket": {
+      "duration": 300.0,
+      "frames": 2000
+    },
+    "timestep": {
+      "dt": 0.025,
+      "duration": 100.0
+    },
+    "spatial": {
+      "n": 96,
+      "duration": 100.0
+    },
+    "leaky": {
+      "mass_tv": 0.3,
+      "duration": 100.0
+    }
+  },
+  "sources": {
+    "model.py": "b1e813445dfc43f9ab4f8aadcbdc03163092dff88180c8acf21e5d03a031097b",
+    "run_prototype.py": "db1aa2607dfdc706515c523d98ed63403ea235318fd0bdc73336dc8078c8fcf0",
+    "pocket_model.h": "d9072d15e0bb9a6469e774f88be452ddbab9bee77031057d168ff47bf4768c73",
+    "evolve.cpp": "e456964ef4e4d800b682b9a40093d0e8167d8e7699b7d57b84a4b4c510cc9e6c"
+  },
+  "executable_sha256": "0a60f10bc2f0b9cdbd166749da3150032bf44db6cf7ab2160c8b19b843e1f0fe",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+}

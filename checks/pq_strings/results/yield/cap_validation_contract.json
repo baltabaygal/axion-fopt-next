@@ -1,0 +1,6 @@
+{
+  "max_error": 2e-05,
+  "min_refinement_ratio": 3.5,
+  "coefficient_error": 2e-14,
+  "source_balance": 0.001
+}

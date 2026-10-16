@@ -18,7 +18,7 @@ static void validateNumericInputs(const ParameterParser& parser) {
     for (const char* name : {"N", "lSide", "kIR", "dx", "dt", "tMax", "t0", "a0", "H0",
                              "omegaEoS", "f_axion", "omega_star", "mass_false", "mass_true",
                              "tau_origin", "theta_initial", "theta_prime_initial", "output_every",
-                             "wall_width", "profile_wall_speed", "snapshot_at"}) {
+                             "wall_width", "profile_wall_speed", "snapshot_at", "snapshot_every"}) {
         const auto found = parser.getParams().find(name);
         if (found == parser.getParams().end()) continue;
         std::istringstream input(found->second);
@@ -27,8 +27,8 @@ static void validateNumericInputs(const ParameterParser& parser) {
             throw std::invalid_argument(std::string("Invalid numeric input: ") + name);
         input >> std::ws;
         if (!input.eof()) throw std::invalid_argument(std::string("Trailing numeric input: ") + name);
-        if ((std::string(name) == "N" || std::string(name) == "output_every") &&
-            (value != std::floor(value) || value > 10000000. || value < 1.))
+        if ((std::string(name) == "N" || std::string(name) == "output_every" || std::string(name) == "snapshot_every") &&
+            (value != std::floor(value) || value > 10000000. || value < (std::string(name) == "snapshot_every" ? 0. : 1.)))
             throw std::invalid_argument(std::string("Invalid integer input: ") + name);
     }
 }
@@ -92,6 +92,8 @@ static Diagnostics measure(AxionFopt& model, bool energies, double u) {
     const double dx2 = model.fldS(0_c).getDx() * model.fldS(0_c).getDx();
     const double tau = model.conformalTime(u), rate = model.externalPowerRate();
     const double mf = model.falseMassSquared(), mt = model.trueMassSquared();
+    const double a2 = model.aI * model.aI;
+    const double a6 = a2 * a2 * a2;
     Diagnostics d;
     for (ptrdiff_t i = start; i < start + sizes[0]; ++i)
       for (ptrdiff_t j = start; j < start + sizes[1]; ++j)
@@ -101,7 +103,7 @@ static Diagnostics measure(AxionFopt& model, bool energies, double u) {
             d.theta += th; d.pi += pi; d.theta2 += th * th; d.potential += potential;
             if (energies) {
                 const double gx = theta(i+1,j,k)-th, gy = theta(i,j+1,k)-th, gz = theta(i,j,k+1)-th;
-                const double gradient = .5 * (gx*gx+gy*gy+gz*gz) / dx2, kinetic = .5*pi*pi;
+                const double gradient = .5 * (gx*gx+gy*gy+gz*gz) / (dx2*a2), kinetic = .5*pi*pi/a6;
                 d.kinetic += kinetic; d.gradient += gradient;
                 if (tau >= arrival(i,j,k)) d.inside += kinetic+gradient+potential;
                 d.source += rate * (m-mf) * (mt-m) * shape;
@@ -145,13 +147,13 @@ int main(int argc, char** argv) {
         if (snapshotFormat != "csv" && snapshotFormat != "binary")
             throw std::invalid_argument("Require snapshot_format=csv or binary");
         const bool binary = snapshotFormat == "binary";
+        const int snapshotEvery = parser.get<int>("snapshot_every", 0)();
+        if (snapshotEvery < 0) throw std::invalid_argument("snapshot_every must be nonnegative");
         const double snapshotAt = parser.get<double>("snapshot_at", -1.)();
         if (snapshotAt != -1. && (snapshotAt < 0. || snapshotAt > run.tMax))
             throw std::invalid_argument("snapshot_at must lie in [0,tMax]");
         bool checkpointWritten = false;
         const bool energies = parser.get<bool>("energy_diagnostics", false)();
-        if (energies && run.expansion)
-            throw std::invalid_argument("energy_diagnostics currently requires expansion=false");
         const std::filesystem::path output(parser.get<std::string>("result_dir")());
         axion_fopt_next::ArrivalMap map(parser.get<std::string>("arrival_map")());
         auto toolbox = MemoryToolBox<3>::makeShared(run.N, 1);
@@ -187,6 +189,14 @@ int main(int argc, char** argv) {
                 integrator.sync(model, u);
                 snapshot(model, output / (binary ? "checkpoint.bin" : "checkpoint.csv"), run.N, binary, run.lSide, u);
                 checkpointWritten = true;
+                if (profile) snapshotSeconds += std::chrono::duration<double>(Clock::now()-snapshotStart).count();
+            }
+            if (snapshotEvery > 0 && step % snapshotEvery == 0) {
+                snapshotStart = profile ? Clock::now() : Clock::time_point{};
+                integrator.sync(model, u);
+                std::ostringstream frameName;
+                frameName << "frame_" << std::setw(7) << std::setfill('0') << step << (binary ? ".bin" : ".csv");
+                snapshot(model, output / frameName.str(), run.N, binary, run.lSide, u);
                 if (profile) snapshotSeconds += std::chrono::duration<double>(Clock::now()-snapshotStart).count();
             }
             if (step < steps) {

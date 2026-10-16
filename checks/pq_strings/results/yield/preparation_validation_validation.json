@@ -1,0 +1,66 @@
+{
+  "gates": {
+    "final_state_error": 0.0002,
+    "refinement_ratio": 3.5,
+    "coefficient_error": 2e-13,
+    "snapshot_energy_error": 2e-12,
+    "relative_energy_balance": 0.003
+  },
+  "checks": {
+    "3.0_0.005_state": true,
+    "3.0_0.005_coefficients": true,
+    "3.0_0.005_energy": true,
+    "3.0_0.005_balance": true,
+    "3.0_0.005_source_partition": true,
+    "3.0_0.0025_state": true,
+    "3.0_0.0025_coefficients": true,
+    "3.0_0.0025_energy": true,
+    "3.0_0.0025_balance": true,
+    "3.0_0.0025_source_partition": true,
+    "3.0_refinement": true,
+    "2.003_0.005_state": true,
+    "2.003_0.005_coefficients": true,
+    "2.003_0.005_energy": true,
+    "2.003_0.005_balance": true,
+    "2.003_0.005_source_partition": true,
+    "2.003_0.0025_state": true,
+    "2.003_0.0025_coefficients": true,
+    "2.003_0.0025_energy": true,
+    "2.003_0.0025_balance": true,
+    "2.003_0.0025_source_partition": true,
+    "2.003_refinement": true
+  },
+  "details": {
+    "3.0_0.005": {
+      "final_error": 4.87485569945767e-07,
+      "coefficient_error": 0.0,
+      "energy_error": 1.0842021724855044e-19,
+      "balance": 0.00015910819576588393,
+      "negative_lambda_work": -0.0006117293037950812
+    },
+    "3.0_0.0025": {
+      "final_error": 1.218702841906949e-07,
+      "coefficient_error": 0.0,
+      "energy_error": 2.439454888092385e-19,
+      "balance": 8.308407049246793e-05,
+      "negative_lambda_work": -0.0006119535969223875
+    },
+    "3.0_refinement": 4.000036376242304,
+    "2.003_0.005": {
+      "final_error": 3.246788314670637e-07,
+      "coefficient_error": 0.0,
+      "energy_error": 4.87890977618477e-19,
+      "balance": 5.6646097709598624e-05,
+      "negative_lambda_work": -7.359326808954228e-07
+    },
+    "2.003_0.0025": {
+      "final_error": 8.553734024731308e-08,
+      "coefficient_error": 0.0,
+      "energy_error": 3.2526065174565133e-19,
+      "balance": 0.00011063326444241065,
+      "negative_lambda_work": -1.100105897282924e-06
+    },
+    "2.003_refinement": 3.795755520668795
+  },
+  "passed": true
+}

@@ -1,0 +1,47 @@
+test_irregular_arrival_cache_fallback (test_bubble_adapter.BubbleAdapterTests.test_irregular_arrival_cache_fallback) ... ok
+test_periodic_snapshots_preserve_dynamics (test_bubble_adapter.BubbleAdapterTests.test_periodic_snapshots_preserve_dynamics) ... ok
+test_reject_profile_inputs (test_bubble_adapter.BubbleAdapterTests.test_reject_profile_inputs) ... ok
+test_smooth_quadratic_field_and_energy (test_bubble_adapter.BubbleAdapterTests.test_smooth_quadratic_field_and_energy) ... ok
+test_zero_mode_and_plane_wave_normalization (test_bubble_adapter.FourierTests.test_zero_mode_and_plane_wave_normalization) ... ok
+test_empty_and_chunking (test_core.GeometryTests.test_empty_and_chunking) ... ok
+test_force_derivative_and_scale_factor (test_core.GeometryTests.test_force_derivative_and_scale_factor) ... ok
+test_input_validation (test_core.GeometryTests.test_input_validation) ... ok
+test_periodic_arrival_and_future_birth (test_core.GeometryTests.test_periodic_arrival_and_future_birth) ... ok
+test_false_vacuum_constant_rate (test_core.SamplingTests.test_false_vacuum_constant_rate) ... ok
+test_linear_rate_conditional_time_distribution (test_core.SamplingTests.test_linear_rate_conditional_time_distribution) ... ok
+test_poisson_count_mean_and_variance (test_core.SamplingTests.test_poisson_count_mean_and_variance) ... ok
+test_seed_and_exclusion (test_core.SamplingTests.test_seed_and_exclusion) ... ok
+test_field_evolution_references (test_cosmolattice.CosmoLatticeTests.test_field_evolution_references) ... ok
+test_reject_unsupported_or_invalid_runs (test_cosmolattice.CosmoLatticeTests.test_reject_unsupported_or_invalid_runs) ... ok
+test_boundary_and_never_converted (test_interchange.InterchangeTests.test_boundary_and_never_converted) ... ok
+test_malformed_maps_and_units (test_interchange.InterchangeTests.test_malformed_maps_and_units) ... ok
+test_one_bubble_units_and_nonmonotonic_stages (test_interchange.InterchangeTests.test_one_bubble_units_and_nonmonotonic_stages) ... ok
+test_invalid_maps (test_interchange.WriterTests.test_invalid_maps) ... ok
+test_compiled_capped_mass_reference (test_pq.PQContracts.test_compiled_capped_mass_reference) ... ok
+test_compiled_core_growth_reference (test_pq.PQContracts.test_compiled_core_growth_reference) ... ok
+test_compiled_evolved_wave_yield (test_pq.PQContracts.test_compiled_evolved_wave_yield) ... ok
+test_compiled_reference_suite (test_pq.PQContracts.test_compiled_reference_suite) ... ok
+test_force_is_potential_gradient (test_pq.PQContracts.test_force_is_potential_gradient) ... ok
+test_force_origin_and_vacuum (test_pq.PQContracts.test_force_origin_and_vacuum) ... ok
+test_mass_hubble_equality (test_pq.PQContracts.test_mass_hubble_equality) ... ok
+test_periodic_neutral_strings_and_no_wall_at_uniform_vacuum (test_pq.PQContracts.test_periodic_neutral_strings_and_no_wall_at_uniform_vacuum) ... ok
+test_bound_expresses_mass_and_core_interval (test_pq_feasibility.PQFeasibilityTests.test_bound_expresses_mass_and_core_interval) ... ok
+test_current_setup_and_unit_independence (test_pq_feasibility.PQFeasibilityTests.test_current_setup_and_unit_independence) ... ok
+test_target_bound_and_relaxed_reference (test_pq_feasibility.PQFeasibilityTests.test_target_bound_and_relaxed_reference) ... ok
+test_coherent_zero_mode_completion_and_harmonic_gate (test_pq_spectra.PQSpectraTests.test_coherent_zero_mode_completion_and_harmonic_gate) ... ok
+test_coordinate_gauge_invariance_and_continuum_convergence (test_pq_spectra.PQSpectraTests.test_coordinate_gauge_invariance_and_continuum_convergence) ... ok
+test_link_alignment_projection_and_parseval (test_pq_spectra.PQSpectraTests.test_link_alignment_projection_and_parseval) ... ok
+test_oblique_wave_normalization_all_phases_and_modulus_weight (test_pq_spectra.PQSpectraTests.test_oblique_wave_normalization_all_phases_and_modulus_weight) ... ok
+test_radial_motion_is_not_counted_as_axions_and_partition_is_exact (test_pq_spectra.PQSpectraTests.test_radial_motion_is_not_counted_as_axions_and_partition_is_exact) ... ok
+test_zero_mode_is_explicit_and_undefined_projections_rejected (test_pq_spectra.PQSpectraTests.test_zero_mode_is_explicit_and_undefined_projections_rejected) ... ok
+test_empty_and_memory_cap (test_spatial_engulfment.SpatialEngulfmentTests.test_empty_and_memory_cap) ... ok
+test_first_arrival_cell_bounds_against_brute_force (test_spatial_engulfment.SpatialEngulfmentTests.test_first_arrival_cell_bounds_against_brute_force) ... ok
+test_random_periodic_survivors_and_order (test_spatial_engulfment.SpatialEngulfmentTests.test_random_periodic_survivors_and_order) ... ok
+test_tangency_wraparound_zero_and_large_radius (test_spatial_engulfment.SpatialEngulfmentTests.test_tangency_wraparound_zero_and_large_radius) ... ok
+test_static_closed_form_and_cosmic_change_of_variables (test_stochastic.AnalyticTests.test_static_closed_form_and_cosmic_change_of_variables) ... ok
+test_same_events_and_phantom_equivalence (test_stochastic.CandidateTests.test_same_events_and_phantom_equivalence) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 12.887s
+
+OK
