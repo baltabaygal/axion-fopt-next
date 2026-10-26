@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "end": 28.0,
+  "box": 32.0,
+  "H0": 0.025,
+  "beta": 0.4,
+  "prefix_count": 12,
+  "candidate_count": 542713,
+  "original_sha256": "cc1e38a135e9cd039d3df3ab6da4eb41fff43e39c44c0d075b6fe7b3de125427",
+  "candidate_sha256": "878d76a8d8a79e8bd966470e90b6862fec68d8e9a8a4ee92871680d9ab4eeb8b",
+  "intervals": [
+    {
+      "start": 12.0,
+      "end": 16.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        0
+      ],
+      "nodes": 343,
+      "expected_count": 156.81103764917145,
+      "count": 179,
+      "quadrature_error": 4.4898201618792655e-06
+    },
+    {
+      "start": 16.0,
+      "end": 18.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        1
+      ],
+      "nodes": 172,
+      "expected_count": 430.72240155693675,
+      "count": 485,
+      "quadrature_error": 4.798897780933231e-06
+    },
+    {
+      "start": 18.0,
+      "end": 20.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        2
+      ],
+      "nodes": 172,
+      "expected_count": 1583.0937946038114,
+      "count": 1630,
+      "quadrature_error": 5.062259578192396e-06
+    },
+    {
+      "start": 20.0,
+      "end": 22.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        3
+      ],
+      "nodes": 172,
+      "expected_count": 6029.008463384696,
+      "count": 5954,
+      "quadrature_error": 5.3350629054538246e-06
+    },
+    {
+      "start": 22.0,
+      "end": 24.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        4
+      ],
+      "nodes": 172,
+      "expected_count": 23798.174029419442,
+      "count": 23833,
+      "quadrature_error": 5.6172736595527795e-06
+    },
+    {
+      "start": 24.0,
+      "end": 26.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        5
+      ],
+      "nodes": 172,
+      "expected_count": 97390.42200723069,
+      "count": 97624,
+      "quadrature_error": 5.908862811487836e-06
+    },
+    {
+      "start": 26.0,
+      "end": 28.0,
+      "seed_entropy": [
+        0,
+        20261020,
+        6
+      ],
+      "nodes": 172,
+      "expected_count": 413303.89691313193,
+      "count": 412996,
+      "quadrature_error": 6.209805511803168e-06
+    }
+  ],
+  "numpy": "2.4.6",
+  "script_sha256": "f86ab94b16a88724e5a6d85885e243f3141c4072de2706f3c892b00c6b0dc4e5",
+  "reference_sha256": "9f978066cce14a8e6783b37df1f6078fda181443dda7649c2cc6a509c0a95a27"
+}

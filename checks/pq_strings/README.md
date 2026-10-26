@@ -271,3 +271,34 @@ python3 checks/pq_strings/validate_cap.py --output outputs/pq_strings/cap-valida
 python3 checks/pq_strings/run_toy.py --output outputs/pq_strings/toy-new --end 400
 python3 checks/pq_strings/analyze_toy.py outputs/pq_strings/toy-new
 ```
+
+## Homogeneous PQ versus theta-only evolution
+
+`homogeneous.py` compares the actual compiled two-field solver with an
+independent homogeneous polar-coordinate DOP853 reference and reuses the
+nonlinear cosine ODE from `checks/homogeneous.py`. All cells start identically:
+`r=1`, `r_prime=0`, with the existing Bessel finite-start angle and derivative.
+The Bessel expression supplies initial data only; the theta-only evolution
+retains `sin(theta)` for both tested amplitudes, 0.01 and 0.8.
+
+The setup uses conformal `u=tau-1`, `a=tau`, physical `m_a=1`, constant
+`chi=1`, `f_a=1`, no core-growth preparation, `L=2*pi`, and `u_end=8`.
+The radial couplings `lambda=2,32,512` give `m_r/m_a=2,8,32`.
+At each coupling the fixed physical problem is repeated at timesteps
+0.00005 and 0.000025 on N=4; N=8 repeats the finest, heaviest larger-angle
+case to check homogeneous grid invariance. This does not test spatial
+convergence of defects. Full initial/final local field and momentum spreads,
+zero gradient energy, transfer, background mapping, coupled-ODE agreement,
+and second-order temporal refinement are checked. The predeclared contract
+and executable/source hashes are saved before running.
+
+```sh
+PYTHONPATH=src python3 checks/pq_strings/homogeneous.py \
+  --output outputs/pq_strings/homogeneous-new
+```
+
+Each run saves native histories, initial/final states, input and log, plus
+`comparison.csv` with the PQ phase/radius, theta-only phase, and independent
+Cartesian field/momentum reference. Errors use the fixed input amplitude,
+not the instantaneous oscillating field. `summary.json` reports all gates
+and exits nonzero on failure. See `results/homogeneous/README.md` for results.

@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "checks": {
+    "state": false,
+    "energy": true,
+    "accepted": true,
+    "prefix": true,
+    "certified": true
+  },
+  "state_error": 0.013646828592322136,
+  "energy_relative": 3.7672293327073447e-06,
+  "certified": 2234,
+  "total_candidates": 2306
+}

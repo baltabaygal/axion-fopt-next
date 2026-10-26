@@ -1,0 +1,99 @@
+{
+  "physical": {
+    "c": 1.0,
+    "S_excursion_v": 1.0,
+    "canonical_fields": [
+      "S",
+      "A=f*theta"
+    ],
+    "potential": "lambda*S^2*(1-S)^2/4 + DeltaV*(1-4*S^3+3*S^4) + f^2*M^2*S^2*(1-cos(A/f))",
+    "lam": 2.0,
+    "dv": 0.06,
+    "mass": 0.5,
+    "fa": 0.2,
+    "scale_factor": 1.0,
+    "H": 0.0,
+    "friction": 0.0,
+    "temperature_model": null,
+    "plasma": false,
+    "backreaction": true,
+    "prescribed_wall_speed": null,
+    "stochastic_nucleation": false
+  },
+  "initial": {
+    "profile": "S=(1-tanh((r-R0)/w))/2",
+    "R0": 8.0,
+    "w": 2.0,
+    "centre": "(L/2,L/2,L/2)",
+    "theta": 1.0,
+    "S_dot": 0.0,
+    "theta_dot": 0.0,
+    "random_seed": null,
+    "birth": "one imposed seed at t=0"
+  },
+  "numerical": {
+    "dimension": 3,
+    "boundaries": "periodic on each axis",
+    "time": "Minkowski cosmic time",
+    "t_initial": 0.0,
+    "t_final": 18.0,
+    "cases": [
+      {
+        "name": "main",
+        "N": 128,
+        "L": 48.0,
+        "dx": 0.375,
+        "dt": 0.04,
+        "theta": 1.0
+      },
+      {
+        "name": "coarse",
+        "N": 96,
+        "L": 48.0,
+        "dx": 0.5,
+        "dt": 0.04,
+        "theta": 1.0
+      },
+      {
+        "name": "time-half",
+        "N": 128,
+        "L": 48.0,
+        "dx": 0.375,
+        "dt": 0.02,
+        "theta": 1.0
+      },
+      {
+        "name": "empty",
+        "N": 128,
+        "L": 48.0,
+        "dx": 0.375,
+        "dt": 0.04,
+        "theta": 0.0
+      },
+      {
+        "name": "larger-box",
+        "N": 160,
+        "L": 60.0,
+        "dx": 0.375,
+        "dt": 0.04,
+        "theta": 1.0
+      }
+    ],
+    "evolver": "CosmoLattice PV2",
+    "laplacian": "nearest-neighbor second order",
+    "energy_gradient": "compatible forward difference",
+    "precision": "float64",
+    "processes": 1,
+    "threads": 1,
+    "history_cadence": 0.08,
+    "slice_cadence": 0.4,
+    "full_states": "initial and final",
+    "subprocess_timeout_seconds": 180,
+    "withGWs": false,
+    "fixedBackground": true,
+    "omegaEoS": 0,
+    "PS_type": 1,
+    "kIR": "2*pi/L; metadata, no spectrum estimator used",
+    "native_files": "input.bin, input.in -> native/history.csv, frames and initial/final states"
+  }
+}

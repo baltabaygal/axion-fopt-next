@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "checks": {
+    "local": true,
+    "state": false,
+    "energy": true,
+    "accepted": true,
+    "prefix": true
+  },
+  "state_error": 0.002169380355167755,
+  "component_errors": [
+    0.00019797648670077939,
+    5.261494233035902e-06,
+    0.002169380355167755,
+    2.994314513143914e-05
+  ],
+  "energy_relative": 4.09027502157322e-06,
+  "ordinary_sha256": "d6ba67e52bcec70967a6ce66124cdfb6222e289f83cc6c9e1afac200d8e6ca3b",
+  "accelerated_sha256": "f055d2470a1d879a8971d481a0fe62754e0a6ac683cc75db9a6e344bece2f834",
+  "script_sha256": "63f7558cde5175a36e2f0ff4102638f4e26e2e8f6ea350bfc21d68ddb606ff0f"
+}

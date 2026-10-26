@@ -1,0 +1,20 @@
+{
+  "experiment": "FREQUENCY_EXPERIMENT.md",
+  "validation": "outputs/pockets/validation-coupling-02/validation.json",
+  "common": {
+    "n": 128, "box": 64.0, "dt": 0.0125, "duration": 80.0,
+    "r0": 20.0, "width": 2.0, "delta_v": 0.01, "mass_tv": 2.0,
+    "mass_power": 4, "seed": 0, "omega_min": 0.1,
+    "radial_h": 0.01, "radial_rmax": 31.0, "r_cut": 30.0,
+    "normalization_n": 128, "normalization_box": 64.0,
+    "target_axion_energy": 2680.82573106329,
+    "history_interval": 0.5, "slice_interval": 4.0,
+    "final_3d_wall": true
+  },
+  "cases": {
+    "soft": {"omega_max": 0.35},
+    "intermediate": {"omega_max": 0.45},
+    "broad": {"omega_max": 0.6}
+  },
+  "gates": {"energy_drift": 0.0005, "candidate_min_radius": 16.0, "candidate_depletion": 0.05}
+}

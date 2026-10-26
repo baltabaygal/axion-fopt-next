@@ -1,0 +1,41 @@
+{
+  "refinement_passed": true,
+  "original_sustained_goal": false,
+  "original_full_intervals": [
+    {
+      "start": 28.16,
+      "end": 29.240000000000002,
+      "duration": 1.0800000000000018
+    }
+  ],
+  "metrics": {
+    "l24": {
+      "best_fraction": 0.9925853587962963,
+      "best_time": 25.44,
+      "final_fraction": 0.9193793402777778
+    },
+    "l20": {
+      "best_fraction": 1.0,
+      "best_time": 28.16,
+      "final_fraction": 0.9074375
+    },
+    "spatial": {
+      "best_fraction": 1.0,
+      "best_time": 28.12,
+      "final_fraction": 0.9875036168981481
+    },
+    "temporal": {
+      "best_fraction": 1.0,
+      "best_time": 28.16,
+      "final_fraction": 0.990984375
+    }
+  },
+  "sources": {
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/time-half/native/history.csv": "f14ae90bd68e395414c4dc14bf12219fa99ea1f5b3352fac39500cc28476b1ae",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/smaller-box-followup-01/main/native/history.csv": "ada7e2709536baa578e2bd4d21f3761a7d8670849a41c296df477ef0da0178c8",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/smaller-box-refinement-01/spatial/native/history.csv": "5c5ff0157f0c964c39c2388fa06b997995f8bd1384c2429293bfbb7a68be864f",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/smaller-box-refinement-01/temporal/native/history.csv": "8ff74836cccbece314347faf3fb7660ac886dbec2725435fd1b4a0413e593c27"
+  },
+  "script_sha256": "3e184aeddb808f497ade21b9d85be6c5ba4f19cdcaa8a8699405bad6fb923b26",
+  "note": "Exact threshold fractions are grid measurements; no settled-vacuum or spatial-continuum claim"
+}

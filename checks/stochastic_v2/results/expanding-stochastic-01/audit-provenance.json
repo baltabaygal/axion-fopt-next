@@ -1,0 +1,8 @@
+{
+  "current_source_sha256": {
+    "checks/stochastic_v2/stochastic_reference.py": "9f978066cce14a8e6783b37df1f6078fda181443dda7649c2cc6a509c0a95a27",
+    "src/axion_fopt_next/core.py": "e2bda5655ff4262a478d0df3a912ad6cce910a381815838ea544cb5d92bcd2b5",
+    "checks/stochastic_v2/run_stochastic_pilot.py": "586e7358c63631e2231cc9bc03807c3be1f4b8bebecb84194594d0b6724eaecc"
+  },
+  "note": "Recorded at final audit; raw frozen candidate and report hashes are in report.json. All pilot-time scripts were copied to the raw sources directory."
+}

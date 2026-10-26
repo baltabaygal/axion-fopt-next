@@ -1,0 +1,982 @@
+{
+  "passed": true,
+  "checks": {
+    "local": true,
+    "spatial_energy": true,
+    "temporal_energy": true,
+    "resolved_preinteraction_wall": true
+  },
+  "results": {
+    "main": {
+      "checks": {
+        "initial_exact": true,
+        "finite": true,
+        "snapshot_energy": true,
+        "total_balance": true,
+        "axion_balance": true,
+        "expansion_transfer": true
+      },
+      "n": 96,
+      "dt": 0.02,
+      "box": 24.0,
+      "H0": 0.025,
+      "u_final": 16.0,
+      "cosmic_elapsed_final": 19.2,
+      "a_final": 1.4,
+      "axion_energy_final": 4.87838327908043,
+      "phase_fraction_final": 0.918701171875,
+      "total_balance": 4.750740794338866e-05,
+      "axion_balance": 1.9188486299422467e-07,
+      "snapshot_energy_error": 3.2982008426924886e-17,
+      "wall_resolution": [
+        {
+          "u": 0.0,
+          "a": 1.0,
+          "comoving_width": 4.404972273967665,
+          "physical_width": 4.404972273967665,
+          "cells": 17.61988909587066
+        },
+        {
+          "u": 0.2,
+          "a": 1.005,
+          "comoving_width": 4.397665940338103,
+          "physical_width": 4.419654270039794,
+          "cells": 17.590663761352413
+        },
+        {
+          "u": 0.4,
+          "a": 1.01,
+          "comoving_width": 4.3750411967783975,
+          "physical_width": 4.418791608746181,
+          "cells": 17.50016478711359
+        },
+        {
+          "u": 0.6,
+          "a": 1.015,
+          "comoving_width": 4.335693351661262,
+          "physical_width": 4.400728751936181,
+          "cells": 17.342773406645048
+        },
+        {
+          "u": 0.8,
+          "a": 1.02,
+          "comoving_width": 4.277913757199355,
+          "physical_width": 4.363472032343342,
+          "cells": 17.11165502879742
+        },
+        {
+          "u": 1.0,
+          "a": 1.025,
+          "comoving_width": 4.209498782550052,
+          "physical_width": 4.3147362521138035,
+          "cells": 16.83799513020021
+        },
+        {
+          "u": 1.2,
+          "a": 1.03,
+          "comoving_width": 4.127810617672501,
+          "physical_width": 4.251644936202676,
+          "cells": 16.511242470690004
+        },
+        {
+          "u": 1.4000000000000001,
+          "a": 1.035,
+          "comoving_width": 4.028963680538229,
+          "physical_width": 4.169977409357067,
+          "cells": 16.115854722152918
+        },
+        {
+          "u": 1.6,
+          "a": 1.04,
+          "comoving_width": 3.914929263382353,
+          "physical_width": 4.071526433917647,
+          "cells": 15.659717053529413
+        },
+        {
+          "u": 1.8,
+          "a": 1.045,
+          "comoving_width": 3.808467654460146,
+          "physical_width": 3.9798486989108524,
+          "cells": 15.233870617840584
+        },
+        {
+          "u": 2.0,
+          "a": 1.05,
+          "comoving_width": 3.6987484264760218,
+          "physical_width": 3.883685847799823,
+          "cells": 14.794993705904087
+        },
+        {
+          "u": 2.2,
+          "a": 1.055,
+          "comoving_width": 3.5978963294366437,
+          "physical_width": 3.7957806275556587,
+          "cells": 14.391585317746575
+        },
+        {
+          "u": 2.4,
+          "a": 1.06,
+          "comoving_width": 3.5241169450216274,
+          "physical_width": 3.7355639617229253,
+          "cells": 14.09646778008651
+        },
+        {
+          "u": 2.6,
+          "a": 1.065,
+          "comoving_width": 3.460088265223887,
+          "physical_width": 3.6849940024634398,
+          "cells": 13.840353060895549
+        },
+        {
+          "u": 2.8000000000000003,
+          "a": 1.07,
+          "comoving_width": 3.3996598451456856,
+          "physical_width": 3.637636034305884,
+          "cells": 13.598639380582743
+        },
+        {
+          "u": 3.0,
+          "a": 1.075,
+          "comoving_width": 3.3547128997125535,
+          "physical_width": 3.606316367190995,
+          "cells": 13.418851598850214
+        },
+        {
+          "u": 3.2,
+          "a": 1.08,
+          "comoving_width": 3.3158457669850865,
+          "physical_width": 3.5811134283438935,
+          "cells": 13.263383067940346
+        },
+        {
+          "u": 3.4,
+          "a": 1.085,
+          "comoving_width": 3.2867172564099585,
+          "physical_width": 3.566088223204805,
+          "cells": 13.146869025639834
+        },
+        {
+          "u": 3.6,
+          "a": 1.09,
+          "comoving_width": 3.267926590723996,
+          "physical_width": 3.562039983889156,
+          "cells": 13.071706362895984
+        },
+        {
+          "u": 3.8000000000000003,
+          "a": 1.095,
+          "comoving_width": 3.2553059928172567,
+          "physical_width": 3.564560062134896,
+          "cells": 13.021223971269027
+        },
+        {
+          "u": 4.0,
+          "a": 1.1,
+          "comoving_width": 3.2490509459942185,
+          "physical_width": 3.573956040593641,
+          "cells": 12.996203783976874
+        },
+        {
+          "u": 4.2,
+          "a": 1.105,
+          "comoving_width": 3.26353582763274,
+          "physical_width": 3.606207089534178,
+          "cells": 13.05414331053096
+        },
+        {
+          "u": 4.4,
+          "a": 1.11,
+          "comoving_width": 3.2828917745223,
+          "physical_width": 3.644009869719753,
+          "cells": 13.1315670980892
+        },
+        {
+          "u": 4.6000000000000005,
+          "a": 1.115,
+          "comoving_width": 3.3009826760396592,
+          "physical_width": 3.68059568378422,
+          "cells": 13.203930704158637
+        },
+        {
+          "u": 4.8,
+          "a": 1.12,
+          "comoving_width": 3.3145002288082868,
+          "physical_width": 3.7122402562652814,
+          "cells": 13.258000915233147
+        },
+        {
+          "u": 5.0,
+          "a": 1.125,
+          "comoving_width": 3.3189347393841846,
+          "physical_width": 3.7338015818072074,
+          "cells": 13.275738957536738
+        },
+        {
+          "u": 5.2,
+          "a": 1.13,
+          "comoving_width": 3.3210984718607364,
+          "physical_width": 3.7528412732026317,
+          "cells": 13.284393887442945
+        },
+        {
+          "u": 5.4,
+          "a": 1.135,
+          "comoving_width": 3.3176467543954145,
+          "physical_width": 3.7655290662387952,
+          "cells": 13.270587017581658
+        },
+        {
+          "u": 5.6000000000000005,
+          "a": 1.1400000000000001,
+          "comoving_width": 3.2966206192301373,
+          "physical_width": 3.758147505922357,
+          "cells": 13.186482476920549
+        },
+        {
+          "u": 5.8,
+          "a": 1.145,
+          "comoving_width": 3.2960400322620647,
+          "physical_width": 3.773965836940064,
+          "cells": 13.184160129048259
+        },
+        {
+          "u": 6.0,
+          "a": 1.15,
+          "comoving_width": 3.3084694477954217,
+          "physical_width": 3.8047398649647346,
+          "cells": 13.233877791181687
+        },
+        {
+          "u": 6.2,
+          "a": 1.155,
+          "comoving_width": 3.302610165816949,
+          "physical_width": 3.8145147415185763,
+          "cells": 13.210440663267796
+        },
+        {
+          "u": 6.4,
+          "a": 1.1600000000000001,
+          "comoving_width": 3.31150123972969,
+          "physical_width": 3.841341438086441,
+          "cells": 13.24600495891876
+        },
+        {
+          "u": 6.6000000000000005,
+          "a": 1.165,
+          "comoving_width": 3.3004663064088335,
+          "physical_width": 3.8450432469662914,
+          "cells": 13.201865225635334
+        },
+        {
+          "u": 6.8,
+          "a": 1.17,
+          "comoving_width": 3.3079633444787273,
+          "physical_width": 3.8703171130401106,
+          "cells": 13.23185337791491
+        },
+        {
+          "u": 7.0,
+          "a": 1.175,
+          "comoving_width": 3.293613304285417,
+          "physical_width": 3.8699956325353653,
+          "cells": 13.174453217141668
+        },
+        {
+          "u": 7.2,
+          "a": 1.18,
+          "comoving_width": 3.307269843011209,
+          "physical_width": 3.9025784147532265,
+          "cells": 13.229079372044836
+        },
+        {
+          "u": 7.4,
+          "a": 1.185,
+          "comoving_width": 3.320175798067263,
+          "physical_width": 3.9344083207097067,
+          "cells": 13.280703192269051
+        }
+      ],
+      "radial_diagnostic_stop": 7.6000000000000005
+    },
+    "coarse": {
+      "checks": {
+        "initial_exact": true,
+        "finite": true,
+        "snapshot_energy": true,
+        "total_balance": true,
+        "axion_balance": true,
+        "expansion_transfer": true
+      },
+      "n": 64,
+      "dt": 0.02,
+      "box": 24.0,
+      "H0": 0.025,
+      "u_final": 16.0,
+      "cosmic_elapsed_final": 19.2,
+      "a_final": 1.4,
+      "axion_energy_final": 4.876148120336912,
+      "phase_fraction_final": 0.91717529296875,
+      "total_balance": 4.538507796472525e-05,
+      "axion_balance": 1.9235744604689827e-07,
+      "snapshot_energy_error": 6.59690328157035e-17,
+      "wall_resolution": [
+        {
+          "u": 0.0,
+          "a": 1.0,
+          "comoving_width": 4.408657156982659,
+          "physical_width": 4.408657156982659,
+          "cells": 11.75641908528709
+        },
+        {
+          "u": 0.2,
+          "a": 1.005,
+          "comoving_width": 4.401168387628677,
+          "physical_width": 4.42317422956682,
+          "cells": 11.736449033676472
+        },
+        {
+          "u": 0.4,
+          "a": 1.01,
+          "comoving_width": 4.378509652270927,
+          "physical_width": 4.422294748793637,
+          "cells": 11.67602573938914
+        },
+        {
+          "u": 0.6,
+          "a": 1.015,
+          "comoving_width": 4.345196591571611,
+          "physical_width": 4.410374540445185,
+          "cells": 11.587190910857629
+        },
+        {
+          "u": 0.8,
+          "a": 1.02,
+          "comoving_width": 4.296528102598907,
+          "physical_width": 4.382458664650885,
+          "cells": 11.457408273597084
+        },
+        {
+          "u": 1.0,
+          "a": 1.025,
+          "comoving_width": 4.231175150323413,
+          "physical_width": 4.336954529081497,
+          "cells": 11.283133734195767
+        },
+        {
+          "u": 1.2,
+          "a": 1.03,
+          "comoving_width": 4.148089369799997,
+          "physical_width": 4.2725320508939975,
+          "cells": 11.061571652799993
+        },
+        {
+          "u": 1.4000000000000001,
+          "a": 1.035,
+          "comoving_width": 4.046927915529275,
+          "physical_width": 4.1885703925727995,
+          "cells": 10.791807774744733
+        },
+        {
+          "u": 1.6,
+          "a": 1.04,
+          "comoving_width": 3.9284894279164,
+          "physical_width": 4.085629005033056,
+          "cells": 10.475971807777066
+        },
+        {
+          "u": 1.8,
+          "a": 1.045,
+          "comoving_width": 3.807952128122947,
+          "physical_width": 3.9793099738884794,
+          "cells": 10.154539008327859
+        },
+        {
+          "u": 2.0,
+          "a": 1.05,
+          "comoving_width": 3.7046376834460286,
+          "physical_width": 3.88986956761833,
+          "cells": 9.879033822522743
+        },
+        {
+          "u": 2.2,
+          "a": 1.055,
+          "comoving_width": 3.6051092985753206,
+          "physical_width": 3.803390309996963,
+          "cells": 9.613624796200854
+        },
+        {
+          "u": 2.4,
+          "a": 1.06,
+          "comoving_width": 3.515104856046941,
+          "physical_width": 3.7260111474097575,
+          "cells": 9.37361294945851
+        },
+        {
+          "u": 2.6,
+          "a": 1.065,
+          "comoving_width": 3.4371937635880423,
+          "physical_width": 3.660611358221265,
+          "cells": 9.16585003623478
+        },
+        {
+          "u": 2.8000000000000003,
+          "a": 1.07,
+          "comoving_width": 3.3938593890977113,
+          "physical_width": 3.631429546334551,
+          "cells": 9.050291704260564
+        },
+        {
+          "u": 3.0,
+          "a": 1.075,
+          "comoving_width": 3.3587892419225893,
+          "physical_width": 3.6106984350667832,
+          "cells": 8.956771311793572
+        },
+        {
+          "u": 3.2,
+          "a": 1.08,
+          "comoving_width": 3.3269726893828846,
+          "physical_width": 3.593130504533516,
+          "cells": 8.871927171687693
+        },
+        {
+          "u": 3.4,
+          "a": 1.085,
+          "comoving_width": 3.299748438949667,
+          "physical_width": 3.5802270562603886,
+          "cells": 8.799329170532445
+        },
+        {
+          "u": 3.6,
+          "a": 1.09,
+          "comoving_width": 3.2800016851898803,
+          "physical_width": 3.57520183685697,
+          "cells": 8.746671160506347
+        },
+        {
+          "u": 3.8000000000000003,
+          "a": 1.095,
+          "comoving_width": 3.2697957355270386,
+          "physical_width": 3.580426330402107,
+          "cells": 8.71945529473877
+        },
+        {
+          "u": 4.0,
+          "a": 1.1,
+          "comoving_width": 3.268457403903396,
+          "physical_width": 3.5953031442937355,
+          "cells": 8.715886410409055
+        },
+        {
+          "u": 4.2,
+          "a": 1.105,
+          "comoving_width": 3.2724259706842584,
+          "physical_width": 3.6160306976061056,
+          "cells": 8.726469255158023
+        },
+        {
+          "u": 4.4,
+          "a": 1.11,
+          "comoving_width": 3.277368097704705,
+          "physical_width": 3.6378785884522227,
+          "cells": 8.739648260545879
+        },
+        {
+          "u": 4.6000000000000005,
+          "a": 1.115,
+          "comoving_width": 3.2924311837554656,
+          "physical_width": 3.6710607698873443,
+          "cells": 8.779816490014575
+        },
+        {
+          "u": 4.8,
+          "a": 1.12,
+          "comoving_width": 3.304173937170801,
+          "physical_width": 3.7006748096312974,
+          "cells": 8.811130499122136
+        },
+        {
+          "u": 5.0,
+          "a": 1.125,
+          "comoving_width": 3.3305234199114535,
+          "physical_width": 3.7468388474003853,
+          "cells": 8.881395786430543
+        },
+        {
+          "u": 5.2,
+          "a": 1.13,
+          "comoving_width": 3.3457476707104723,
+          "physical_width": 3.780694867902833,
+          "cells": 8.92199378856126
+        },
+        {
+          "u": 5.4,
+          "a": 1.135,
+          "comoving_width": 3.3388414712657895,
+          "physical_width": 3.789585069886671,
+          "cells": 8.903577256708772
+        },
+        {
+          "u": 5.6000000000000005,
+          "a": 1.1400000000000001,
+          "comoving_width": 3.3059444914033262,
+          "physical_width": 3.768776720199792,
+          "cells": 8.815851977075537
+        },
+        {
+          "u": 5.8,
+          "a": 1.145,
+          "comoving_width": 3.294681008323396,
+          "physical_width": 3.7724097545302886,
+          "cells": 8.785816022195723
+        },
+        {
+          "u": 6.0,
+          "a": 1.15,
+          "comoving_width": 3.3164377876822586,
+          "physical_width": 3.813903455834597,
+          "cells": 8.843834100486022
+        },
+        {
+          "u": 6.2,
+          "a": 1.155,
+          "comoving_width": 3.321023049579365,
+          "physical_width": 3.8357816222641667,
+          "cells": 8.856061465544974
+        },
+        {
+          "u": 6.4,
+          "a": 1.1600000000000001,
+          "comoving_width": 3.30517174753684,
+          "physical_width": 3.833999227142735,
+          "cells": 8.813791326764907
+        },
+        {
+          "u": 6.6000000000000005,
+          "a": 1.165,
+          "comoving_width": 3.3163052246746245,
+          "physical_width": 3.8634955867459375,
+          "cells": 8.843480599132333
+        },
+        {
+          "u": 6.8,
+          "a": 1.17,
+          "comoving_width": 3.3263903529507965,
+          "physical_width": 3.8918767129524316,
+          "cells": 8.870374274535457
+        },
+        {
+          "u": 7.0,
+          "a": 1.175,
+          "comoving_width": 3.2947885307311875,
+          "physical_width": 3.8713765236091455,
+          "cells": 8.7861027486165
+        },
+        {
+          "u": 7.2,
+          "a": 1.18,
+          "comoving_width": 3.3098729193284893,
+          "physical_width": 3.9056500448076172,
+          "cells": 8.826327784875971
+        },
+        {
+          "u": 7.4,
+          "a": 1.185,
+          "comoving_width": 3.3599028405809186,
+          "physical_width": 3.9814848660883886,
+          "cells": 8.959740908215784
+        }
+      ],
+      "radial_diagnostic_stop": 7.6000000000000005
+    },
+    "time-half": {
+      "checks": {
+        "initial_exact": true,
+        "finite": true,
+        "snapshot_energy": true,
+        "total_balance": true,
+        "axion_balance": true,
+        "expansion_transfer": true
+      },
+      "n": 96,
+      "dt": 0.01,
+      "box": 24.0,
+      "H0": 0.025,
+      "u_final": 16.0,
+      "cosmic_elapsed_final": 19.2,
+      "a_final": 1.4,
+      "axion_energy_final": 4.878476943318024,
+      "phase_fraction_final": 0.918701171875,
+      "total_balance": 1.1670482186796244e-05,
+      "axion_balance": 1.1773123348344417e-07,
+      "snapshot_energy_error": 2.5767194083535067e-19,
+      "wall_resolution": [
+        {
+          "u": 0.0,
+          "a": 1.0,
+          "comoving_width": 4.404972273967665,
+          "physical_width": 4.404972273967665,
+          "cells": 17.61988909587066
+        },
+        {
+          "u": 0.2,
+          "a": 1.005,
+          "comoving_width": 4.397666458957911,
+          "physical_width": 4.4196547912527,
+          "cells": 17.590665835831643
+        },
+        {
+          "u": 0.4,
+          "a": 1.01,
+          "comoving_width": 4.375042404112052,
+          "physical_width": 4.4187928281531725,
+          "cells": 17.500169616448208
+        },
+        {
+          "u": 0.6,
+          "a": 1.015,
+          "comoving_width": 4.335695521369837,
+          "physical_width": 4.400730954190385,
+          "cells": 17.34278208547935
+        },
+        {
+          "u": 0.8,
+          "a": 1.02,
+          "comoving_width": 4.277916980873747,
+          "physical_width": 4.363475320491222,
+          "cells": 17.111667923494988
+        },
+        {
+          "u": 1.0,
+          "a": 1.025,
+          "comoving_width": 4.20950384985889,
+          "physical_width": 4.314741446105361,
+          "cells": 16.83801539943556
+        },
+        {
+          "u": 1.2,
+          "a": 1.03,
+          "comoving_width": 4.127817809851856,
+          "physical_width": 4.251652344147412,
+          "cells": 16.511271239407424
+        },
+        {
+          "u": 1.4000000000000001,
+          "a": 1.035,
+          "comoving_width": 4.0289752615906895,
+          "physical_width": 4.169989395746363,
+          "cells": 16.115901046362758
+        },
+        {
+          "u": 1.6,
+          "a": 1.04,
+          "comoving_width": 3.9149453926106332,
+          "physical_width": 4.071543208315059,
+          "cells": 15.659781570442533
+        },
+        {
+          "u": 1.8,
+          "a": 1.045,
+          "comoving_width": 3.8084882556021338,
+          "physical_width": 3.9798702271042297,
+          "cells": 15.233953022408535
+        },
+        {
+          "u": 2.0,
+          "a": 1.05,
+          "comoving_width": 3.69876711514354,
+          "physical_width": 3.8837054709007175,
+          "cells": 14.79506846057416
+        },
+        {
+          "u": 2.2,
+          "a": 1.055,
+          "comoving_width": 3.5978999095255206,
+          "physical_width": 3.795784404549424,
+          "cells": 14.391599638102083
+        },
+        {
+          "u": 2.4,
+          "a": 1.06,
+          "comoving_width": 3.5240990392050238,
+          "physical_width": 3.735544981557325,
+          "cells": 14.096396156820095
+        },
+        {
+          "u": 2.6,
+          "a": 1.065,
+          "comoving_width": 3.4600644310708084,
+          "physical_width": 3.684968619090411,
+          "cells": 13.840257724283234
+        },
+        {
+          "u": 2.8000000000000003,
+          "a": 1.07,
+          "comoving_width": 3.399659017260837,
+          "physical_width": 3.6376351484690956,
+          "cells": 13.598636069043348
+        },
+        {
+          "u": 3.0,
+          "a": 1.075,
+          "comoving_width": 3.3547349387678516,
+          "physical_width": 3.6063400591754404,
+          "cells": 13.418939755071406
+        },
+        {
+          "u": 3.2,
+          "a": 1.08,
+          "comoving_width": 3.315858863045416,
+          "physical_width": 3.5811275720890494,
+          "cells": 13.263435452181664
+        },
+        {
+          "u": 3.4,
+          "a": 1.085,
+          "comoving_width": 3.2867002549240603,
+          "physical_width": 3.566069776592605,
+          "cells": 13.146801019696241
+        },
+        {
+          "u": 3.6,
+          "a": 1.09,
+          "comoving_width": 3.26790235996416,
+          "physical_width": 3.562013572360935,
+          "cells": 13.07160943985664
+        },
+        {
+          "u": 3.8000000000000003,
+          "a": 1.095,
+          "comoving_width": 3.255306820015398,
+          "physical_width": 3.5645609679168606,
+          "cells": 13.021227280061591
+        },
+        {
+          "u": 4.0,
+          "a": 1.1,
+          "comoving_width": 3.249063700851492,
+          "physical_width": 3.5739700709366415,
+          "cells": 12.996254803405968
+        },
+        {
+          "u": 4.2,
+          "a": 1.105,
+          "comoving_width": 3.26350978787956,
+          "physical_width": 3.6061783156069134,
+          "cells": 13.05403915151824
+        },
+        {
+          "u": 4.4,
+          "a": 1.11,
+          "comoving_width": 3.282864547361412,
+          "physical_width": 3.6439796475711677,
+          "cells": 13.131458189445649
+        },
+        {
+          "u": 4.6000000000000005,
+          "a": 1.115,
+          "comoving_width": 3.300966579823938,
+          "physical_width": 3.680577736503691,
+          "cells": 13.203866319295752
+        },
+        {
+          "u": 4.8,
+          "a": 1.12,
+          "comoving_width": 3.314463795664242,
+          "physical_width": 3.7121994511439516,
+          "cells": 13.257855182656968
+        },
+        {
+          "u": 5.0,
+          "a": 1.125,
+          "comoving_width": 3.3188924027332547,
+          "physical_width": 3.7337539530749115,
+          "cells": 13.275569610933019
+        },
+        {
+          "u": 5.2,
+          "a": 1.13,
+          "comoving_width": 3.3211023383888607,
+          "physical_width": 3.752845642379412,
+          "cells": 13.284409353555443
+        },
+        {
+          "u": 5.4,
+          "a": 1.135,
+          "comoving_width": 3.317662760173117,
+          "physical_width": 3.7655472327964876,
+          "cells": 13.270651040692467
+        },
+        {
+          "u": 5.6000000000000005,
+          "a": 1.1400000000000001,
+          "comoving_width": 3.296634544319522,
+          "physical_width": 3.7581633805242554,
+          "cells": 13.186538177278088
+        },
+        {
+          "u": 5.8,
+          "a": 1.145,
+          "comoving_width": 3.2960036759383016,
+          "physical_width": 3.773924208949355,
+          "cells": 13.184014703753206
+        },
+        {
+          "u": 6.0,
+          "a": 1.15,
+          "comoving_width": 3.3084113491426264,
+          "physical_width": 3.80467305151402,
+          "cells": 13.233645396570505
+        },
+        {
+          "u": 6.2,
+          "a": 1.155,
+          "comoving_width": 3.3026224386056082,
+          "physical_width": 3.814528916589478,
+          "cells": 13.210489754422433
+        },
+        {
+          "u": 6.4,
+          "a": 1.1600000000000001,
+          "comoving_width": 3.311495659477858,
+          "physical_width": 3.841334964994316,
+          "cells": 13.245982637911432
+        },
+        {
+          "u": 6.6000000000000005,
+          "a": 1.165,
+          "comoving_width": 3.3004250574365317,
+          "physical_width": 3.8449951919135597,
+          "cells": 13.201700229746127
+        },
+        {
+          "u": 6.8,
+          "a": 1.17,
+          "comoving_width": 3.307946650110825,
+          "physical_width": 3.870297580629665,
+          "cells": 13.2317866004433
+        },
+        {
+          "u": 7.0,
+          "a": 1.175,
+          "comoving_width": 3.293616221017354,
+          "physical_width": 3.869999059695391,
+          "cells": 13.174464884069415
+        },
+        {
+          "u": 7.2,
+          "a": 1.18,
+          "comoving_width": 3.3072369143706393,
+          "physical_width": 3.902539558957354,
+          "cells": 13.228947657482557
+        },
+        {
+          "u": 7.4,
+          "a": 1.185,
+          "comoving_width": 3.3201962819567488,
+          "physical_width": 3.9344325941187472,
+          "cells": 13.280785127826995
+        }
+      ],
+      "radial_diagnostic_stop": 7.6000000000000005
+    }
+  },
+  "spatial_energy_difference": 0.0004581761242712368,
+  "temporal_energy_difference": 1.9199852130391548e-05,
+  "build": {
+    "compile": [
+      "/usr/bin/c++",
+      "-DDEVICE_CPU",
+      "-DDEVICE_KOKKOS",
+      "-DKOKKOS_DEPENDENCE",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/adapter/overlay",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/cosmolattice/include",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/include",
+      "-isystem",
+      "/opt/homebrew/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/external/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/desul/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/mdspan/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/simd/src",
+      "-DNDEBUG",
+      "-std=gnu++20",
+      "-Wall",
+      "-Wshadow",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-O2",
+      "-c",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/expand_evolve.cpp",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-expansion-02/evolve.o"
+    ],
+    "link": [
+      "/usr/bin/c++",
+      "-O2",
+      "-DNDEBUG",
+      "-Wl,-search_paths_first",
+      "-Wl,-headerpad_max_install_names",
+      "-DKOKKOS_DEPENDENCE",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-expansion-02/evolve.o",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-expansion-02/bubble_evolve",
+      "-L/opt/homebrew/lib",
+      "-Wl,-rpath,/opt/homebrew/lib",
+      "_deps/kokkos-build/containers/src/libkokkoscontainers.a",
+      "_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a",
+      "_deps/kokkos-build/simd/src/libkokkossimd.a",
+      "_deps/kokkos-build/core/src/libkokkoscore.a",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib",
+      "/opt/homebrew/lib/libfftw3_omp.dylib",
+      "/opt/homebrew/lib/libfftw3_threads.dylib",
+      "/opt/homebrew/lib/libfftw3.dylib"
+    ],
+    "library_build": "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped",
+    "source_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/expand_evolve.cpp": "3ce8237833abb618cc061430a81585d4f13e66636088056a72de201cb8324c8f",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/bubble_model.h": "a202193dd13e09ee1f7adccb820035f98e44e138ef7fc576807eeae102867f8a",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/state_io.h": "915b3e44aba8225db37c612a3fca9487512fbd35b09feab91aa81345526d3e97",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/potential.h": "90bbc8ab4b6f7bf71e809498f971736fe03b18e527b1ece27634e85675c6e455",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/build_expanding_backend.py": "454cb50d1244dc519fb09e79d3b03bd0aa67d1956f055098eb7783a298fa0287",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/initial_state.h": "13bb263852ead2b81277b7d488f0af878b0c4f68bee80f85ec9f86f9366acdbc",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/accurate_sum.h": "86c2a379ecebc09c62dbc8f85e755aadf45c836b41edc44c7102cf56086652de"
+    },
+    "library_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src/libkokkoscontainers.a": "37917464b2dc104e18d4e613cd49722ea0a639a1ccc0b3fcda799234268e39d2",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a": "72bb7d5763acc693f4157ab563878cb1eb5d1954de6a36b787afc7edfd50ca69",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src/libkokkossimd.a": "dbd5ae89fe5935ed1d12ef08dffc990013c71cd0249ff03d258af5ca13fc76de",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src/libkokkoscore.a": "c0c0fcb51e9173927b5ef7723516dd076f978197aef7ffa48dde220a7ea216c0",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib": "432b8d15fc1b2431f937bba89796a32daaa2dd464eda12a744d9cb2818842477",
+      "/opt/homebrew/lib/libfftw3_omp.dylib": "410f49c6252ae15823d3b05e8e4f8622d4615730cbd18c20396edda156e40594",
+      "/opt/homebrew/lib/libfftw3_threads.dylib": "1ceb262b9c62af3f3a8bb10d3459fa36c7a954cd32a4bc9774d4c27e4bea0ecc",
+      "/opt/homebrew/lib/libfftw3.dylib": "2eda1ef2b5bd9707a63d38f8d4994513b40e1b0ae475fd8c57cfecf5abb88c2d"
+    },
+    "base_manifest_sha256": "dcc88d2f9b046b796b19d6eb630cf6fbdf5bcd72ac3790873f4c94bd9d6daa92",
+    "executable_sha256": "e5fe103ea5e80e19a3c5180f7a2a0a7c4366e3a3f5af19d88e868aad0c7cd15d",
+    "seconds": 6.041715416999068,
+    "scope": "3D coupled fields; prescribed RD expansion; actual CosmoLattice PV2, one CPU thread"
+  },
+  "validation_sha256": "f30b7eb6dfc7f3bf97c6fa88261fcaa95f8193570e82d518155b33a5d84c9d23",
+  "scope": "Prescribed RD, polynomial coupled fields; single seeded periodic bubble; no Friedmann, reheating or abundance claim"
+}

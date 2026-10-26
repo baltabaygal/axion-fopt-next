@@ -8,8 +8,11 @@ read-only; cite its equation numbers when implementing a formula.
 
 - Separate what the reference paper derives (trapped-mode photon conversion
   and phenomenology) from what its Ref. [5] (arXiv:2407.01676) derives
-  (formation, R_eq, epsilon, alpha). Never attribute a simulation result to
-  either paper; neither contains one.
+  (formation, R_eq, epsilon, alpha). The 2024 formation paper contains a
+  spherical reflective-particle simulation (Sec. 5, Fig. 4), not a coupled
+  field simulation; it does not establish the damping timescale. The 2026
+  phenomenology paper does not contain field simulations. New work follows
+  the user-approved FIELD_GOAL_REVISED.md and remains fields only.
 - The paper's numbers are physical (GeV, metres) and our lattice units are
   dimensionless. Never infer a physical pocket mass, radius or transition
   temperature from a toy run. State the dimensionless hierarchy actually
@@ -18,7 +21,8 @@ read-only; cite its equation numbers when implementing a formula.
   1/sqrt(m_true^2 - omega^2) and wall width in cells, and treat the Dirichlet
   boundary (3.2) as a limit to approach, not an assumption. Check that dt*m_true
   and the largest lattice frequency are resolved.
-- ARP axions are a thermalised, ultra-relativistic gas. A classical field
+- The formation paper also discusses nonthermal axions; thermalisation is
+  not imposed on our initial data or claimed without evidence. A classical field
   represents only high-occupation modes. Record the spectrum, amplitude,
   occupation assumption, filter and seed of any random axion initial state.
   Distinguish it from coherent misalignment initial data.

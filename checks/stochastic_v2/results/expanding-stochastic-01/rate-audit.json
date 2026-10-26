@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "rate_quadrature": true,
+    "rate_refinement": true,
+    "poisson_mean": true,
+    "poisson_variance": true
+  },
+  "passed": true,
+  "seed": 0,
+  "box": 32.0,
+  "end": 12.0,
+  "H0": 0.025,
+  "beta": 0.4,
+  "Gamma0": 3.9062500000000007e-07,
+  "rate_nodes": 1025,
+  "candidate_count": 12,
+  "expected_count": 15.651891501838165,
+  "candidate_mean": 15.640625,
+  "candidate_variance": 15.117401960784314,
+  "ensemble": 256,
+  "rate_quadrature_error": 3.978438239515825e-06,
+  "rate_refinement_error": 2.98382505992123e-06,
+  "numpy": "2.4.6",
+  "RNG": "numpy.default_rng / PCG64; candidate file frozen, no RNG in native evolution"
+}

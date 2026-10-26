@@ -1,0 +1,23 @@
+{
+  "experiment": "GLOBAL_STIFFNESS_EXPERIMENT.md",
+  "validation": "outputs/pockets/validation-tracking-02/validation.json",
+  "common": {
+    "box": 64.0, "dt": 0.0125, "duration": 80.0,
+    "r0": 20.0, "width": 0.5, "delta_v": 0.01,
+    "mass_tv": 2.0, "mass_power": 4, "seed": 0,
+    "omega_min": 0.1, "omega_max": 0.6,
+    "radial_h": 0.01, "radial_rmax": 31.0, "r_cut": 30.0,
+    "normalization_n": 320, "normalization_box": 64.0,
+    "target_axion_energy": 7707.373976806957,
+    "history_interval": 0.25, "slice_interval": 4.0,
+    "snapshot_interval": 40.0, "monitor_radius": 26.0,
+    "tracking_inner": 26.0, "tracking_outer": 30.0,
+    "final_3d_wall": true
+  },
+  "cases": {"n320": {"n": 320}, "n384": {"n": 384}},
+  "gates": {
+    "energy_drift": 0.0005, "candidate_min_radius": 16.0,
+    "candidate_depletion": 0.05,
+    "monitor_continuity": 0.001, "monitor_cadence": 0.001
+  }
+}

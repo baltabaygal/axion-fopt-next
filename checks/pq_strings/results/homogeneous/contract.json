@@ -1,0 +1,41 @@
+{
+  "gates": {
+    "ode_field_normalized": 0.0002,
+    "ode_momentum_normalized": 0.002,
+    "local_spread_normalized": 1e-10,
+    "grid_difference_normalized": 1e-10,
+    "refinement_ratio": 3.0,
+    "heavy_phase_normalized": 0.002,
+    "heavy_radial_excursion": 0.002,
+    "heavy_improvement_factor": 10.0
+  },
+  "amplitudes": [
+    0.01,
+    0.8
+  ],
+  "lambdas": [
+    2.0,
+    32.0,
+    512.0
+  ],
+  "timesteps": [
+    5e-05,
+    2.5e-05
+  ],
+  "duration": 8.0,
+  "N": 4,
+  "box": 6.283185307179586,
+  "background": "tau=1+u, a=tau, H=1/tau^2; conformal time, comoving box",
+  "potential": "lambda/4*(r^2-1)^2 + r^2*(1-cos(theta)); f_a=m_a=1",
+  "initial": "r=1, r_prime=0; theta and theta_prime from existing Bessel finite-start data",
+  "normalization": "errors divided by fixed early-time amplitude; pi_X,Y=a^2 X_prime,Y_prime",
+  "stopping": "fixed u=8; fail on solver error or any numerical gate",
+  "executable_sha256": "28f19c5d6fdcaa9c68029f1d633810738620823bb859bb698a485ca554e0faf3",
+  "source_sha256": {
+    "checks/pq_strings/homogeneous.py": "48e5cad41cda856e823ec5976017307a01c9ddf5860a530e35372f0906beb680",
+    "checks/homogeneous.py": "f53826cfb3390934850f81cd62c8fa492d1734eaea57f5276ebd5147b9dab3dd",
+    "checks/pq_strings/model.py": "f7b0aa51ddc020f71880664afe80fefb90380539ae22a6b151d1828ab863346d",
+    "checks/pq_strings/pq_model.h": "b6b9c98f98a81c04e16e90907e8483fe9bb5aca685d4f93e895aa889bfe071b9",
+    "checks/pq_strings/evolve.cpp": "122749e0b48484ec438b3f01303590f7015464943a4c8933ac4b96484d134f71"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "passed": true,
+  "checks": {
+    "reference": true,
+    "refinement": true,
+    "acceptance": true,
+    "maps": true,
+    "jumps": true,
+    "no_event_regression": true
+  },
+  "runs": [
+    {
+      "dt": 0.02,
+      "error": 8.973497577158263e-05,
+      "accepted": [
+        true,
+        false,
+        true
+      ],
+      "map_error": 4.336808689942018e-19,
+      "jump_error": 9.825711889484538e-19,
+      "total_balance": 2.5815808311728528e-05,
+      "axion_balance": 3.1238998589979933e-08,
+      "seconds": 0.23583100002724677
+    },
+    {
+      "dt": 0.01,
+      "error": 2.3507814041701103e-05,
+      "accepted": [
+        true,
+        false,
+        true
+      ],
+      "map_error": 1.734723475976807e-18,
+      "jump_error": 1.965142377895905e-18,
+      "total_balance": 1.1443544381192772e-05,
+      "axion_balance": 6.944160586224994e-08,
+      "seconds": 0.007870875007938594
+    },
+    {
+      "dt": 0.005,
+      "error": 6.060827538623137e-06,
+      "accepted": [
+        true,
+        false,
+        true
+      ],
+      "map_error": 6.938893903907228e-18,
+      "jump_error": 1.0061528974915896e-15,
+      "total_balance": 7.817560859074701e-06,
+      "axion_balance": 7.912490963316192e-08,
+      "seconds": 0.008498957962729037
+    }
+  ],
+  "ratios": [
+    3.8172403275098015,
+    3.8786475760769576
+  ],
+  "reference_acceptance": [
+    true,
+    false,
+    true
+  ],
+  "no_event_error": 4.996003610813204e-16,
+  "build": {
+    "compile": [
+      "/usr/bin/c++",
+      "-DDEVICE_CPU",
+      "-DDEVICE_KOKKOS",
+      "-DKOKKOS_DEPENDENCE",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/adapter/overlay",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/cosmolattice/include",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/include",
+      "-isystem",
+      "/opt/homebrew/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/external/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/desul/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/mdspan/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/simd/src",
+      "-DNDEBUG",
+      "-std=gnu++20",
+      "-Wall",
+      "-Wshadow",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-O2",
+      "-c",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/stochastic_evolve.cpp",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-insertion-03/evolve.o"
+    ],
+    "link": [
+      "/usr/bin/c++",
+      "-O2",
+      "-DNDEBUG",
+      "-Wl,-search_paths_first",
+      "-Wl,-headerpad_max_install_names",
+      "-DKOKKOS_DEPENDENCE",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-insertion-03/evolve.o",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-insertion-03/bubble_evolve",
+      "-L/opt/homebrew/lib",
+      "-Wl,-rpath,/opt/homebrew/lib",
+      "_deps/kokkos-build/containers/src/libkokkoscontainers.a",
+      "_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a",
+      "_deps/kokkos-build/simd/src/libkokkossimd.a",
+      "_deps/kokkos-build/core/src/libkokkoscore.a",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib",
+      "/opt/homebrew/lib/libfftw3_omp.dylib",
+      "/opt/homebrew/lib/libfftw3_threads.dylib",
+      "/opt/homebrew/lib/libfftw3.dylib"
+    ],
+    "library_build": "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped",
+    "source_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/stochastic_evolve.cpp": "b9755b53f89c379156ed41f42c8e19f409f68511053697b08b7a1cc811cdf40d",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/bubble_model.h": "a202193dd13e09ee1f7adccb820035f98e44e138ef7fc576807eeae102867f8a",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/state_io.h": "915b3e44aba8225db37c612a3fca9487512fbd35b09feab91aa81345526d3e97",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/potential.h": "90bbc8ab4b6f7bf71e809498f971736fe03b18e527b1ece27634e85675c6e455",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/bubble_insertion.h": "29d9f9c7bff6aa231c81d4608fc70186d2ff0447697c6489c50fcfd33a283633",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/build_stochastic_backend.py": "98ed84cdee2e0d11027425b47b764129cc0e802bfad9b302009a7633988a70fd",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/initial_state.h": "13bb263852ead2b81277b7d488f0af878b0c4f68bee80f85ec9f86f9366acdbc",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/accurate_sum.h": "86c2a379ecebc09c62dbc8f85e755aadf45c836b41edc44c7102cf56086652de"
+    },
+    "library_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src/libkokkoscontainers.a": "37917464b2dc104e18d4e613cd49722ea0a639a1ccc0b3fcda799234268e39d2",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a": "72bb7d5763acc693f4157ab563878cb1eb5d1954de6a36b787afc7edfd50ca69",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src/libkokkossimd.a": "dbd5ae89fe5935ed1d12ef08dffc990013c71cd0249ff03d258af5ca13fc76de",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src/libkokkoscore.a": "c0c0fcb51e9173927b5ef7723516dd076f978197aef7ffa48dde220a7ea216c0",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib": "432b8d15fc1b2431f937bba89796a32daaa2dd464eda12a744d9cb2818842477",
+      "/opt/homebrew/lib/libfftw3_omp.dylib": "410f49c6252ae15823d3b05e8e4f8622d4615730cbd18c20396edda156e40594",
+      "/opt/homebrew/lib/libfftw3_threads.dylib": "1ceb262b9c62af3f3a8bb10d3459fa36c7a954cd32a4bc9774d4c27e4bea0ecc",
+      "/opt/homebrew/lib/libfftw3.dylib": "2eda1ef2b5bd9707a63d38f8d4994513b40e1b0ae475fd8c57cfecf5abb88c2d"
+    },
+    "base_manifest_sha256": "dcc88d2f9b046b796b19d6eb630cf6fbdf5bcd72ac3790873f4c94bd9d6daa92",
+    "executable_sha256": "6eacb42770878a09c4c89d71108f9786d0aa6451b960100f100d9fdc3401f44b",
+    "seconds": 8.081695750006475,
+    "scope": "3D coupled fields; prescribed RD expansion; actual CosmoLattice PV2, one CPU thread"
+  },
+  "script_sha256": "9945b3dc76045b2f9ec618cccf1ad0a865c379ddeeea511fca990bb5b9e66708",
+  "reference_sha256": "9f978066cce14a8e6783b37df1f6078fda181443dda7649c2cc6a509c0a95a27",
+  "scope": "Small semi-discrete insertion/ODE validation, not resolved supercritical bubble physics"
+}

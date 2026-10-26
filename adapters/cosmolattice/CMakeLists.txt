@@ -13,17 +13,26 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
 execute_process(COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/prepare_overlay.py"
   "${COSMOLATTICE_SOURCE}" "${CMAKE_CURRENT_BINARY_DIR}/overlay"
   COMMAND_ERROR_IS_FATAL ANY)
-# First adapter deliberately supports a single CPU process only.
+# One CPU process only. Keep Serial as the default; OpenMP is explicit and
+# validated separately before use in long pocket experiments.
+option(AFOPT_KOKKOS_OPENMP "Use Kokkos OpenMP in a single CPU process" OFF)
 set(MPI OFF CACHE BOOL "" FORCE)
 set(HDF5 OFF CACHE BOOL "" FORCE)
 set(CUDA OFF CACHE BOOL "" FORCE)
 set(HIP OFF CACHE BOOL "" FORCE)
-set(OPENMP OFF CACHE BOOL "" FORCE)
+set(OPENMP ${AFOPT_KOKKOS_OPENMP} CACHE BOOL "" FORCE)
 set(PTHREADS OFF CACHE BOOL "" FORCE)
-set(NOTHREADING ON CACHE BOOL "" FORCE)
+if(AFOPT_KOKKOS_OPENMP)
+  set(_afopt_serial OFF)
+  set(_afopt_backend "OpenMP")
+else()
+  set(_afopt_serial ON)
+  set(_afopt_backend "Serial")
+endif()
+set(NOTHREADING ${_afopt_serial} CACHE BOOL "" FORCE)
 set(Kokkos_ENABLE_THREADS OFF CACHE BOOL "" FORCE)
-set(Kokkos_ENABLE_OPENMP OFF CACHE BOOL "" FORCE)
-set(Kokkos_ENABLE_SERIAL ON CACHE BOOL "" FORCE)
+set(Kokkos_ENABLE_OPENMP ${AFOPT_KOKKOS_OPENMP} CACHE BOOL "" FORCE)
+set(Kokkos_ENABLE_SERIAL ${_afopt_serial} CACHE BOOL "" FORCE)
 add_subdirectory("${COSMOLATTICE_SOURCE}" upstream EXCLUDE_FROM_ALL)
 # Infinity is part of the arrival-map contract. Upstream Release enables
 # finite-only fast math, which invalidates infinity comparisons and validation.
@@ -37,7 +46,7 @@ if(NOT _templ_commit STREQUAL "f5239eebdfaa159e45b38b89d7ef8ef6e2222f4b")
   message(FATAL_ERROR "Require official TempLat v1.0.0 commit")
 endif()
 file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/build-info.json" CONTENT
-  "{\n  \"cosmolattice_commit\": \"0dad16ec2c894a7c6abbea0e98734126b3470b36\",\n  \"templat_commit\": \"${_templ_commit}\",\n  \"kokkos\": \"5.1.1\",\n  \"compiler\": \"${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}\",\n  \"backend\": \"Kokkos Serial; FFTW; MPI OFF; strict floating point\"\n}\n")
+  "{\n  \"cosmolattice_commit\": \"0dad16ec2c894a7c6abbea0e98734126b3470b36\",\n  \"templat_commit\": \"${_templ_commit}\",\n  \"kokkos\": \"5.1.1\",\n  \"compiler\": \"${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}\",\n  \"backend\": \"Kokkos ${_afopt_backend}; FFTW; MPI OFF; strict floating point\"\n}\n")
 add_executable(axion_fopt_evolve evolve.cpp)
 target_include_directories(axion_fopt_evolve BEFORE PRIVATE
   "${CMAKE_CURRENT_BINARY_DIR}/overlay" "${COSMOLATTICE_SOURCE}/include")

@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "case": "main",
+  "n": 96,
+  "u_final": 79.9999999999955,
+  "below_threshold_count": 342,
+  "physical_cell_spacing": 0.9999999999999626,
+  "physical_below_threshold_volume": 341.99999999996163,
+  "minimum_sampled_below_count": 131,
+  "u_at_minimum_below_count": 78.83999999999655,
+  "maximum_sampled_global_minimum": 0.23201967610873778,
+  "axion_energy_fraction_in_below_cells": 0.003471182226949728,
+  "physical_volume_averages": [
+    {
+      "u_start": 24.0,
+      "u_end": 32.0,
+      "cosmic_weighted_physical_volume": 4503.225515906246
+    },
+    {
+      "u_start": 32.0,
+      "u_end": 40.0,
+      "cosmic_weighted_physical_volume": 1835.9555954160646
+    },
+    {
+      "u_start": 40.0,
+      "u_end": 48.0,
+      "cosmic_weighted_physical_volume": 976.8663054229656
+    },
+    {
+      "u_start": 48.0,
+      "u_end": 56.0,
+      "cosmic_weighted_physical_volume": 578.893609916286
+    },
+    {
+      "u_start": 56.0,
+      "u_end": 64.0,
+      "cosmic_weighted_physical_volume": 425.1043897911819
+    },
+    {
+      "u_start": 64.0,
+      "u_end": 72.0,
+      "cosmic_weighted_physical_volume": 271.90267235930463
+    },
+    {
+      "u_start": 72.0,
+      "u_end": 80.0,
+      "cosmic_weighted_physical_volume": 282.79375933820705
+    }
+  ],
+  "history_sha256": "484e2d6df9bf53b1def5fdac347e3188721ecfde3983e80f7bec166509a239c6",
+  "state_sha256": "fb7b79845006a19aa26d6eda3b0af1b48a90768bcbb12e88b589a2a781fefbe8",
+  "script_sha256": "3e42298a645ab8d3757eeecdc3cfa9602629ef474fa7a431e20529c945f7667f",
+  "interpretation": "Instantaneous threshold regions and sampled histories; physical volume separates field evolution from dilution by an expanding box. No claim of stable pockets, oscillons, pressure causality or a continuum volume."
+}

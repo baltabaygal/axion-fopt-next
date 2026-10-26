@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "numerical_passed": true,
+  "goal_reached": false,
+  "all_control_reports_current": true,
+  "legacy_and_current_builds_verified": true,
+  "report_sha256": "82482941f0e1526c4db7529e03b52f94fe05a7aeb38e9994d69cee9278e76cdb",
+  "conversion_renderer_sha256": "f986bd3f49bc7a7da74f6486e7d97b0db8e24dc0a8e4589e069fc3a1a797ea29",
+  "conversion_image_sha256": "24352fb21c468337d34660c43810efdc9429efa7797638f55d71224e8ecfc712",
+  "checked_links": true,
+  "animation_frames": 201,
+  "scope": "Final artifact QA; no simulation or failed result overwritten"
+}

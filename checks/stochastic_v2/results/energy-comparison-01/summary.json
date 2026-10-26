@@ -1,0 +1,63 @@
+{
+  "chart_contract": {
+    "question": "How do energy components evolve, and what can legacy/new curves actually compare?",
+    "takeaway": "Axion energy is supplied by S; legacy growth is externally driven. Different models/boxes prevent attributing curve differences to S alone.",
+    "family": "Trend",
+    "variant": "component line small multiples plus total-energy contextual overlay",
+    "surface": "static scientific PNG and SVG in the established simulation results folder",
+    "temporal_points": "226 main saved times over 0..18, dense native legacy histories; no resampling except explicit common-time scalar lookup",
+    "palette": "Three persistent component colors plus neutral total; distinct line styles; blue focal versus neutral/orange legacy curves",
+    "qa": "Inspect final PNGs, verify component sums, normalization and energy-source balance",
+    "skill_limitations": "Referenced user-context preflight file unavailable; Seaborn absent in local and bundled runtimes. Uses local evidence and Matplotlib template-style fallback, not full skill-template compliance."
+  },
+  "normalization": {
+    "new": "E_A/[L^3*f^2*M^2], theta_i=1, A_i=f",
+    "legacy": "rho_phi/[m0^2*phi0^2], m0=phi0=1",
+    "new_denominator": 1105.92
+  },
+  "checks": {
+    "axion_component_sum_max_abs": 1.566746732351021e-11,
+    "scalar_component_sum_max_abs": 2.3000211513135582e-08,
+    "legacy_work_balance": {
+      "0.1": 1.6323934077106566e-05,
+      "0.5": 7.847146146301805e-06,
+      "0.9": 3.467615658412374e-05
+    }
+  },
+  "new_final": {
+    "t": 18.0,
+    "Mt": 9.0,
+    "kinetic": 0.0053625344346037275,
+    "gradient": 0.00636179205371929,
+    "potential": 0.0027774089990795004,
+    "total": 0.014501735487403258,
+    "E_A": 16.037759310229013,
+    "energy_gain": 8.545506805680182
+  },
+  "legacy_common_time": {
+    "0.1": {
+      "m0t": 9,
+      "total_density": 0.0052529373345630076
+    },
+    "0.5": {
+      "m0t": 9,
+      "total_density": 0.1535610106273335
+    },
+    "0.9": {
+      "m0t": 6.981317007977318,
+      "total_density": 0.3833858022857765
+    }
+  },
+  "caveat": "Unmatched physics and conversion geometry; no suppression/enhancement ratio or causal attribution to adding S is inferred.",
+  "source_sha256": {
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/single-bubble-long-01/main/native/history.csv": "556276f636a5f6e5227ddb3d7061a790eabd64c82a70862ebb33510d6036d12a",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/single-bubble-long-01/time-half/native/history.csv": "a31b59f0260bd9c6c669a87ca014a089f8afafe9b5268b405131a62a70f8059c",
+    "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/results/single-bubble-02/N96_history.csv": "5c9e6f486ce3daf2f5129220e5223a03179f73bcc47711174f7ec573b6be9319",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/single-bubble-long-01/parameters.json": "e05a52b0da64ce5e5f5a5151e38f5a9dbacf313d64dc3017eb7f31874181eea8",
+    "/Users/baltabay/Desktop/axion-fopt-next/checks/single_bubble/results/N128_v0.1_ref1_history.csv": "6a025288a89a9f5bde277e27273239754b0dc819e8866ecee79bb23d72e32a45",
+    "/Users/baltabay/Desktop/axion-fopt-next/checks/single_bubble/results/N128_v0.5_ref2_history.csv": "b8be5ea669ec131833badc4772b660fb409174b948eb52c22d62327ec88bf70d",
+    "/Users/baltabay/Desktop/axion-fopt-next/checks/single_bubble/results/N128_v0.9_ref1_history.csv": "1ce257876092bfa2ca3ca61c2ef36fec1705fb64fc9d336133a95aec49d16c27",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/long-diagnostic-replay-01/report.json": "aec5089f6b826771920ede64b3637a5cd22c8438323b94d06d37be15d9fabd30"
+  },
+  "script_sha256": "d0e35088d0cd562f8baa538395a9d9557c14acc4953a06f1174153ab6e56b18c"
+}

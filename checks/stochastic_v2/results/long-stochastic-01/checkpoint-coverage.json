@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "all_cells_observed_true": true,
+  "threshold": 0.5,
+  "positive_margin": 1e-06,
+  "checkpoints": [
+    {
+      "path": "outputs/stochastic_v2/long-stochastic-20-certified-02/main/native/final.bin",
+      "sha256": "3e6fe9b8378512cef309e3116efbccf4f03710231d81a6b864d5cc6db8f54f15",
+      "u": 19.999999999999872,
+      "below_now": 261016,
+      "unobserved_true": 261016,
+      "below_now_previously_observed_true": 0,
+      "replay_error": 0.0,
+      "history_sha256": "3e281f8385f511d1999d0b351c8099433707793857023a40d90f67a4cdb298af"
+    },
+    {
+      "path": "outputs/stochastic_v2/long-stochastic-24-01/main/native/final.bin",
+      "sha256": "45785ca8cbf4464d41296500abd5c12f812cb4b45743253081acbab86599d5a9",
+      "u": 23.999999999999076,
+      "below_now": 24626,
+      "unobserved_true": 23880,
+      "below_now_previously_observed_true": 746,
+      "replay_error": 0.0,
+      "history_sha256": "84346166d4856fbf3f6febec8bacc73df4d355e767367ca5855900be6748f28e"
+    },
+    {
+      "path": "outputs/stochastic_v2/long-stochastic-28-01/main/native/final.bin",
+      "sha256": "8c175baf7ca66c4de164e5c6a7a62239763712f3ec3e380ed9caa2679b8b3fa5",
+      "u": 27.99999999999828,
+      "below_now": 15108,
+      "unobserved_true": 3014,
+      "below_now_previously_observed_true": 12094,
+      "replay_error": 0.0,
+      "history_sha256": "a20527857c142d713a8be90cafee67e35efbc8b0c7c8e914c8442444254f2257"
+    },
+    {
+      "path": "outputs/stochastic_v2/long-stochastic-40-01/main/native/final.bin",
+      "sha256": "ea6778c005459b12e1b9dc3e30a96d2e04345d4b017f0e503489676f68733612",
+      "u": 40.0,
+      "below_now": 3762,
+      "unobserved_true": 33,
+      "below_now_previously_observed_true": 3729,
+      "replay_error": 0.0,
+      "history_sha256": "3f747b3dbbd4d35fdc2d008759c95ee8195b1294a6e70ad542e9b44c0ed618d8"
+    },
+    {
+      "path": "outputs/stochastic_v2/long-stochastic-until-01/main/native/final.bin",
+      "sha256": "fb7b79845006a19aa26d6eda3b0af1b48a90768bcbb12e88b589a2a781fefbe8",
+      "u": 79.9999999999955,
+      "below_now": 342,
+      "unobserved_true": 0,
+      "below_now_previously_observed_true": 342,
+      "replay_error": 0.0,
+      "history_sha256": "484e2d6df9bf53b1def5fdac347e3188721ecfde3983e80f7bec166509a239c6"
+    }
+  ],
+  "script_sha256": "d6b2a3b06b63cb4d778265b74b78d67a1f023f2dd8e42e022ab1209e6f9eb6c4",
+  "interpretation": "N96 replayed numerical trajectory only. A zero unobserved count establishes that every cell exceeded .500001 in at least one saved full checkpoint. It does not imply simultaneous conversion, relaxation, or an exact first-passage time. Refinement controls do not save the same intermediate full checkpoints."
+}

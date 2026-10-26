@@ -1,0 +1,7 @@
+{
+  "source": "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/single-bubble-01",
+  "passed": true,
+  "scope": "Seeded finite-time scalar-only 3D pilot; no terminal speed, tunnelling, cosmology, relic density or continuum limit established",
+  "report_sha256": "3112ad3527079d59e259a0f212db29a65769b9d144003066ff75447af2ac99fb",
+  "renderer_sha256": "a690f0545f78c1c75a26195ed9f34789a1ad25500e56173887468b6ad5cc5544"
+}

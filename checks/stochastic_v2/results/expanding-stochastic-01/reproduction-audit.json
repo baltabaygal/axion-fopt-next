@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "candidate_cli_exact_replay": {
+    "report.json": true,
+    "rate.csv": true,
+    "candidates.txt": true
+  },
+  "replay_directory": "outputs/stochastic_v2/candidate-rate-replay-01",
+  "source_provenance": {
+    "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/audit_candidates.py": "b549e17f2393d23997f972a9c1977da40e5f4c15c6122722b872fa3f5071aec3",
+    "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/stochastic_reference.py": "9f978066cce14a8e6783b37df1f6078fda181443dda7649c2cc6a509c0a95a27",
+    "/Users/baltabay/Desktop/axion-fopt-next/src/axion_fopt_next/core.py": "e2bda5655ff4262a478d0df3a912ad6cce910a381815838ea544cb5d92bcd2b5"
+  }
+}

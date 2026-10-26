@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "homogeneous": true,
+      "runs": [
+        {
+          "dt": 0.02,
+          "error": 1.979105384408708e-05,
+          "initial_exact": true,
+          "snapshot_energy": 0.0,
+          "total_balance": 9.209900942159636e-06,
+          "axion_balance": 3.521217550059382e-08,
+          "scale_error": 2.220446049250313e-16,
+          "cosmic_error": 2.220446049250313e-16,
+          "seconds": 0.43990404199576005
+        },
+        {
+          "dt": 0.01,
+          "error": 4.948100736257288e-06,
+          "initial_exact": true,
+          "snapshot_energy": 2.0756345013614069e-16,
+          "total_balance": 2.302653623852035e-06,
+          "axion_balance": 8.803647132928266e-09,
+          "scale_error": 2.220446049250313e-16,
+          "cosmic_error": 4.440892098500626e-16,
+          "seconds": 0.010785332997329533
+        },
+        {
+          "dt": 0.005,
+          "error": 1.2370462856292619e-06,
+          "initial_exact": true,
+          "snapshot_energy": 2.0756345013614069e-16,
+          "total_balance": 5.756745564499249e-07,
+          "axion_balance": 2.2009109741602784e-09,
+          "scale_error": 2.220446049250313e-16,
+          "cosmic_error": 4.440892098500626e-16,
+          "seconds": 0.013741375005338341
+        }
+      ],
+      "ratios": [
+        3.9997273497420562,
+        3.999931767904936
+      ],
+      "passed": true
+    },
+    {
+      "homogeneous": false,
+      "runs": [
+        {
+          "dt": 0.02,
+          "error": 2.0002292273779698e-05,
+          "initial_exact": true,
+          "snapshot_energy": 0.0,
+          "total_balance": 8.531310397122888e-06,
+          "axion_balance": 2.0808062867463916e-07,
+          "scale_error": 2.220446049250313e-16,
+          "cosmic_error": 2.220446049250313e-16,
+          "seconds": 0.009733624989166856
+        },
+        {
+          "dt": 0.01,
+          "error": 5.000923055054063e-06,
+          "initial_exact": true,
+          "snapshot_energy": 2.060395501077541e-16,
+          "total_balance": 2.1329877966502726e-06,
+          "axion_balance": 5.2020099627386975e-08,
+          "scale_error": 2.220446049250313e-16,
+          "cosmic_error": 4.440892098500626e-16,
+          "seconds": 0.011771042016334832
+        },
+        {
+          "dt": 0.005,
+          "error": 1.2502526715585383e-06,
+          "initial_exact": true,
+          "snapshot_energy": 0.0,
+          "total_balance": 5.33256961520902e-07,
+          "axion_balance": 1.300487464757517e-08,
+          "scale_error": 2.220446049250313e-16,
+          "cosmic_error": 4.440892098500626e-16,
+          "seconds": 0.020295833004638553
+        }
+      ],
+      "ratios": [
+        3.999720062392254,
+        3.9999299092238845
+      ],
+      "passed": true
+    }
+  ],
+  "regression": [
+    {
+      "case": "False-0.005",
+      "exact": true
+    },
+    {
+      "case": "False-0.01",
+      "exact": true
+    },
+    {
+      "case": "True-0.02",
+      "exact": true
+    },
+    {
+      "case": "True-0.005",
+      "exact": true
+    },
+    {
+      "case": "False-0.02",
+      "exact": true
+    },
+    {
+      "case": "True-0.01",
+      "exact": true
+    }
+  ],
+  "build": {
+    "compile": [
+      "/usr/bin/c++",
+      "-DDEVICE_CPU",
+      "-DDEVICE_KOKKOS",
+      "-DKOKKOS_DEPENDENCE",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/adapter/overlay",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/cosmolattice/include",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/include",
+      "-isystem",
+      "/opt/homebrew/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/external/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/desul/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/mdspan/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/simd/src",
+      "-DNDEBUG",
+      "-std=gnu++20",
+      "-Wall",
+      "-Wshadow",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-O2",
+      "-c",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/expand_evolve.cpp",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-expansion-02/evolve.o"
+    ],
+    "link": [
+      "/usr/bin/c++",
+      "-O2",
+      "-DNDEBUG",
+      "-Wl,-search_paths_first",
+      "-Wl,-headerpad_max_install_names",
+      "-DKOKKOS_DEPENDENCE",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-expansion-02/evolve.o",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-expansion-02/bubble_evolve",
+      "-L/opt/homebrew/lib",
+      "-Wl,-rpath,/opt/homebrew/lib",
+      "_deps/kokkos-build/containers/src/libkokkoscontainers.a",
+      "_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a",
+      "_deps/kokkos-build/simd/src/libkokkossimd.a",
+      "_deps/kokkos-build/core/src/libkokkoscore.a",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib",
+      "/opt/homebrew/lib/libfftw3_omp.dylib",
+      "/opt/homebrew/lib/libfftw3_threads.dylib",
+      "/opt/homebrew/lib/libfftw3.dylib"
+    ],
+    "library_build": "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped",
+    "source_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/expand_evolve.cpp": "3ce8237833abb618cc061430a81585d4f13e66636088056a72de201cb8324c8f",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/bubble_model.h": "a202193dd13e09ee1f7adccb820035f98e44e138ef7fc576807eeae102867f8a",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/state_io.h": "915b3e44aba8225db37c612a3fca9487512fbd35b09feab91aa81345526d3e97",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/potential.h": "90bbc8ab4b6f7bf71e809498f971736fe03b18e527b1ece27634e85675c6e455",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/build_expanding_backend.py": "454cb50d1244dc519fb09e79d3b03bd0aa67d1956f055098eb7783a298fa0287",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/initial_state.h": "13bb263852ead2b81277b7d488f0af878b0c4f68bee80f85ec9f86f9366acdbc",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/accurate_sum.h": "86c2a379ecebc09c62dbc8f85e755aadf45c836b41edc44c7102cf56086652de"
+    },
+    "library_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src/libkokkoscontainers.a": "37917464b2dc104e18d4e613cd49722ea0a639a1ccc0b3fcda799234268e39d2",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a": "72bb7d5763acc693f4157ab563878cb1eb5d1954de6a36b787afc7edfd50ca69",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src/libkokkossimd.a": "dbd5ae89fe5935ed1d12ef08dffc990013c71cd0249ff03d258af5ca13fc76de",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src/libkokkoscore.a": "c0c0fcb51e9173927b5ef7723516dd076f978197aef7ffa48dde220a7ea216c0",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib": "432b8d15fc1b2431f937bba89796a32daaa2dd464eda12a744d9cb2818842477",
+      "/opt/homebrew/lib/libfftw3_omp.dylib": "410f49c6252ae15823d3b05e8e4f8622d4615730cbd18c20396edda156e40594",
+      "/opt/homebrew/lib/libfftw3_threads.dylib": "1ceb262b9c62af3f3a8bb10d3459fa36c7a954cd32a4bc9774d4c27e4bea0ecc",
+      "/opt/homebrew/lib/libfftw3.dylib": "2eda1ef2b5bd9707a63d38f8d4994513b40e1b0ae475fd8c57cfecf5abb88c2d"
+    },
+    "base_manifest_sha256": "dcc88d2f9b046b796b19d6eb630cf6fbdf5bcd72ac3790873f4c94bd9d6daa92",
+    "executable_sha256": "e5fe103ea5e80e19a3c5180f7a2a0a7c4366e3a3f5af19d88e868aad0c7cd15d",
+    "seconds": 6.041715416999068,
+    "scope": "3D coupled fields; prescribed RD expansion; actual CosmoLattice PV2, one CPU thread"
+  },
+  "script_sha256": "7df484b35ae144a2a773b0d21894243371e0fadb5ee0e0dd08879ae8be41004b",
+  "reference_sha256": "4c7a35812cec02cd3114b65f1e9d1d869a0af793581dc153a3a03acab3672063"
+}

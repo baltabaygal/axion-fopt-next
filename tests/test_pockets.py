@@ -39,6 +39,20 @@ class PocketContracts(unittest.TestCase):
         self.assertEqual(pk.force(0., .3, 2., .01, 4.)[1], 0.)
         self.assertAlmostEqual(pk.force(1., .3, 2., .01, 4.)[1], 1.2)
 
+    def test_quartic_coupling_and_false_vacuum_curvature(self):
+        rng=np.random.default_rng(11);phi,a=rng.uniform(-.5,1.5,(2,60));eps=1e-6
+        numerical=((pk.potential(phi+eps,a,2.,.01,4.,4)-pk.potential(phi-eps,a,2.,.01,4.,4))/(2*eps),
+                   (pk.potential(phi,a+eps,2.,.01,4.,4)-pk.potential(phi,a-eps,2.,.01,4.,4))/(2*eps))
+        for observed,expected in zip(pk.force(phi,a,2.,.01,4.,4),numerical):
+            np.testing.assert_allclose(observed,expected,rtol=2e-8,atol=2e-8)
+        for amplitude in (0.,1.,10.):
+            curvature=(pk.force(eps,amplitude,2.,.01,4.,4)[0]-pk.force(-eps,amplitude,2.,.01,4.,4)[0])/(2*eps)
+            self.assertAlmostEqual(curvature,1.,delta=1e-8)
+        self.assertAlmostEqual(pk.force(1.,.3,2.,.01,4.,4)[1],1.2)
+        for invalid in (0,2.5,3,6):
+            with self.assertRaises(ValueError):
+                pk.force(.3,.2,2.,.01,4.,invalid)
+
     def test_gas_field_is_grid_independent(self):
         modes = pk.gas_modes(16., .5, 1.3, 2)
         coarse, _ = pk.gas_field(modes, 12);fine, _ = pk.gas_field(modes, 24)
@@ -75,6 +89,36 @@ class PocketContracts(unittest.TestCase):
                 pk.read_state(path)
             with self.assertRaises(ValueError):
                 pk.write_initial(path, s[..., :3], 6.)
+
+    def test_radial_modes_reach_reflective_sphere_limit(self):
+        r0 = 5.
+        modes = pk.radial_modes(r0, 1., 400., .3, 2.5, 6., h=.01, profile=lambda r: (r > r0).astype(float))
+        low = [m for m in modes if m['l'] <= 1 and m['n'] <= 1]
+        self.assertEqual(len(low), 4)
+        for m in low:
+            self.assertAlmostEqual(m['omega']*r0/pk.bessel_zeros(m['l'], 2)[m['n']], 1., delta=3e-3)
+            self.assertAlmostEqual(np.trapezoid(m['u']**2, m['r']), 1., places=6)
+
+    def test_eigen_gas_is_confined_and_grid_independent(self):
+        modes = pk.radial_modes(4., 1., 3., .5, 1.2, 7.)
+        self.assertGreater(len(modes), 0)
+        coarse, coarse_p = pk.eigen_gas(modes, 16, 16., 4)
+        fine, fine_p = pk.eigen_gas(modes, 48, 16., 4)
+        # Refinement by 3 keeps every coarse cell centre: fine index 3i+1.
+        np.testing.assert_allclose(fine[1::3, 1::3, 1::3], coarse, atol=1e-12)
+        np.testing.assert_allclose(fine_p[1::3, 1::3, 1::3], coarse_p, atol=1e-12)
+        s = pk.eigen_state(48, 16., 4., 1., modes, 1., 4)
+        r = pk.radius(48, 16.);dx = 16/48
+        grad = sum((np.roll(s[..., 1], -1, ax)-s[..., 1])**2 for ax in range(3))/(2*dx*dx)
+        density = .5*s[..., 3]**2+grad+.5*9*s[..., 0]**2*s[..., 1]**2
+        self.assertLess(density[r > 7].sum()/density.sum(), 1e-4)
+
+    def test_gas_chunking_preserves_the_same_realisation_bitwise(self):
+        modes=pk.radial_modes(4.,1.,3.,.5,1.2,7.)
+        small=pk.eigen_gas(modes,24,16.,4,7.,chunk_size=13)
+        full=pk.eigen_gas(modes,24,16.,4,7.,chunk_size=24**3)
+        for left,right in zip(small,full):
+            self.assertTrue(np.array_equal(left,right))
 
     def test_thin_wall_brackets(self):
         sigma = pk.tension(pk.lambda_for_width(2.))

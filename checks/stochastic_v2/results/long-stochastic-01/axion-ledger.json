@@ -1,0 +1,10 @@
+{
+  "initial": 0.0,
+  "insertion_work": 16.59401710201167,
+  "continuous_scalar_transfer": 109.03208606626112,
+  "expansion_loss": 97.63176154254262,
+  "final": 27.99655671693302,
+  "residual": 0.0022150912028564562,
+  "maximum_absolute_balance_bound_from_report": 0.002567346854917219,
+  "energy_convention": "Physical density integrated over comoving coordinate volume"
+}

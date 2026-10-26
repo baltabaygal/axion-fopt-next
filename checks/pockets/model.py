@@ -9,25 +9,47 @@ import struct
 import subprocess
 import numpy as np
 from scipy.integrate import solve_ivp
+from scipy.linalg import eigh_tridiagonal
 from scipy.optimize import brentq
+from scipy.special import sph_harm_y, spherical_jn
+import importlib.util
+# References are also loaded directly by file path, outside this directory's
+# import path (e.g. optional integration tests).
+_wall_spec=importlib.util.spec_from_file_location('pocket_structured_wall',Path(__file__).with_name('structured_wall.py'))
+structured_wall=importlib.util.module_from_spec(_wall_spec)
+_wall_spec.loader.exec_module(structured_wall)
 
 ROOT = Path(__file__).resolve().parents[2]
 EXECUTABLE = ROOT / 'build/pockets/pocket_evolve'
+MAX_N = 384
 
 
-def dilaton_potential(phi, lam, dv):
+def dilaton_potential(phi, lam, dv, vacuum_stiffening=0.):
     """Expanded form; V(1)=0 and V(0)=dv. The compiled model uses a factored form."""
+    if vacuum_stiffening:
+        return structured_wall.potential(phi,lam,dv,vacuum_stiffening)
     return lam/4*(phi**2-2*phi**3+phi**4)+dv*(1-4*phi**3+3*phi**4)
 
 
-def potential(phi, a, lam, dv, m2):
-    return dilaton_potential(phi, lam, dv)+.5*m2*phi**2*a**2
+def _check_power(mass_power):
+    if mass_power not in (2, 4):
+        raise ValueError('mass_power must be 2 or 4')
 
 
-def force(phi, a, lam, dv, m2):
+def potential(phi, a, lam, dv, m2, mass_power=2, vacuum_stiffening=0.):
+    _check_power(mass_power)
+    return dilaton_potential(phi, lam, dv,vacuum_stiffening)+.5*m2*phi**mass_power*a**2
+
+
+def force(phi, a, lam, dv, m2, mass_power=2, vacuum_stiffening=0.):
     """(dV/dphi, dV/da), differentiated from the expanded polynomial."""
-    return (lam/4*(2*phi-6*phi**2+4*phi**3)+dv*(12*phi**3-12*phi**2)+m2*phi*a**2,
-            m2*phi**2*a)
+    _check_power(mass_power)
+    if vacuum_stiffening:
+        return (structured_wall.force(phi,lam,dv,vacuum_stiffening)+.5*mass_power*m2*phi**(mass_power-1)*a**2,
+                m2*phi**mass_power*a)
+    return (lam/4*(2*phi-6*phi**2+4*phi**3)+dv*(12*phi**3-12*phi**2)
+            +.5*mass_power*m2*phi**(mass_power-1)*a**2,
+            m2*phi**mass_power*a)
 
 
 def lambda_for_width(width):
@@ -52,20 +74,30 @@ def radius(n, box, centre=None):
     return np.sqrt(d[0][:, None, None]**2+d[1][None, :, None]**2+d[2][None, None, :]**2)
 
 
-def energies(state, box, lam, dv, m2):
-    """Volume-integrated components and region split, matching the driver's definitions."""
+def energies(state, box, lam, dv, m2, far_margin=6., mass_power=2, vacuum_stiffening=0.):
+    """Volume-integrated components and region split, matching the driver's definitions.
+
+    'axion_far' counts axion energy beyond R_eff+far_margin from the false-vacuum
+    centroid (periodic nearest image), R_eff the volume-equivalent radius.
+    """
+    _check_power(mass_power)
     n = len(state);dx = box/n;cell = dx**3
     phi, a, pphi, pa = (state[..., i] for i in range(4))
     gphi = sum((np.roll(phi, -1, ax)-phi)**2 for ax in range(3))/(2*dx*dx)
     ga = sum((np.roll(a, -1, ax)-a)**2 for ax in range(3))/(2*dx*dx)
-    coupling = .5*m2*phi**2*a**2
+    coupling = .5*m2*phi**mass_power*a**2
     axion = .5*pa**2+ga+coupling
     fv = phi < .5;tv = phi > .99
+    far = np.zeros_like(fv)
+    if fv.any():
+        x = grid(n, box);idx = np.nonzero(fv)
+        centre = [x[i].mean() for i in idx]
+        far = radius(n, box, centre) > np.cbrt(3*fv.sum()*cell/(4*np.pi))+far_margin
     out = dict(dilaton_kinetic=.5*np.sum(pphi**2), dilaton_gradient=np.sum(gphi),
-               dilaton_potential=np.sum(dilaton_potential(phi, lam, dv)),
+               dilaton_potential=np.sum(dilaton_potential(phi, lam, dv,vacuum_stiffening)),
                axion_kinetic=.5*np.sum(pa**2), axion_gradient=np.sum(ga), coupling=np.sum(coupling),
                fv_volume=float(np.count_nonzero(fv)), axion_fv=np.sum(axion[fv]),
-               axion_wall=np.sum(axion[~fv & ~tv]), axion_tv=np.sum(axion[tv]))
+               axion_wall=np.sum(axion[~fv & ~tv]), axion_tv=np.sum(axion[tv]), axion_far=np.sum(axion[far]))
     out = {k: v*cell for k, v in out.items()}
     out['total'] = sum(out[k] for k in ('dilaton_kinetic', 'dilaton_gradient', 'dilaton_potential',
                                           'axion_kinetic', 'axion_gradient', 'coupling'))
@@ -135,6 +167,95 @@ def gas_amplitude(target_energy, n, box, r0, wall_width, modes, window_radius, w
     return float(np.sqrt(target_energy/unit))
 
 
+def radial_modes(r0, width, mass_tv, k_min, k_max, r_max, h=.01, profile=None, mass_power=2):
+    """Bound pocket modes with k_min <= omega <= k_max for a static spherical wall.
+
+    Solves -u'' + [l(l+1)/r^2 + mass_tv^2 phi(r)^2] u = omega^2 u, u = r R(r),
+    u(0)=u(r_max)=0, by second-order finite differences. The default wall is
+    phi=[1+tanh((r-r0)/width)]/2. In the Dirichlet limit (large mass, sharp wall)
+    omega_nl -> alpha_nl/r0, arXiv:2609.24714 Eq. (3.4). Each u has int u^2 dr = 1.
+    """
+    _check_power(mass_power)
+    r = h*np.arange(1, int(round(r_max/h)))
+    phi = .5*(1+np.tanh((r-r0)/width)) if profile is None else profile(r)
+    off = -np.ones(len(r)-1)/h**2;modes = []
+    for l in range(10000):
+        diagonal = 2/h**2+l*(l+1)/r**2+mass_tv**2*phi**mass_power
+        w2, u = eigh_tridiagonal(diagonal, off, select='v', select_range=(k_min**2, k_max**2))
+        if not len(w2):
+            if l*(l+1) > (k_max*r0)**2:
+                break
+            continue
+        for n, (value, vector) in enumerate(zip(w2, u.T)):
+            modes.append(dict(l=l, n=n, omega=float(np.sqrt(value)), r=r, u=vector/np.sqrt(h)))
+    return modes
+
+
+def bessel_zeros(l, count):
+    """First positive zeros alpha_l1..alpha_l,count of the spherical Bessel function j_l."""
+    x = np.linspace(.5, 3*count+l+10, 20000);f = lambda v: spherical_jn(l, v);y = f(x)
+    brackets = np.nonzero(np.sign(y[:-1]) != np.sign(y[1:]))[0][:count]
+    return np.array([brentq(f, x[i], x[i+1], xtol=1e-14) for i in brackets])
+
+
+def real_sph_harm(l, m, theta, azimuth):
+    """Orthonormal real spherical harmonics; theta is the polar angle."""
+    y = sph_harm_y(l, abs(m), theta, azimuth)
+    if m > 0:
+        return np.sqrt(2)*(-1)**m*y.real
+    if m < 0:
+        return np.sqrt(2)*(-1)**m*y.imag
+    return y.real
+
+
+def eigen_gas(modes, n, box, seed, r_cut=None, chunk_size=65536):
+    """Unit-temperature equipartition gas of pocket standing waves R_nl(r) Y_lm.
+
+    Field amplitudes have variance 1/omega^2 and momenta variance 1, independent.
+    Random numbers are drawn in (l, n, m) order, so a seed fixes the continuum
+    field independently of the grid. Cells beyond r_cut are left at zero.
+    """
+    if chunk_size<1:
+        raise ValueError('chunk_size must be positive')
+    x = grid(n, box)-box/2;rng = np.random.default_rng(seed)
+    groups=[]
+    for l in sorted({mode['l'] for mode in modes}):
+        entries=[]
+        for mode in (mode for mode in modes if mode['l'] == l):
+            coefficients=[(rng.normal()/mode['omega'],rng.normal()) for _ in range(2*l+1)]
+            entries.append((mode,coefficients))
+        groups.append((l,entries))
+    # Keep the exact coefficient and per-cell accumulation order, while
+    # bounding harmonic/coordinate working memory for N=192..256 states.
+    full_a,full_pa=np.zeros(n**3),np.zeros(n**3)
+    for start in range(0,n**3,chunk_size):
+        flat=np.arange(start,min(start+chunk_size,n**3))
+        X,Y,Z=x[flat//(n*n)],x[(flat//n)%n],x[flat%n]
+        r=np.sqrt(X*X+Y*Y+Z*Z);keep=r<(np.inf if r_cut is None else r_cut)
+        if not keep.any():
+            continue
+        rk=r[keep]
+        theta=np.arccos(np.clip(np.divide(Z[keep],rk,out=np.ones_like(rk),where=rk>0),-1,1))
+        azimuth=np.arctan2(Y[keep],X[keep]);a,pa=np.zeros(len(rk)),np.zeros(len(rk))
+        for l,entries in groups:
+            harmonics=[real_sph_harm(l,m,theta,azimuth) for m in range(-l,l+1)]
+            for mode,coefficients in entries:
+                radial=np.interp(rk,mode['r'],mode['u']/mode['r'],right=0.)
+                for y,(cq,cp) in zip(harmonics,coefficients):
+                    a+=cq*radial*y;pa+=cp*radial*y
+        full_a[flat[keep]]=a;full_pa[flat[keep]]=pa
+    return [full_a.reshape(n,n,n),full_pa.reshape(n,n,n)]
+
+
+def eigen_state(n, box, r0, wall_width, modes=None, amplitude=0., seed=0, r_cut=None, profile=None):
+    s = np.zeros((n, n, n, 4))
+    s[..., 0] = dilaton_sphere(n, box, r0, wall_width) if profile is None else profile(radius(n,box))
+    if modes is not None and amplitude:
+        a, pa = eigen_gas(modes, n, box, seed, r_cut)
+        s[..., 1], s[..., 3] = amplitude*a, amplitude*pa
+    return s
+
+
 def laplacian(field, dx):
     return sum(np.roll(field, 1, ax)+np.roll(field, -1, ax)-2*field for ax in range(3))/dx**2
 
@@ -146,7 +267,7 @@ def reference(initial, cfg, times):
 
     def rhs(_, flat):
         s = flat.reshape(shape)
-        fphi, fa = force(s[..., 0], s[..., 1], lam, dv, m2)
+        fphi, fa = force(s[..., 0], s[..., 1], lam, dv, m2, cfg.get('mass_power', 2),cfg.get('vacuum_stiffening',0.))
         acceleration = np.stack((laplacian(s[..., 0], dx)-fphi, laplacian(s[..., 1], dx)-fa), -1)
         return np.concatenate((s[..., 2:], acceleration), -1).ravel()
     result = solve_ivp(rhs, (0, max(times)), initial.ravel(), t_eval=times, method='DOP853',
@@ -214,24 +335,32 @@ def brackets(r0, sigma, dv, rho0, energy):
 
 
 def write_initial(path, state, box):
-    state = np.asarray(state, dtype='<f8');n = state.shape[0]
-    if state.shape != (n, n, n, 4) or not np.isfinite(state).all() or box <= 0:
+    state = np.asarray(state, dtype='<f8')
+    if state.ndim!=4:
+        raise ValueError('Require a four-dimensional state')
+    n = state.shape[0]
+    if not 4<=n<=MAX_N or state.shape != (n, n, n, 4) or not np.isfinite(state).all() or not np.isfinite(box) or box <= 0:
         raise ValueError('Require finite cubic (N,N,N,4) state and positive box')
-    with Path(path).open('wb') as f:
+    with Path(path).open('wb',buffering=0) as f:
         f.write(b'PKIN0001'+struct.pack('<Id', n, box))
-        f.write(state.tobytes())
+        state.tofile(f)
 
 
 def _read(path, magic, cells):
-    raw = Path(path).read_bytes()
-    if raw[:8] != magic or len(raw) < 28:
-        raise ValueError('Invalid magic/header')
-    n, box, u = struct.unpack('<I2d', raw[8:28])
-    if not 4 <= n <= 128 or not np.isfinite([box, u]).all() or box <= 0:
-        raise ValueError('Invalid metadata')
-    if len(raw) != 28+32*cells(n):
-        raise ValueError('Invalid byte count')
-    data = np.frombuffer(raw, dtype='<f8', offset=28).copy()
+    path=Path(path)
+    with path.open('rb',buffering=0) as f:
+        header=f.read(28)
+        if len(header)!=28 or header[:8]!=magic:
+            raise ValueError('Invalid magic/header')
+        n,box,u=struct.unpack('<I2d',header[8:])
+        if not 4<=n<=MAX_N or not np.isfinite([box,u]).all() or box<=0:
+            raise ValueError('Invalid metadata')
+        count=4*cells(n)
+        if path.stat().st_size!=28+8*count:
+            raise ValueError('Invalid byte count')
+        data=np.fromfile(f,dtype='<f8',count=count)
+        if len(data)!=count or f.read(1):
+            raise ValueError('Invalid byte count')
     if not np.isfinite(data).all():
         raise ValueError('Nonfinite data')
     return dict(n=n, box=box, u=u), data
@@ -248,13 +377,25 @@ def read_slice(path):
     return meta, data.reshape(meta['n'], meta['n'], 4)
 
 
-def config(n, box, dt, duration, *, lam, dv, mass_tv, every=10, frames=0, slices=0):
+def config(n, box, dt, duration, *, lam, dv, mass_tv, every=10, frames=0, slices=0, far_margin=6., mass_power=2, monitor_radius=0., vacuum_stiffening=0., tracking_inner=0., tracking_outer=0.):
+    _check_power(mass_power)
+    if not isinstance(n,(int,np.integer)) or not 4<=n<=MAX_N:
+        raise ValueError(f'Require integer N=4..{MAX_N}')
+    structured_wall.check_shape(vacuum_stiffening)
+    if not np.isfinite(monitor_radius) or not 0<=monitor_radius<box/2:
+        raise ValueError('Require 0<=monitor_radius<L/2')
+    if (tracking_inner or tracking_outer) and not 0<tracking_inner<tracking_outer<box/2:
+        raise ValueError('Require tracking radii both zero or 0<inner<outer<L/2')
     return dict(N=n, lSide=box, dt=dt, tMax=duration, expansion=False, evolver='PV2',
-                **{'lambda': lam}, delta_v=dv, mass_tv=mass_tv,
-                output_every=every, snapshot_every=frames, slice_every=slices)
+                **{'lambda': lam}, delta_v=dv, mass_tv=mass_tv, far_margin=far_margin,
+                output_every=every, snapshot_every=frames, slice_every=slices,
+                **({'mass_power': mass_power} if mass_power != 2 else {}),
+                **({'monitor_radius': monitor_radius} if monitor_radius else {}),
+                **({'vacuum_stiffening': vacuum_stiffening} if vacuum_stiffening else {}),
+                **({'tracking_inner':tracking_inner,'tracking_outer':tracking_outer} if tracking_outer else {}))
 
 
-def run(initial, cfg, root, executable=EXECUTABLE):
+def prepare_run(initial,cfg,root):
     root = Path(root)
     root.mkdir(parents=True, exist_ok=False)
     cfg = dict(cfg)
@@ -263,12 +404,43 @@ def run(initial, cfg, root, executable=EXECUTABLE):
     (root/'input.json').write_text(json.dumps(cfg, indent=2)+'\n')
     text = '\n'.join(f'{k} = {str(v).lower() if isinstance(v, bool) else v}' for k, v in cfg.items())+'\n'
     (root/'input.in').write_text(text)
+    return cfg
+
+
+def run_prepared(root,executable=EXECUTABLE):
+    root=Path(root);cfg=json.loads((root/'input.json').read_text())
     result = subprocess.run([str(executable), 'input='+str((root/'input.in').resolve())],
                             capture_output=True, text=True)
     (root/'run.log').write_text(result.stdout+result.stderr)
     if result.returncode:
         raise RuntimeError(f'Pocket solver failed: {root}/run.log\n{result.stderr[-1500:]}')
     return cfg
+
+
+def run(initial,cfg,root,executable=EXECUTABLE):
+    prepare_run(initial,cfg,root)
+    return run_prepared(root,executable)
+
+
+def initial_transfer_exact(input_path,snapshot_path,chunk_bytes=1024*1024):
+    """Exact bounded-memory PKIN -> initial PKST byte comparison."""
+    if not isinstance(chunk_bytes,int) or chunk_bytes<=0:
+        raise ValueError('Require positive integer chunk_bytes')
+    with Path(input_path).open('rb') as source,Path(snapshot_path).open('rb') as target:
+        a,b=source.read(20),target.read(28)
+        if len(a)!=20 or len(b)!=28 or a[:8]!=b'PKIN0001' or b[:8]!=b'PKST0001':
+            return False
+        n,box=struct.unpack('<Id',a[8:]);m,length,u=struct.unpack('<I2d',b[8:])
+        if n!=m or box!=length or u!=0. or not 4<=n<=MAX_N:
+            return False
+        if Path(input_path).stat().st_size!=20+32*n**3 or Path(snapshot_path).stat().st_size!=28+32*n**3:
+            return False
+        while True:
+            left=source.read(chunk_bytes);right=target.read(chunk_bytes)
+            if left!=right:
+                return False
+            if not left:
+                return True
 
 
 def history(directory):

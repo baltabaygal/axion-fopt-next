@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "folder": "long-stochastic-20-certified-02",
+      "end": 20,
+      "max_history_error": 0.0,
+      "history_sha256": "3e281f8385f511d1999d0b351c8099433707793857023a40d90f67a4cdb298af"
+    },
+    {
+      "folder": "long-stochastic-24-01",
+      "end": 24,
+      "max_history_error": 0.0,
+      "history_sha256": "84346166d4856fbf3f6febec8bacc73df4d355e767367ca5855900be6748f28e"
+    },
+    {
+      "folder": "long-stochastic-28-01",
+      "end": 28,
+      "max_history_error": 0.0,
+      "history_sha256": "a20527857c142d713a8be90cafee67e35efbc8b0c7c8e914c8442444254f2257"
+    },
+    {
+      "folder": "long-stochastic-40-01",
+      "end": 40,
+      "max_history_error": 0.0,
+      "history_sha256": "3f747b3dbbd4d35fdc2d008759c95ee8195b1294a6e70ad542e9b44c0ed618d8"
+    }
+  ],
+  "note": "Same initial fields, frozen candidate prefix, integrator and timesteps; full global history replay matches exactly. Supports interpreting saved stage endpoints as checkpoints of the extended numerical trajectory."
+}

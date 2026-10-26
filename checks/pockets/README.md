@@ -7,6 +7,27 @@ trapping in our lattice runs and compare with the reference paper where a
 lattice can actually test it. A first dynamical-wall prototype is implemented
 below.
 
+The agreed field-only programme and the next predeclared pilot are in
+[FIELD_GOAL_REVISED.md](FIELD_GOAL_REVISED.md), accepted on 2026-10-18.
+It starts with the formation paper's model and hierarchy, then contracting
+field pockets, survival/equilibration, scaling, expansion and collisions.
+No particle or N-body implementation is in scope. The earlier static
+programme remains in [FIELD_GOAL.md](FIELD_GOAL.md) as historical evidence.
+
+Current field-only evidence (2026-10-19): finite-time stationary and moving
+planar reflection benchmarks pass their declared controls; see
+[PLANAR_STATIONARY_BENCHMARK.md](PLANAR_STATIONARY_BENCHMARK.md) and
+[PLANAR_MOVING_BENCHMARK.md](PLANAR_MOVING_BENCHMARK.md). The moving result
+uses the consistently validated optional fourth-order spatial operator;
+earlier failures are retained. Neither is a demonstrated long-lived
+three-dimensional pocket. Work remains bounded to one-thread planar tests
+while the laptop is busy. A first finite-amplitude pilot observes sustained
+wall reversal, now supported by temporal/spatial refinement and a displaced
+second-wall control; see [PLANAR_PRESSURE_CONTROLLED.md](PLANAR_PRESSURE_CONTROLLED.md). Positive
+vacuum bias now also retains the rebound under the same refinement and
+boundary controls; see
+[PLANAR_BIASED_PRESSURE_CONTROLLED.md](PLANAR_BIASED_PRESSURE_CONTROLLED.md).
+
 Reference: W. Khater, M.C.D. Marsh and C. Nikolis, *The phenomenology of Axion
 Relic Pockets*, [arXiv:2609.24714v1](https://arxiv.org/abs/2609.24714). The PDF
 is retained here as [2609.24714.pdf](2609.24714.pdf) for lookups.
@@ -20,13 +41,20 @@ The paper is phenomenology. It has no lattice or field simulations; its
 figures are a formation sketch, atomic fields, event-rate geometry and
 detector limits.
 
+Its formation reference, arXiv:2407.01676, does include a spherical
+reflective-particle simulation (Sec. 5, Fig. 4). That is distinct from a
+coupled-field simulation. We use its analytic relations for comparison;
+the present programme uses fields throughout.
+
 - **Sec. 2, Eqs. (2.1)-(2.7), from Ref. [5].** A dilaton first-order transition
   traps a pre-existing axion population in false vacuum. Bubble walls compress
   and heat the axions, which cannot enter the true vacuum. Their pressure
   stops the walls at the equilibrium radius R_eq. A pocket's energy density is
   4*DeltaV: 3*DeltaV in the hot axion gas and DeltaV of vacuum energy.
-  Two parameters are left to simulations. epsilon is the ratio of scale factors
-  between matter-like redshifting and coalescence, with epsilon^4 <~ 0.15.
+  Two parameters are left to simulations. For our cosmological convention use
+  epsilon=a(t_transition)/a(t_matterlike), following Ref. [5], Eq. (16), with
+  epsilon^4 <~ 0.15. The newer paper's prose instead references coalescence;
+  these conventions must not be interchanged silently.
   alpha sets the wall Lorentz factor at coalescence, gamma_w = alpha*R_0/R_c,
   with 0 < alpha <~ 1.6.
 - **Sec. 3, Eqs. (3.1)-(3.4).** Free axion in a totally reflective sphere:
@@ -74,6 +102,34 @@ false-vacuum ball filled with a band-limited axion gas, on a static N=128
 lattice, against no-gas and leaky (m_TV=0.3) controls.
 The contract is in [EXPERIMENT.md](EXPERIMENT.md) and the results in
 [results/README.md](results/README.md).
+
+The default potential remains the above phi^2 coupling. An optional
+`mass_power=4` replaces phi^2 by phi^4 in the axion mass, with independently
+validated forces and energy accounting. This is an explicit alternative toy
+model, not a claim to implement the paper's instanton mass function.
+The [coupling contract](COUPLING_EXPERIMENT.md) and
+[results](results/coupling-pilot-01.md) describe the comparison.
+
+An optional `monitor_radius` (zero by default) adds a fixed-sphere energy
+current and coupling-exchange diagnostic. It adds no damping or boundary
+condition. Its symmetric-bond energy allocation is distinct from the old
+forward-bond region energies; see [MONITOR_CONTRACT.md](MONITOR_CONTRACT.md).
+Parameterized field suites can be run with `run_field_suite.py`; its
+`--analyze-source` mode reconstructs reports in a fresh directory from
+existing states and histories, without rerunning field evolution.
+Optional `tracking_inner`/`tracking_outer` radii enable the validated moving
+weighted-volume monitor; reports audit its corrected currents, cadence and
+false-vacuum enclosure separately from the fixed monitor. See
+[TRACKING_MONITOR_CONTRACT.md](TRACKING_MONITOR_CONTRACT.md) and the next
+[global-stiffness experiment](GLOBAL_STIFFNESS_EXPERIMENT.md).
+`initial_radial_balance.py` checks the seeded mode ensemble's finite-mass
+radial force against independent radius differences, and gives a restricted
+fixed-action, fixed-width reference radius. This is a mean spectral
+diagnostic; field evolution must test stability and mass-radius scaling.
+`compare_field_grids.py` also compares moving-window histories under the
+[additional grid gates](MOVING_GRID_COMPARISON.md), when both histories
+contain them. Prefix comparisons use shared endpoints and do not pass a
+full-duration gate.
 
 Outcome of prototype-01, in brief:
 - Trapped axions hold the false vacuum open for more than four times the

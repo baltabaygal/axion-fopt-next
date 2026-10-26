@@ -1,0 +1,912 @@
+{
+  "passed": false,
+  "checks": {
+    "reference": true,
+    "exact_reference_regression": true,
+    "local_checks": false,
+    "spatial_energy": true,
+    "spatial_phase": true,
+    "spatial_completion": false,
+    "temporal_energy": true,
+    "temporal_phase": true,
+    "temporal_completion": false
+  },
+  "results": {
+    "main": {
+      "n": 96,
+      "box": 24.0,
+      "dt": 0.02,
+      "end": 32.0,
+      "checks": {
+        "initial_exact": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_phase": true,
+        "energy_drift": false,
+        "exchange": true,
+        "pre_collision_wall": true
+      },
+      "snapshots": [
+        {
+          "phase": {
+            "S_min": 3.4812928617067307e-06,
+            "S_max": 0.9995836191104188,
+            "S_mean": 0.17837312429656277,
+            "S_std": 0.29339070676119966,
+            "F_half": 0.8447265625,
+            "F_barrier": 0.8109899450231481,
+            "near_true_fraction": 0.059416594328703706
+          },
+          "phase_moment_error": 0.0,
+          "fractions_exact": true,
+          "energy_error": 0.0
+        },
+        {
+          "phase": {
+            "S_min": -0.10846098420848851,
+            "S_max": 1.36170643889871,
+            "S_mean": 0.8623616740330825,
+            "S_std": 0.2145728452985024,
+            "F_half": 0.08067491319444445,
+            "F_barrier": 0.044252748842592594,
+            "near_true_fraction": 0.5498046875
+          },
+          "phase_moment_error": 1.1102230246251565e-16,
+          "fractions_exact": true,
+          "energy_error": 6.596401685384977e-17
+        }
+      ],
+      "first_full_conversion": null,
+      "first_sustained_full_interval": null,
+      "full_intervals": [],
+      "recrossing_after_first": false,
+      "final_phase": {
+        "S_min": -0.10846098420848851,
+        "S_max": 1.36170643889871,
+        "S_mean": 0.8623616740330825,
+        "S_std": 0.2145728452985024,
+        "F_half": 0.08067491319444445,
+        "F_barrier": 0.044252748842592594,
+        "near_true_fraction": 0.5498046875
+      },
+      "initial_excess": 32.29373866468143,
+      "energy_drift_excess": 0.006789595164172614,
+      "energy_drift_total": 0.00025444218095781716,
+      "exchange_residual": 0.00029407773909166695,
+      "final_axion_energy": 31.218587373481967,
+      "pre_collision_wall": [
+        {
+          "t": 0.0,
+          "width_cells": 17.61988909587066,
+          "radius": 8.00000507391255
+        },
+        {
+          "t": 0.2,
+          "width_cells": 17.59115165758332,
+          "radius": 8.0018237046502
+        },
+        {
+          "t": 0.4,
+          "width_cells": 17.50409833734394,
+          "radius": 8.007191907213175
+        },
+        {
+          "t": 0.6,
+          "width_cells": 17.35630230089532,
+          "radius": 8.015864540158988
+        },
+        {
+          "t": 0.8,
+          "width_cells": 17.14407249108315,
+          "radius": 8.027486311673549
+        },
+        {
+          "t": 1.0,
+          "width_cells": 16.89571965300022,
+          "radius": 8.04165262954848
+        },
+        {
+          "t": 1.2,
+          "width_cells": 16.606639743256473,
+          "radius": 8.057966910766257
+        },
+        {
+          "t": 1.4000000000000001,
+          "width_cells": 16.272152491309576,
+          "radius": 8.07608294245455
+        },
+        {
+          "t": 1.6,
+          "width_cells": 15.893388709877208,
+          "radius": 8.095728859602673
+        },
+        {
+          "t": 1.8,
+          "width_cells": 15.529992232983211,
+          "radius": 8.11671539864986
+        },
+        {
+          "t": 2.0,
+          "width_cells": 15.207822712544026,
+          "radius": 8.138910025258312
+        },
+        {
+          "t": 2.2,
+          "width_cells": 14.926265861679699,
+          "radius": 8.162136872196388
+        },
+        {
+          "t": 2.4,
+          "width_cells": 14.704181629129327,
+          "radius": 8.186367062667532
+        },
+        {
+          "t": 2.6,
+          "width_cells": 14.58780742609305,
+          "radius": 8.211645049337266
+        },
+        {
+          "t": 2.8000000000000003,
+          "width_cells": 14.479808647182438,
+          "radius": 8.2380726534248
+        },
+        {
+          "t": 3.0,
+          "width_cells": 14.374684645618853,
+          "radius": 8.265830116859407
+        },
+        {
+          "t": 3.2,
+          "width_cells": 14.303119870896289,
+          "radius": 8.2952442256692
+        },
+        {
+          "t": 3.4,
+          "width_cells": 14.3095999964556,
+          "radius": 8.326928281122811
+        },
+        {
+          "t": 3.6,
+          "width_cells": 14.356081522874359,
+          "radius": 8.361954569620984
+        },
+        {
+          "t": 3.8000000000000003,
+          "width_cells": 14.42231266615926,
+          "radius": 8.402119312803077
+        },
+        {
+          "t": 4.0,
+          "width_cells": 14.522417416502577,
+          "radius": 8.448026151964065
+        },
+        {
+          "t": 4.2,
+          "width_cells": 14.655182053873531,
+          "radius": 8.498037338896156
+        },
+        {
+          "t": 4.4,
+          "width_cells": 14.799435376409765,
+          "radius": 8.54868234894618
+        },
+        {
+          "t": 4.6000000000000005,
+          "width_cells": 14.965966302358176,
+          "radius": 8.597376521179738
+        },
+        {
+          "t": 4.8,
+          "width_cells": 15.1667912792532,
+          "radius": 8.645165131134469
+        },
+        {
+          "t": 5.0,
+          "width_cells": 15.351158501003503,
+          "radius": 8.695525544675291
+        },
+        {
+          "t": 5.2,
+          "width_cells": 15.495383531980352,
+          "radius": 8.748904897331725
+        },
+        {
+          "t": 5.4,
+          "width_cells": 15.630234795903288,
+          "radius": 8.803384043593015
+        },
+        {
+          "t": 5.6000000000000005,
+          "width_cells": 15.691111694350461,
+          "radius": 8.859410415352409
+        },
+        {
+          "t": 5.8,
+          "width_cells": 15.704587995450229,
+          "radius": 8.919731815965049
+        },
+        {
+          "t": 6.0,
+          "width_cells": 15.811167043426302,
+          "radius": 8.98345264434682
+        },
+        {
+          "t": 6.2,
+          "width_cells": 15.919064255322827,
+          "radius": 9.049758470672625
+        },
+        {
+          "t": 6.4,
+          "width_cells": 16.23363519891673,
+          "radius": 9.120768767971317
+        },
+        {
+          "t": 6.6000000000000005,
+          "width_cells": 16.542609258141237,
+          "radius": 9.1975113222067
+        },
+        {
+          "t": 6.8,
+          "width_cells": 17.071486017788704,
+          "radius": 9.277781396611983
+        }
+      ],
+      "radial_diagnostic_stops_at": 7.0
+    },
+    "coarse": {
+      "n": 64,
+      "box": 24.0,
+      "dt": 0.02,
+      "end": 32.0,
+      "checks": {
+        "initial_exact": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_phase": true,
+        "energy_drift": false,
+        "exchange": true,
+        "pre_collision_wall": true
+      },
+      "snapshots": [
+        {
+          "phase": {
+            "S_min": 3.879306941068084e-06,
+            "S_max": 0.9995360364406958,
+            "S_mean": 0.17837502461385513,
+            "S_std": 0.2933896088632186,
+            "F_half": 0.8443603515625,
+            "F_barrier": 0.810272216796875,
+            "near_true_fraction": 0.05877685546875
+          },
+          "phase_moment_error": 2.7755575615628914e-17,
+          "fractions_exact": true,
+          "energy_error": 0.0
+        },
+        {
+          "phase": {
+            "S_min": -0.0531926305678632,
+            "S_max": 1.3545623136333043,
+            "S_mean": 0.8690238625654843,
+            "S_std": 0.2086552548550781,
+            "F_half": 0.0743408203125,
+            "F_barrier": 0.045135498046875,
+            "near_true_fraction": 0.550537109375
+          },
+          "phase_moment_error": 1.3877787807814457e-16,
+          "fractions_exact": true,
+          "energy_error": 0.0
+        }
+      ],
+      "first_full_conversion": null,
+      "first_sustained_full_interval": null,
+      "full_intervals": [],
+      "recrossing_after_first": false,
+      "final_phase": {
+        "S_min": -0.0531926305678632,
+        "S_max": 1.3545623136333043,
+        "S_mean": 0.8690238625654843,
+        "S_std": 0.2086552548550781,
+        "F_half": 0.0743408203125,
+        "F_barrier": 0.045135498046875,
+        "near_true_fraction": 0.550537109375
+      },
+      "initial_excess": 32.22821665569154,
+      "energy_drift_excess": 0.006415001897676948,
+      "energy_drift_total": 0.0002399346604745624,
+      "exchange_residual": 0.00029688542948338,
+      "final_axion_energy": 32.557697646632306,
+      "pre_collision_wall": [
+        {
+          "t": 0.0,
+          "width_cells": 11.75641908528709,
+          "radius": 7.9995877981020165
+        },
+        {
+          "t": 0.2,
+          "width_cells": 11.736785343767382,
+          "radius": 8.001410060111708
+        },
+        {
+          "t": 0.4,
+          "width_cells": 11.678243072643333,
+          "radius": 8.006790979045213
+        },
+        {
+          "t": 0.6,
+          "width_cells": 11.594775178334459,
+          "radius": 8.015490521717355
+        },
+        {
+          "t": 0.8,
+          "width_cells": 11.47573844179527,
+          "radius": 8.027161011676126
+        },
+        {
+          "t": 1.0,
+          "width_cells": 11.319835760852335,
+          "radius": 8.041407383799113
+        },
+        {
+          "t": 1.2,
+          "width_cells": 11.126913510287942,
+          "radius": 8.057844428043937
+        },
+        {
+          "t": 1.4000000000000001,
+          "width_cells": 10.899191945327507,
+          "radius": 8.076110669510006
+        },
+        {
+          "t": 1.6,
+          "width_cells": 10.642461892288871,
+          "radius": 8.095812513023835
+        },
+        {
+          "t": 1.8,
+          "width_cells": 10.367130841049027,
+          "radius": 8.116717875663813
+        },
+        {
+          "t": 2.0,
+          "width_cells": 10.146644439907073,
+          "radius": 8.138683373466492
+        },
+        {
+          "t": 2.2,
+          "width_cells": 9.971166195043061,
+          "radius": 8.161638251469839
+        },
+        {
+          "t": 2.4,
+          "width_cells": 9.832941623724935,
+          "radius": 8.18557713102058
+        },
+        {
+          "t": 2.6,
+          "width_cells": 9.732256589294758,
+          "radius": 8.21055854389897
+        },
+        {
+          "t": 2.8000000000000003,
+          "width_cells": 9.657842647916526,
+          "radius": 8.236715285758894
+        },
+        {
+          "t": 3.0,
+          "width_cells": 9.598695691475948,
+          "radius": 8.264282669723361
+        },
+        {
+          "t": 3.2,
+          "width_cells": 9.553641316243443,
+          "radius": 8.29364579328285
+        },
+        {
+          "t": 3.4,
+          "width_cells": 9.550793893794522,
+          "radius": 8.325392303890682
+        },
+        {
+          "t": 3.6,
+          "width_cells": 9.573645051348011,
+          "radius": 8.360332470259044
+        },
+        {
+          "t": 3.8000000000000003,
+          "width_cells": 9.621914468635888,
+          "radius": 8.399422440629818
+        },
+        {
+          "t": 4.0,
+          "width_cells": 9.690794204739916,
+          "radius": 8.443539554332117
+        },
+        {
+          "t": 4.2,
+          "width_cells": 9.770338822516932,
+          "radius": 8.492341765073592
+        },
+        {
+          "t": 4.4,
+          "width_cells": 9.876366361098924,
+          "radius": 8.543070189596795
+        },
+        {
+          "t": 4.6000000000000005,
+          "width_cells": 10.006194521912512,
+          "radius": 8.593819461573286
+        },
+        {
+          "t": 4.8,
+          "width_cells": 10.139340727295718,
+          "radius": 8.643551445979584
+        },
+        {
+          "t": 5.0,
+          "width_cells": 10.263637901430274,
+          "radius": 8.692788525987762
+        },
+        {
+          "t": 5.2,
+          "width_cells": 10.36248275326951,
+          "radius": 8.743385774793097
+        },
+        {
+          "t": 5.4,
+          "width_cells": 10.421100680014986,
+          "radius": 8.797549740064685
+        },
+        {
+          "t": 5.6000000000000005,
+          "width_cells": 10.497370835621387,
+          "radius": 8.856110689472533
+        },
+        {
+          "t": 5.8,
+          "width_cells": 10.527639112178774,
+          "radius": 8.91690383986909
+        },
+        {
+          "t": 6.0,
+          "width_cells": 10.57878780560779,
+          "radius": 8.979502544607838
+        },
+        {
+          "t": 6.2,
+          "width_cells": 10.651105086012187,
+          "radius": 9.045052672594354
+        },
+        {
+          "t": 6.4,
+          "width_cells": 10.83237592803786,
+          "radius": 9.115449636734905
+        },
+        {
+          "t": 6.6000000000000005,
+          "width_cells": 10.969376959665786,
+          "radius": 9.192075300739656
+        },
+        {
+          "t": 6.8,
+          "width_cells": 11.470744785319363,
+          "radius": 9.274049445153885
+        }
+      ],
+      "radial_diagnostic_stops_at": 7.0
+    },
+    "time-half": {
+      "n": 96,
+      "box": 24.0,
+      "dt": 0.01,
+      "end": 32.0,
+      "checks": {
+        "initial_exact": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_phase": true,
+        "energy_drift": true,
+        "exchange": true,
+        "pre_collision_wall": true
+      },
+      "snapshots": [
+        {
+          "phase": {
+            "S_min": 3.4812928617067307e-06,
+            "S_max": 0.9995836191104188,
+            "S_mean": 0.17837312429656277,
+            "S_std": 0.29339070676119966,
+            "F_half": 0.8447265625,
+            "F_barrier": 0.8109899450231481,
+            "near_true_fraction": 0.059416594328703706
+          },
+          "phase_moment_error": 0.0,
+          "fractions_exact": true,
+          "energy_error": 0.0
+        },
+        {
+          "phase": {
+            "S_min": -0.1079723256614416,
+            "S_max": 1.3618784983830385,
+            "S_mean": 0.8624195649447755,
+            "S_std": 0.21451622813440835,
+            "F_half": 0.08062065972222222,
+            "F_barrier": 0.04429796006944445,
+            "near_true_fraction": 0.5498589409722222
+          },
+          "phase_moment_error": 1.1102230246251565e-16,
+          "fractions_exact": true,
+          "energy_error": 6.596401685384977e-17
+        }
+      ],
+      "first_full_conversion": null,
+      "first_sustained_full_interval": null,
+      "full_intervals": [],
+      "recrossing_after_first": false,
+      "final_phase": {
+        "S_min": -0.1079723256614416,
+        "S_max": 1.3618784983830385,
+        "S_mean": 0.8624195649447755,
+        "S_std": 0.21451622813440835,
+        "F_half": 0.08062065972222222,
+        "F_barrier": 0.04429796006944445,
+        "near_true_fraction": 0.5498589409722222
+      },
+      "initial_excess": 32.29373866468143,
+      "energy_drift_excess": 0.001694709747788601,
+      "energy_drift_total": 6.350977251091391e-05,
+      "exchange_residual": 0.00021947631938806309,
+      "final_axion_energy": 31.231388798063506,
+      "pre_collision_wall": [
+        {
+          "t": 0.0,
+          "width_cells": 17.61988909587066,
+          "radius": 8.00000507391255
+        },
+        {
+          "t": 0.2,
+          "width_cells": 17.59115192249671,
+          "radius": 8.001823687739838
+        },
+        {
+          "t": 0.4,
+          "width_cells": 17.50409951097427,
+          "radius": 8.007191844794393
+        },
+        {
+          "t": 0.6,
+          "width_cells": 17.35630536441715,
+          "radius": 8.015864416880524
+        },
+        {
+          "t": 0.8,
+          "width_cells": 17.144079014320095,
+          "radius": 8.02748612780516
+        },
+        {
+          "t": 1.0,
+          "width_cells": 16.89573115449994,
+          "radius": 8.041652397941974
+        },
+        {
+          "t": 1.2,
+          "width_cells": 16.60665829050203,
+          "radius": 8.057966651262202
+        },
+        {
+          "t": 1.4000000000000001,
+          "width_cells": 16.27218681565346,
+          "radius": 8.076082676890312
+        },
+        {
+          "t": 1.6,
+          "width_cells": 15.893446262670778,
+          "radius": 8.09572860912887
+        },
+        {
+          "t": 1.8,
+          "width_cells": 15.530063075384973,
+          "radius": 8.116715183364715
+        },
+        {
+          "t": 2.0,
+          "width_cells": 15.207878353182494,
+          "radius": 8.138909868416038
+        },
+        {
+          "t": 2.2,
+          "width_cells": 14.926248912848873,
+          "radius": 8.162136800284651
+        },
+        {
+          "t": 2.4,
+          "width_cells": 14.704067336688809,
+          "radius": 8.186367106344832
+        },
+        {
+          "t": 2.6,
+          "width_cells": 14.587709982472166,
+          "radius": 8.211645268000105
+        },
+        {
+          "t": 2.8000000000000003,
+          "width_cells": 14.47986127744415,
+          "radius": 8.238073206074137
+        },
+        {
+          "t": 3.0,
+          "width_cells": 14.374814458963048,
+          "radius": 8.265831395660149
+        },
+        {
+          "t": 3.2,
+          "width_cells": 14.303144814916998,
+          "radius": 8.295246912867558
+        },
+        {
+          "t": 3.4,
+          "width_cells": 14.309456686529956,
+          "radius": 8.326932877464396
+        },
+        {
+          "t": 3.6,
+          "width_cells": 14.356016664479721,
+          "radius": 8.361959908285106
+        },
+        {
+          "t": 3.8000000000000003,
+          "width_cells": 14.422332745973563,
+          "radius": 8.402120059392747
+        },
+        {
+          "t": 4.0,
+          "width_cells": 14.522366718443,
+          "radius": 8.448016916376877
+        },
+        {
+          "t": 4.2,
+          "width_cells": 14.655085906743363,
+          "radius": 8.49802386035068
+        },
+        {
+          "t": 4.4,
+          "width_cells": 14.79944118584621,
+          "radius": 8.548680981541056
+        },
+        {
+          "t": 4.6000000000000005,
+          "width_cells": 14.965943768337283,
+          "radius": 8.597393890328183
+        },
+        {
+          "t": 4.8,
+          "width_cells": 15.16665359973872,
+          "radius": 8.645180449442813
+        },
+        {
+          "t": 5.0,
+          "width_cells": 15.351073434139678,
+          "radius": 8.695521022810746
+        },
+        {
+          "t": 5.2,
+          "width_cells": 15.495257129513764,
+          "radius": 8.748900515038725
+        },
+        {
+          "t": 5.4,
+          "width_cells": 15.630104561424119,
+          "radius": 8.80339777369303
+        },
+        {
+          "t": 5.6000000000000005,
+          "width_cells": 15.691230317275238,
+          "radius": 8.859421558770146
+        },
+        {
+          "t": 5.8,
+          "width_cells": 15.704684931736036,
+          "radius": 8.919724194577263
+        },
+        {
+          "t": 6.0,
+          "width_cells": 15.811129791394404,
+          "radius": 8.98345584687806
+        },
+        {
+          "t": 6.2,
+          "width_cells": 15.91870800831763,
+          "radius": 9.049769573489723
+        },
+        {
+          "t": 6.4,
+          "width_cells": 16.233375028404815,
+          "radius": 9.120760120415653
+        },
+        {
+          "t": 6.6000000000000005,
+          "width_cells": 16.542545464873204,
+          "radius": 9.197510552929307
+        },
+        {
+          "t": 6.8,
+          "width_cells": 17.071300669783717,
+          "radius": 9.277787849118779
+        }
+      ],
+      "radial_diagnostic_stops_at": 7.0
+    }
+  },
+  "spatial": {
+    "energy_relative": 0.04289464661324871,
+    "false_fraction": 0.0063340928819444475,
+    "completion_time_difference": null
+  },
+  "temporal": {
+    "energy_relative": 0.0004100577783481274,
+    "false_fraction": 5.4253472222223764e-05,
+    "completion_time_difference": null
+  },
+  "goal_reached": false,
+  "parameters": {
+    "physical": {
+      "lam": 2.0,
+      "dv": 0.06,
+      "mass": 0.5,
+      "fa": 0.2
+    },
+    "box": 24.0,
+    "end": 32.0,
+    "initial": {
+      "R0": 8.0,
+      "width": 2.0,
+      "theta": 1.0,
+      "S_dot": 0.0,
+      "theta_dot": 0.0
+    },
+    "cases": [
+      {
+        "name": "main",
+        "n": 96,
+        "dx": 0.25,
+        "dt": 0.02
+      },
+      {
+        "name": "coarse",
+        "n": 64,
+        "dx": 0.375,
+        "dt": 0.02
+      },
+      {
+        "name": "time-half",
+        "n": 96,
+        "dx": 0.25,
+        "dt": 0.01
+      }
+    ],
+    "cadence": 0.04,
+    "slice_cadence": 0.2,
+    "boundary": "periodic; image interaction is part of this experiment",
+    "completion": "all 3D cells S>=.5, measured every .04",
+    "no_expansion": true,
+    "no_friction": true,
+    "backreaction": true
+  },
+  "build": {
+    "compile": [
+      "/usr/bin/c++",
+      "-DDEVICE_CPU",
+      "-DDEVICE_KOKKOS",
+      "-DKOKKOS_DEPENDENCE",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/adapter/overlay",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/cosmolattice/include",
+      "-I/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/include",
+      "-isystem",
+      "/opt/homebrew/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/templat/external/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/core/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/desul/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/tpls/mdspan/include",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/containers/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/algorithms/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src",
+      "-isystem",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/vendor/kokkos/simd/src",
+      "-DNDEBUG",
+      "-std=gnu++20",
+      "-Wall",
+      "-Wshadow",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-O2",
+      "-c",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/evolve.cpp",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-phase-01/evolve.o"
+    ],
+    "link": [
+      "/usr/bin/c++",
+      "-O2",
+      "-DNDEBUG",
+      "-Wl,-search_paths_first",
+      "-Wl,-headerpad_max_install_names",
+      "-DKOKKOS_DEPENDENCE",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-phase-01/evolve.o",
+      "-o",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/stochastic-v2-phase-01/bubble_evolve",
+      "-L/opt/homebrew/lib",
+      "-Wl,-rpath,/opt/homebrew/lib",
+      "_deps/kokkos-build/containers/src/libkokkoscontainers.a",
+      "_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a",
+      "_deps/kokkos-build/simd/src/libkokkossimd.a",
+      "_deps/kokkos-build/core/src/libkokkoscore.a",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib",
+      "/opt/homebrew/lib/libfftw3_omp.dylib",
+      "/opt/homebrew/lib/libfftw3_threads.dylib",
+      "/opt/homebrew/lib/libfftw3.dylib"
+    ],
+    "library_build": "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped",
+    "source_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/evolve.cpp": "8aad6e3a0bea81c162010eb5bcb4ef4c1781c3edabd59a5d71b120cbfcc19262",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/bubble_model.h": "a202193dd13e09ee1f7adccb820035f98e44e138ef7fc576807eeae102867f8a",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/state_io.h": "915b3e44aba8225db37c612a3fca9487512fbd35b09feab91aa81345526d3e97",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/potential.h": "90bbc8ab4b6f7bf71e809498f971736fe03b18e527b1ece27634e85675c6e455",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/stochastic_v2/build_backend.py": "db8c867900e1e51da7a55d5f2991fad9dcab4998d9c18be7203b3cf3cc78c196",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/initial_state.h": "13bb263852ead2b81277b7d488f0af878b0c4f68bee80f85ec9f86f9366acdbc",
+      "/Users/baltabay/Desktop/axion-fopt-next/checks/pockets/accurate_sum.h": "86c2a379ecebc09c62dbc8f85e755aadf45c836b41edc44c7102cf56086652de"
+    },
+    "library_sha256": {
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/containers/src/libkokkoscontainers.a": "37917464b2dc104e18d4e613cd49722ea0a639a1ccc0b3fcda799234268e39d2",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/algorithms/src/libkokkosalgorithms.a": "72bb7d5763acc693f4157ab563878cb1eb5d1954de6a36b787afc7edfd50ca69",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/simd/src/libkokkossimd.a": "dbd5ae89fe5935ed1d12ef08dffc990013c71cd0249ff03d258af5ca13fc76de",
+      "/Users/baltabay/Desktop/axion-fopt-next/build/pockets-mapped/_deps/kokkos-build/core/src/libkokkoscore.a": "c0c0fcb51e9173927b5ef7723516dd076f978197aef7ffa48dde220a7ea216c0",
+      "/opt/homebrew/opt/libomp/lib/libomp.dylib": "432b8d15fc1b2431f937bba89796a32daaa2dd464eda12a744d9cb2818842477",
+      "/opt/homebrew/lib/libfftw3_omp.dylib": "410f49c6252ae15823d3b05e8e4f8622d4615730cbd18c20396edda156e40594",
+      "/opt/homebrew/lib/libfftw3_threads.dylib": "1ceb262b9c62af3f3a8bb10d3459fa36c7a954cd32a4bc9774d4c27e4bea0ecc",
+      "/opt/homebrew/lib/libfftw3.dylib": "2eda1ef2b5bd9707a63d38f8d4994513b40e1b0ae475fd8c57cfecf5abb88c2d"
+    },
+    "base_manifest_sha256": "dcc88d2f9b046b796b19d6eb630cf6fbdf5bcd72ac3790873f4c94bd9d6daa92",
+    "executable_sha256": "74682d7e506cd4562f666ffc545098b3caf6bf07b5a2401daaac5b57d1c697fa",
+    "seconds": 5.490667958976701,
+    "scope": "3D canonical S plus cosine axion; actual CosmoLattice PV2, serial"
+  },
+  "validation_sha256": "025eac53825bcee4dbed599767e824056ca8aa34f8bcd76d6358f105e12e1bbc",
+  "source_sha256": {
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/EXPERIMENT.md": "33c7760427d1bf1ddec935ac08ee0ddf0b790cc9c37b315320d5404d18f93fcf",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/plot_long_bubble.py": "b08c09e7fa576276801bc1cb4b4b38c375b34f340a2199ebfdf52ad696042b99",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/evolve.cpp": "8aad6e3a0bea81c162010eb5bcb4ef4c1781c3edabd59a5d71b120cbfcc19262",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/SMALL_BOX_EXPERIMENT.md": "487857fe2a45744204fd567c19e0087d569680e60c731f590db42ea10372ca0c",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/run_bubble.py": "87cb0af60ce4265c2886269ca189af71bcb9d0b3689a4547cb1922fb85a3d33b",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/state_io.h": "915b3e44aba8225db37c612a3fca9487512fbd35b09feab91aa81345526d3e97",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/build_backend.py": "db8c867900e1e51da7a55d5f2991fad9dcab4998d9c18be7203b3cf3cc78c196",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/run_small_box.py": "931c1fa9d97c08cb708753d50b777c1f7165512fb26128049d74a20e473ca61d",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/model.py": "30c8339d3f0faedbde0e1a5cb86052215100a9066a651700705a35581f11b1b5",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/README.md": "42499e3f5c59f89285d1adbb4ad6d683726012c3b9ccc50358f34036c895731f",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/bubble_model.h": "a202193dd13e09ee1f7adccb820035f98e44e138ef7fc576807eeae102867f8a",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/potential.h": "90bbc8ab4b6f7bf71e809498f971736fe03b18e527b1ece27634e85675c6e455",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/validate_backend.py": "aa97a23c9424bd80eda3824c39207d5ccaf8b48029948b0d9817ba7dd7a14f51",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/plot_energy_comparison.py": "d5feee2baeb523210a551212742a40ad1124e7d8289c2953950247e5cc75ba7c",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/INPUT_PARAMETERS.md": "688b54d5ddcf085a04a3f96840e62cb71f8d9c9bd3ec44438c3381121b54f554",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/plot_bubble.py": "a690f0545f78c1c75a26195ed9f34789a1ad25500e56173887468b6ad5cc5544",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/audit_long_diagnostics.py": "d8434051a56f8a2dbe921000b8249f9c1c76a2b45efd974da1640772bffcf78c",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/AGENTS.md": "93385f8c4aad4cbc98a464aa883da281b977c00f3c66f35be4883db784edfa06",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/run_long_bubble.py": "44d9aa3b63874de5386b1ec69139aab485bd6b22340fc904cee98c8987c5f6bc",
+    "/Users/baltabay/Desktop/axion-fopt-next/outputs/stochastic_v2/small-box-completion-01/sources/LONG_EXPERIMENT.md": "9798b342ab329f0571e8bdfa03e928e0adba7650bf93ed78272ddfa80676d7ef"
+  },
+  "caveat": "Operational true phase does not mean uniform static S=1 or constant axion mass. Periodic-image collisions are intentional."
+}

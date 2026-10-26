@@ -1,0 +1,15 @@
+{
+  "S_below_half": {
+    "cells": 3762,
+    "volume_fraction": 0.004252115885416667,
+    "axion_energy_fraction": 0.02933589875166679,
+    "scalar_energy_fraction": 0.03591195583190277
+  },
+  "near_false_abs_S_below_point1": {
+    "cells": 179,
+    "volume_fraction": 0.00020232024016203704,
+    "axion_energy_fraction": 0.0017961517985440592,
+    "scalar_energy_fraction": 0.0014500467040542084
+  },
+  "note": "Instantaneous threshold masks only; energy concentration is not a causal pressure or stable-pocket demonstration."
+}

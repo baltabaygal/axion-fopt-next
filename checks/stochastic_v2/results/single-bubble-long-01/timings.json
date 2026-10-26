@@ -1,0 +1,22 @@
+[
+  {
+    "case": "main",
+    "seconds": 59.04282483301358
+  },
+  {
+    "case": "coarse",
+    "seconds": 26.898949583992362
+  },
+  {
+    "case": "time-half",
+    "seconds": 86.24021904199617
+  },
+  {
+    "case": "empty",
+    "seconds": 49.8996010000119
+  },
+  {
+    "case": "larger-box",
+    "seconds": 121.36584408400813
+  }
+]

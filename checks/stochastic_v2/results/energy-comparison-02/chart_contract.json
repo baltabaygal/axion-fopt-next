@@ -1,0 +1,11 @@
+{
+  "question": "How do energy components evolve, and what can legacy/new curves actually compare?",
+  "takeaway": "Axion energy is supplied by S; legacy growth is externally driven. Different models/boxes prevent attributing curve differences to S alone.",
+  "family": "Trend",
+  "variant": "component line small multiples plus total-energy contextual overlay",
+  "surface": "static scientific PNG and SVG in the established simulation results folder",
+  "temporal_points": "226 main saved times over 0..18, dense native legacy histories; no resampling except explicit common-time scalar lookup",
+  "palette": "Three persistent component colors plus neutral total; distinct line styles; blue focal versus neutral/orange legacy curves",
+  "qa": "Inspect final PNGs, verify component sums, normalization and energy-source balance",
+  "skill_limitations": "Referenced user-context preflight file unavailable; Seaborn absent in local and bundled runtimes. Uses local evidence and Matplotlib template-style fallback, not full skill-template compliance."
+}
